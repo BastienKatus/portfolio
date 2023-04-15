@@ -1,0 +1,168 @@
+{
+  "profil": {
+    "nom": "KATUSZYNSKI",
+    "prenom": "Bastien",
+    "date_naissance": 21,
+    "nationalite": "Française",
+    "adresse1": "1 rue Emile Dunière, 69100 Villeurbanne",
+    "adresse2": "7 rue du moulin à vent, 42300 Roanne",
+    "telephone": "07 66 603561",
+    "email": "katusbastien@gmail.com"
+  },
+  "formations": [
+    {
+      "diplome": "Diplôme d’ingénieur en Informatique et Réseaux de Communications en alternance",
+      "etablissement": "Ecole de Chimie Physique et Electronique de Lyon",
+      "code_etablissement": "CPE Lyon",
+      "etablissement2" : "Instituts des techniques d'ingénieur de l'industrie du Centres de Formation des Apprentis de l'Industrie de Lyon",
+      "code_etablissement2": "ITII / CFAI Lyon",
+      "annee": "2021-2024", 
+      "description":"", 
+      "autre":""
+    },
+    {
+      "diplome": "Diplôme Universitaire et Technologique Informatique",
+      "etablissement": "Université Lyon 1 site Bourg-en-Bresse",
+      "code_etablissement": "IUT Lyon 1 Bourg-en-Bresse",
+      "annee": "2019-2021", 
+      "description":""
+    },
+    {
+      "diplome": "Baccalauréat des Sciences Economiques et Sociales",
+      "mention": "Mention Bien",
+      "etablissement": "Lycée Jean Puy Roanne",
+      "annee": "2018-2019", 
+      "description":""
+    }
+  ],
+  "competences": {
+    "programmation": {
+      "experience_confirme": [
+        "Java / J2EE",
+        "Javascript / React JS",
+        "HTML / CSS",
+        "Velocity", 
+        "Freemarker"
+      ], 
+      "experience_intermediaire": [
+        "C",
+        "C++",
+        "Python",
+        "Android Studio Java"
+      ],
+      "experience_decouverte": [
+        "Flutter",
+        "PHP"
+      ]
+    },
+    "bases_de_donnees": [
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Neo4J"
+    ],
+    "autre":[
+      "ElasticSearch"
+    ]
+  },
+  "experiences_professionnelles": [
+    {
+      "poste": "Développeur Full Stack de site intranet et extranet",
+      "entreprise": "AGIIR NETWORK",
+      "ville": "Roanne",
+      "pays": "France",
+      "debut": "Septembre 2021",
+      "fin": "Aujourd'hui",
+      "type": "Alternance", 
+      "technologies":[
+        "Java / J2EE",
+        "Javascript / React JS",
+        "HTML / CSS",
+        "Velocity", 
+        "Freemarker",
+        "PostgreSQL",
+        "ElasticSearch"
+      ]
+    },
+    {
+      "poste": "Assistant chef de projet informatique",
+      "entreprise": "AGIIR NETWORK",
+      "ville": "Roanne",
+      "pays": "France",
+      "debut": "Août 2021",
+      "fin": "Juillet 2021",
+      "type": "CDD",
+      "technologies":[
+        "Java / J2EE",
+        "Javascript / React JS",
+        "HTML / CSS",
+        "Velocity", 
+        "Freemarker",
+        "PostgreSQL",
+        "ElasticSearch"
+      ]
+    },
+    {
+      "poste": "Développeur Full Stack",
+      "entreprise": "AGIIR NETWORK",
+      "ville": "Roanne",
+      "pays": "France",
+      "debut": "Avril 2021",
+      "fin": "Juin 2021",
+      "type": "Stage",
+      "technologies":[
+        "Java / J2EE",
+        "Javascript / React JS",
+        "HTML / CSS",
+        "Velocity", 
+        "Freemarker",
+        "PostgreSQL",
+        "ElasticSearch"
+      ]
+    },
+    {
+      "poste": "Intérimaire",
+      "entreprise": "Teinture Apprêts D’Anjoux (TAD)",
+      "ville": "Le Coteau",
+      "pays": "France",
+      "debut": "Juillet 2020",
+      "fin": "Août 2020",
+      "type": "CDD",
+      "technologies":[
+      ]
+    }
+  ],
+  "projets_universitaires": [
+    {
+      "nom": "Développement d’un site internet de recherche de lieux géographique et traçage d’itinéraire",
+      "technologies": [
+        "Javascript",
+        "HTML",
+        "CSS"
+      ],
+      "librairies_et_plugins": [
+        "Leaflet"
+      ],
+      "description": ""
+    },
+    {
+      "nom": "Mur d’escalade en réalité augmentée",
+      "technologies": [
+        "Python"
+      ],
+      "librairies_et_plugins": [
+        "OpenCV"
+      ],
+      "description": "Projet Tutoré en groupe de 3. Programmation d’un mur d’escalade interactif en Python."
+    },
+    {
+      "nom": "Gestion de projet Web",
+      "technologies": [
+        "HTML",
+        "CSS"
+      ],
+      "librairies_et_plugins": [],
+      "description": "Site Web d’un club de Babyfoot en Groupe de 3, programmé en HTML et CSS. Réalisation d’un dossier d’analyse, d’un dossier de conception et de la charte graphique du site."
+    }
+  ]
+}
