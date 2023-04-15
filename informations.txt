@@ -2,7 +2,8 @@
   "profil": {
     "nom": "KATUSZYNSKI",
     "prenom": "Bastien",
-    "date_naissance": 21,
+    "date_naissance": "2001-01-05",
+    "format_date": "YYYY-MM-DD",
     "nationalite": "Française",
     "adresse1": "1 rue Emile Dunière, 69100 Villeurbanne",
     "adresse2": "7 rue du moulin à vent, 42300 Roanne",
@@ -17,8 +18,7 @@
       "etablissement2" : "Instituts des techniques d'ingénieur de l'industrie du Centres de Formation des Apprentis de l'Industrie de Lyon",
       "code_etablissement2": "ITII / CFAI Lyon",
       "annee": "2021-2024", 
-      "description":"", 
-      "autre":""
+      "description":""
     },
     {
       "diplome": "Diplôme Universitaire et Technologique Informatique",
