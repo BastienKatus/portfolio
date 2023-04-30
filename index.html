@@ -5,29 +5,38 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Portfolio</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='navbar.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <script src='index.js'></script>
 </head>
 <body>
+    <div class="triangle">
+        <div id="triangle1"></div>
+        <div id="triangle2"></div>
+        <div id="triangle3"></div>
+    </div>
+
     <nav id="navbar">
         <div class="navbar-container container">
             <input type="checkbox" name="" id="">
             <div class="hamburger-lines">
                 <span class="line line1"></span>
-                <span class="line line2"></span>
+                <span class="line line2"></span> 
                 <span class="line line3"></span>
             </div>
             <ul class="menu-items">
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">A propos</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li onclick="changeSection('accueil')"><a href="#">Accueil</a></li>
+                <li onclick="changeSection('formations')"><a href="#">Formations</a></li>
+                <li onclick="changeSection('competences')"><a href="#">Compétences</a></li>
+                <li onclick="changeSection('experiences')"><a href="#">Expériences</a></li>
+                <li onclick="changeSection('projets_universitaires')"><a href="#">Projets universitaires</a></li>
+                <li onclick="changeSection('contacts')"><a href="#">Contact</a></li>
             </ul>
             <h1 class="logo"></h1>
         </div>
     </nav>
     
-    <section id="accueil">
+    <section class="accueil active">
         <h1>Qui suis-je ?</h1>
         <div id="profil">
             <div id="lastname" class="profil-info"></div>
@@ -40,12 +49,12 @@
         </div>
     </section>
 
-    <section id="formations">
+    <section class="formations">
         <h1>Formations</h2>
         <ul id="formations_list"></ul>
     </section>
 
-    <section id="skills">
+    <section class="competences">
         <h1>Compétences</h2>
         <div id="programmation">
             <h3>Programmation</h3>
@@ -72,12 +81,12 @@
         </div>
     </section>
 
-    <section id="experiences">
+    <section class="experiences">
         <h1>Expériences professionnelles</h2>
         <ul id="experiences-list"></ul>
     </section>
 
-    <section id="projets_universitaires">
+    <section class="projets_universitaires">
         <h1>Projets universitaires</h2>
         <div id="projets_div"></div>
     </section>

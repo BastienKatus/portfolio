@@ -252,5 +252,61 @@ function buildProjets(projets) {
 
 // EXECUTION //
 initSite()
-
 //////////////
+
+
+const speed = .75; //vitesse du point
+const screenWidth = window.innerWidth; //largeur de l'écran
+const screenHeight = window.innerHeight; //hauteur de l'écran
+const pointRadius = 1; //Radius du centre
+let x = Math.random() * (screenWidth - 2 * pointRadius) + pointRadius; //position horizontale initiale aléatoire du point
+let y = Math.random() * (screenHeight - 2 * pointRadius) + pointRadius; //position verticale initiale aléatoire du point
+let vx = (Math.random() - 0.5) * speed; //vitesse horizontale initiale aléatoire du point
+let vy = (Math.random() - 0.5) * speed; //vitesse verticale initiale aléatoire du point
+
+const centerPoint = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+
+function movePoint() {
+    try {
+        const triangle1 = document.getElementById("triangle1");
+        const triangle2 = document.getElementById("triangle2");
+        const triangle3 = document.getElementById("triangle3");
+
+        //Centre
+        x += vx;
+        y += vy;
+
+        //rebond contre les murs horizontaux
+        if (x <= pointRadius + screenWidth * 15 / 100 || x >= screenWidth - pointRadius) {
+            vx = -vx;
+        }
+
+        //rebond contre les murs verticaux
+        if (y <= pointRadius + screenHeight * 25 / 100 || y >= screenHeight - pointRadius) {
+            vy = -vy;
+        }
+        
+        triangle2.style.clipPath = `polygon(20% 100%, ${x}px ${y}px, 66% 100%)`;
+        triangle3.style.clipPath = `polygon(100% 50%, ${x}px ${y}px, 66% 100%, 100% 100%)`;
+
+        //appel récursif de la fonction pour créer l'animation
+        requestAnimationFrame(movePoint);
+    } catch (error) {
+        console.error(error);
+        requestAnimationFrame(movePoint);
+    }
+
+}
+
+movePoint();
+
+
+function changeSection(sectionToDisplay){
+    let allSections = document.querySelectorAll("section")
+    allSections.forEach(eachSection => {
+        eachSection.classList.remove("active")
+        if(eachSection.classList.contains(sectionToDisplay)){
+            eachSection.classList.add("active")
+        }
+    })
+}
