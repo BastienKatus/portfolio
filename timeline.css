@@ -1,0 +1,130 @@
+#timeline{
+    position: relative;
+    margin: auto;
+}
+
+#timeline::after{
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background-color: aliceblue;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    animation: moveline 6s linear forwards;
+}
+
+@keyframes moveline {
+    0%{
+        height: 0;;
+    }
+    100%{
+        height: 100%;
+    }
+}
+
+#timeline .timeline-container{
+    padding: 15px;
+    position: relative;
+    width: 50%;
+    animation: movedown 1s linear forwards;
+}
+
+@keyframes movedown {
+    0%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* Cette partie est faite pour 10 en dur pour le moment, il faudra le remplacer avec du JS */
+#timeline .timeline-container:nth-child(1){
+    animation-delay: 0s;
+}
+
+#timeline .timeline-container:nth-child(2){
+    animation-delay: 1s;
+}
+
+#timeline .timeline-container:nth-child(3){
+    animation-delay: 2s;
+}
+
+#timeline .timeline-container:nth-child(4){
+    animation-delay: 3s;
+}
+
+#timeline .timeline-container:nth-child(5){
+    animation-delay: 4s;
+}
+
+#timeline .timeline-container:nth-child(6){
+    animation-delay: 5s;
+}
+
+#timeline .timeline-container:nth-child(7){
+    animation-delay: 6s;
+}
+
+#timeline .timeline-container:nth-child(8){
+    animation-delay: 7s;
+}
+
+#timeline .timeline-container:nth-child(9){
+    animation-delay: 8s;
+}
+
+#timeline .timeline-container:nth-child(10){
+    animation-delay: 9s;
+}
+
+#timeline .timeline-container:nth-child(11){
+    animation-delay: 10s;
+}
+
+#timeline .timeline-card{
+    padding: 10px;
+    background-color: greenyellow;
+    position: relative;
+}
+
+#timeline .timeline-container:nth-child(2n){
+    margin-left: auto;
+}
+
+#timeline .timeline-container .icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    right: -20px;
+    top: 32px;
+    background-color: brown;
+    z-index: 1;
+}
+
+#timeline .timeline-container:nth-child(2n) .icon{
+    left: -20px;
+}
+
+#timeline .timeline-container span {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: -8px;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid blue;
+    right: -15px;
+}
+
+#timeline .timeline-container:nth-child(2n) span {
+    border-right: 15px solid blue;
+    border-left: none;
+    left: -15px;
+}
