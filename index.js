@@ -1,63 +1,22 @@
 // VARIABLES //
-const FILENAME = "informations.txt"
+const FILENAME = "informations.txt";
+const dataTimeline = [];
+
+    // Moving point
+const speed = .75; //vitesse du point
+const screenWidth = window.innerWidth; //largeur de l'écran
+const screenHeight = window.innerHeight; //hauteur de l'écran
+const pointRadius = 1; //Radius du centre
+let x = Math.random() * (screenWidth - 2 * pointRadius) + pointRadius; //position horizontale initiale aléatoire du point
+let y = Math.random() * (screenHeight - 2 * pointRadius) + pointRadius; //position verticale initiale aléatoire du point
+let vx = (Math.random() - 0.5) * speed; //vitesse horizontale initiale aléatoire du point
+let vy = (Math.random() - 0.5) * speed; //vitesse verticale initiale aléatoire du point
+const centerPoint = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+
 //////////////
 
 
 // FUNCTION //
-function initSite() {
-    // Recuperation des informations du fichier
-    fetch(FILENAME)
-    .then(response => response.json())
-    .then(data => {
-        // PROFIL
-        try{
-            let profil = data["profil"]
-            buildProfil(profil)
-        }
-        catch(profilError){
-            console.log("Erreur lors du chargement du profile")
-        }
-
-        // FORMATIONS
-        try{
-            let formations = data["formations"]
-            buildFormations(formations)
-        }
-        catch(formationsError){
-            console.log("Erreur lors du chargement des formations", formationsError)
-        }
-
-        // COMPETENCES
-        try{
-            let competences = data["competences"]
-            buildCompetences(competences)
-        }
-        catch(competencesError){
-            console.log("Erreur lors du chargement des compétences", competencesError)
-        }
-
-        // EXPERIENCES
-        try{
-            let experiences = data["experiences_professionnelles"]
-            buildExperiences(experiences)
-        }
-        catch(experiencesError){
-            console.log("Erreur lors du chargement des expériences professionnel", experiencesError)
-        }
-
-        // PROJETS UNIVERSITAIRES
-        try {
-            let projets = data["projets_universitaires"];
-            buildProjets(projets);
-        } catch (projetsError) {
-            console.log("Erreur lors du chargement des projets universitaires");
-        }
-    })
-    .catch(error => {
-        console.error('Erreur lors du chargement des données JSON', error);
-    });
-}
-
 function buildProfil(profil){
     if(profil){
         // Récupération des données
@@ -247,24 +206,17 @@ function buildProjets(projets) {
         projetsDiv.appendChild(projetDiv);
       }
     }
-  }
-//////////////
+}
 
-// EXECUTION //
-initSite()
-//////////////
-
-
-const speed = .75; //vitesse du point
-const screenWidth = window.innerWidth; //largeur de l'écran
-const screenHeight = window.innerHeight; //hauteur de l'écran
-const pointRadius = 1; //Radius du centre
-let x = Math.random() * (screenWidth - 2 * pointRadius) + pointRadius; //position horizontale initiale aléatoire du point
-let y = Math.random() * (screenHeight - 2 * pointRadius) + pointRadius; //position verticale initiale aléatoire du point
-let vx = (Math.random() - 0.5) * speed; //vitesse horizontale initiale aléatoire du point
-let vy = (Math.random() - 0.5) * speed; //vitesse verticale initiale aléatoire du point
-
-const centerPoint = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+function changeSection(sectionToDisplay){
+    let allSections = document.querySelectorAll("section")
+    allSections.forEach(eachSection => {
+        eachSection.classList.remove("active")
+        if(eachSection.classList.contains(sectionToDisplay)){
+            eachSection.classList.add("active")
+        }
+    })
+}
 
 function movePoint() {
     try {
@@ -292,21 +244,152 @@ function movePoint() {
         //appel récursif de la fonction pour créer l'animation
         requestAnimationFrame(movePoint);
     } catch (error) {
-        console.error(error);
+        //console.error(error);
         requestAnimationFrame(movePoint);
     }
-
 }
 
-movePoint();
+function createTimelineItem(item) {
+    const liContainer = document.createElement("li");
+    liContainer.classList.add("timeline-container");
+  
+    const icon = document.createElement("div");
+    icon.classList.add("icon");
+  
+    const card = document.createElement("div");
+    card.classList.add("timeline-card");
+  
+    const title = document.createElement("h2");
+    title.textContent = item.poste;
+  
+    const period = document.createElement("small");
+    period.textContent = `${item.debut} - ${item.fin}`;
+  
+    const description = document.createElement("p");
+    description.textContent = item.description;
+  
+    const arrow = document.createElement("span");
+  
+    card.appendChild(title);
+    card.appendChild(period);
+    card.appendChild(description);
+    card.appendChild(arrow);
+  
+    liContainer.appendChild(icon);
+    liContainer.appendChild(card);
+  
+    return liContainer;
+}
 
+function buildTimeline(dataTimeline){
+    const timelineDiv = document.getElementById("timeline");
+    if (!timelineDiv) {
+        return;
+    }
 
-function changeSection(sectionToDisplay){
-    let allSections = document.querySelectorAll("section")
-    allSections.forEach(eachSection => {
-        eachSection.classList.remove("active")
-        if(eachSection.classList.contains(sectionToDisplay)){
-            eachSection.classList.add("active")
+    const ul = document.createElement("ul");
+    for(let i = 3; i< 10;i++){
+        dataTimeline.forEach((eachCategory) => {
+            eachCategory.forEach((item) => {
+            const liContainer = createTimelineItem(item);
+            ul.appendChild(liContainer);
+            });
+        });
+    }
+
+    timelineDiv.appendChild(ul);
+
+    // Effet d'affichage au scroll
+    (function () {
+        "use strict";
+
+        // define variables
+        var items = document.querySelectorAll("#timeline li");
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <=
+                (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
         }
-    })
+
+        function callbackFunc() {
+            for (var i = 0; i < items.length; i++) {
+                if (isElementInViewport(items[i])) {
+                items[i].classList.add("in-view");
+                }
+            }
+        }
+
+        // listen for events
+        window.addEventListener("load", callbackFunc);
+        window.addEventListener("resize", callbackFunc);
+        window.addEventListener("scroll", callbackFunc);
+    })()
 }
+
+function initSite() {
+    // Recuperation des informations du fichier
+    fetch(FILENAME)
+    .then(response => response.json())
+    .then(data => {
+        // PROFIL
+        try{
+            let profil = data["profil"]
+            buildProfil(profil)
+        }
+        catch(profilError){
+            console.log("Erreur lors du chargement du profile")
+        }
+
+        // FORMATIONS
+        try{
+            let formations = data["formations"]
+            buildFormations(formations)
+        }
+        catch(formationsError){
+            console.log("Erreur lors du chargement des formations", formationsError)
+        }
+
+        // COMPETENCES
+        try{
+            let competences = data["competences"]
+            buildCompetences(competences)
+        }
+        catch(competencesError){
+            console.log("Erreur lors du chargement des compétences", competencesError)
+        }
+
+        // EXPERIENCES
+        try{
+            let experiences = data["experiences_professionnelles"]
+            dataTimeline.push(experiences)
+            buildExperiences(experiences)
+        }
+        catch(experiencesError){
+            console.log("Erreur lors du chargement des expériences professionnel", experiencesError)
+        }
+
+        // PROJETS UNIVERSITAIRES
+        try {
+            let projets = data["projets_universitaires"];
+            buildProjets(projets);
+        } catch (projetsError) {
+            console.log("Erreur lors du chargement des projets universitaires");
+        }
+    
+        buildTimeline(dataTimeline)
+    })
+    .catch(error => {
+        console.error('Erreur lors du chargement des données JSON', error);
+    });
+}
+//////////////
+
+// EXECUTION //
+initSite();
+movePoint();
+//////////////
