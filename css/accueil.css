@@ -1,0 +1,75 @@
+#profil {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+#profil ul{
+  list-style-type: none;
+}
+
+#profil .first_column{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 15px;
+}
+
+#profil .second_column{
+  width: 55%;
+}
+
+#profil .first_column img{
+  width: 250px;
+  height: 250px;
+}
+
+#profil .first_column .main_info{
+  font-size: 22px;
+}
+
+#profil .first_column .social{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#profil .first_column .social li{
+  position: relative;
+  align-items: center;
+}
+
+#profil .first_column .social li:hover{
+  cursor: pointer;
+}
+
+#profil .first_column .social a{
+  text-decoration: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+#profil .first_column .social a img{
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+#profil .first_column .social div {
+  display: none; /* Cacher l'élément par défaut */
+  position: absolute;
+  top: 45px;
+  left: 45px;
+  background-color: var(--secondary);
+  color:black;
+  width: max-content;
+  padding: 6px;
+}
+
+#profil .first_column .social li:hover div {
+  display: block; /* Afficher l'élément lors du survol */
+}
