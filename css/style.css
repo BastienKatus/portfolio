@@ -27,6 +27,12 @@ section{
 
 .active{
   display: flex !important;
+  flex-direction: column;
+}
+
+.container{
+  width: 80%;
+  margin: auto;
 }
 
 /* Effet de bounce

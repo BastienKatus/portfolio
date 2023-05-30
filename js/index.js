@@ -1,5 +1,5 @@
 // VARIABLES //
-const FILENAME = "informations.txt";
+const FILENAME = "./data/informations.txt";
 const dataTimeline = [];
 
     // Moving point
@@ -288,14 +288,12 @@ function buildTimeline(dataTimeline){
     }
 
     const ul = document.createElement("ul");
-    for(let i = 3; i< 10;i++){
-        dataTimeline.forEach((eachCategory) => {
+    dataTimeline.forEach((eachCategory) => {
             eachCategory.forEach((item) => {
             const liContainer = createTimelineItem(item);
             ul.appendChild(liContainer);
-            });
         });
-    }
+    });
 
     timelineDiv.appendChild(ul);
 
@@ -319,7 +317,7 @@ function buildTimeline(dataTimeline){
         function callbackFunc() {
             for (var i = 0; i < items.length; i++) {
                 if (isElementInViewport(items[i])) {
-                items[i].classList.add("in-view");
+                    items[i].classList.add("in-view");
                 }
             }
         }
@@ -381,7 +379,12 @@ function initSite() {
             console.log("Erreur lors du chargement des projets universitaires");
         }
     
-        buildTimeline(dataTimeline)
+        // MY WHOLE TIMELINE
+        try {
+            buildTimeline(dataTimeline)
+        } catch (projetsError) {
+            console.log("Erreur lors du chargement de Ma Timeline");
+        }
     })
     .catch(error => {
         console.error('Erreur lors du chargement des données JSON', error);

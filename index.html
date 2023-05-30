@@ -5,9 +5,10 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Portfolio</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='navbar.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='timeline.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/navbar.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/timeline.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/accueil.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/style.css'>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
@@ -28,38 +29,53 @@
             </div>
             <ul class="menu-items">
                 <li onclick="changeSection('accueil')"><a href="#">Accueil</a></li>
+                <li onclick="changeSection('experiences')"><a href="#">Expériences</a></li>
                 <li onclick="changeSection('formations')"><a href="#">Formations</a></li>
                 <li onclick="changeSection('competences')"><a href="#">Compétences</a></li>
-                <li onclick="changeSection('experiences')"><a href="#">Expériences</a></li>
                 <li onclick="changeSection('projets_universitaires')"><a href="#">Projets universitaires</a></li>
+                <li onclick="changeSection('whole_timeline')"><a href="#">Ma timeline</a></li>
                 <li onclick="changeSection('contacts')"><a href="#">Contact</a></li>
             </ul>
             <h1 class="logo"></h1>
         </div>
     </nav>
     
-    <section class="accueil active">
+    <section class="accueil active container">
         <h1>Qui suis-je ?</h1>
         <div id="profil">
-            <div id="lastname" class="profil-info"></div>
-            <div id="firstname" class="profil-info"></div>
-            <div id="age" class="profil-info"></div>
-            <div id="nationality" class="profil-info"></div>
-            <div id="address" class="profil-info"></div>
-            <div id="phone" class="profil-info"></div>
-            <div id="mail" class="profil-info"></div>
-        </div>
-
-        <div id="timeline">
+            <span class="first_column">
+                <img src="./data/avatar.png"/>
+                <div class="main_info">
+                    <div id="firstname" class="profil-info"></div>
+                    <div id="lastname" class="profil-info"></div>
+                    <div id="age" class="profil-info"></div>
+                </div>
+                <div id="nationality" class="profil-info"></div>
+                <div>Intitule de poste</div>
+                <!--<div id="address" class="profil-info"></div>-->
+                <ul class="social">
+                    <li> 
+                        <a><img src="./data/avatar.png"/></a>
+                        <div id="phone" class="profil-info"></div>
+                    </li>
+                    <li>
+                        <a><img src="./data/avatar.png"/></a>
+                        <div id="mail" class="profil-info"></div>
+                    </li>
+                </ul>
+            </span>
+            <span class="second_column">
+                <div>Description</div>
+            </span>
         </div>
     </section>
 
-    <section class="formations">
+    <section class="formations container">
         <h1>Formations</h2>
         <ul id="formations_list"></ul>
     </section>
 
-    <section class="competences">
+    <section class="competences container">
         <h1>Compétences</h2>
         <div id="programmation">
             <h3>Programmation</h3>
@@ -86,20 +102,24 @@
         </div>
     </section>
 
-    <section class="experiences">
+    <section class="experiences container">
         <h1>Expériences professionnelles</h2>
         <ul id="experiences-list"></ul>
     </section>
 
-    <section class="projets_universitaires">
+    <section class="projets_universitaires container">
         <h1>Projets universitaires</h2>
         <div id="projets_div"></div>
     </section>
     
+    <section class="whole_timeline container">
+        <h1>Mes expériences au fil du temps</h2>
+        <div id="timeline"></div>
+    </section>
 
     <footer id="footer">
 
     </footer>
-    <script src='index.js'></script>
+    <script src='./js/index.js'></script>
 </body>
 </html>   
