@@ -8,7 +8,27 @@
     "adresse1": "1 rue Emile Dunière, 69100 Villeurbanne",
     "adresse2": "7 rue du moulin à vent, 42300 Roanne",
     "telephone": "07 66 603561",
-    "email": "katusbastien@gmail.com"
+    "email": "katusbastien@gmail.com",
+    "presentation_text":" <p> Je suis actuellement en formations en alternance dans le domaine de l’informatique et des réseaux de télécommunications. Actuellement, mon alternance est partagée entre la formation dispensé par <a href=\"https://www.cpe.fr/\"> CPE Lyon </a> dans laquelle je poursuis cette 5ème année avec une spécialisation génie logiciel et l’entreprise <a href=\"https://agiir-digital.com/\"> AGIIR Network</a> qui me permet de me confirmer mes compétences en tant que développeur full stack et chef de projet.</p> <p> Si vous êtes ici, c’est que vous avez dû apercevoir un lien vers mon portfolio et que vous êtes curieux de découvrir mes expériences. Vous trouverez différents onglets accessibles via un simple clic afin d’en savoir plus sur mes formations, mes expériences professionnelles, les projets personnels etc… </p> <p> Autrement, si cela peut vous intéresser, vous pouvez déployer la description en cliquant sur « Voir plus ». Attention, cette section a tendance à ressembler à une autobiographie. Je vais expliquer plus ou moins en détail tous les choix que j’ai été amené à prendre durant ma scolarité afin de construire l’Homme que je suis aujourd’hui. </p>",
+    "more_presentation":"Voici mon autobiographie",
+    "hobbies":[
+      "Badminton (2 ans)",
+      "Aviron (4 ans)",
+      "Football (10 ans)",
+      "Voiture sportives",
+      "Jeux de société",
+      "Les jeux de stratégies tour par tour ou en temps réel",
+      "Les défis"
+    ],
+    "soft_skills":[
+      "Esprit d'équipe",
+      "Persévérance",
+      "Assiduité",
+      "Autonome",
+      "Capacité d'adaption rapide",
+      "Prise de recul", 
+      "Réflexion"
+    ]
   },
   "formations": [
     {

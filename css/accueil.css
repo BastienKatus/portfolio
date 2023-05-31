@@ -8,17 +8,15 @@
   list-style-type: none;
 }
 
+
+/* SECTION PROFIL */
 #profil .first_column{
-  width: 45%;
+  width: 35%;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   gap: 15px;
-}
-
-#profil .second_column{
-  width: 55%;
 }
 
 #profil .first_column img{
@@ -72,4 +70,65 @@
 
 #profil .first_column .social li:hover div {
   display: block; /* Afficher l'élément lors du survol */
+}
+
+
+/* SECTION DESCRIPTION */
+#profil .second_column{
+  width: 65%;
+}
+
+#profil .second_column .presentations{
+  position: relative;
+  width: 100%;
+}
+
+#profil .second_column .description{
+  height: 300px;
+}
+
+#profil .second_column .description p{
+  text-align: justify;
+  font-size: 16px;
+  line-height: 18px;
+  margin: 12px 0;
+}
+
+#profil .second_column .presentations span{
+  background-color: var(--secondary);
+  padding: 6px;
+  margin-left: auto;
+}
+
+#profil .second_column .presentations span:hover{
+  cursor: pointer;
+  color: black;
+  background-color: var(--primary);
+}
+
+#profil .second_column .lists {
+  display: inline-flex;
+  position: relative;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+#profil .second_column .lists h3 {
+  margin-bottom: .5rem;
+  margin-top: 1.5rem;
+  font-weight: 700;
+  text-align: left;
+  width: 100%;
+}
+
+#profil .second_column .lists div{
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+#profil .second_column .lists li{
+  list-style: disc;
 }

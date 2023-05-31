@@ -1,5 +1,5 @@
 // VARIABLES //
-const FILENAME = "./data/informations.txt";
+const FILENAME = "./data/informations.json";
 const dataTimeline = [];
 
     // Moving point
@@ -29,11 +29,17 @@ function buildProfil(profil){
         let address2 = profil["adresse2"];
         let phone = profil["telephone"];
         let mail = profil["email"];
+        let presentation = profil["presentation_text"];
+        let morePresentation = profil["more_presentation"];
+        let hobbies = profil["hobbies"];
+        let softSkills = profil["soft_skills"];
+        
 
         // Sélection de tous les éléments avec la classe "profil-info"
         let profilInfos = document.querySelectorAll(".profil-info");
         profilInfos.forEach(function(profilInfo) {
             // Ajout du contenu correspondant à chaque élément
+            console.log(profilInfo.id)
             switch(profilInfo.id) {
                 case "lastname":
                     profilInfo.innerHTML = lastName;
@@ -55,6 +61,31 @@ function buildProfil(profil){
                     break;
                 case "mail":
                     profilInfo.innerHTML = mail;
+                    break;
+                case "presentation_text":
+                    profilInfo.innerHTML = presentation;
+                    break;
+                case "more_presentation":
+                    profilInfo.innerHTML = morePresentation;
+                    break;
+                case "hobbies":
+                    var ulHobbies = document.createElement("ul")
+                    hobbies.forEach(hobby => {
+                        let liHobby = document.createElement("li")
+                        liHobby.innerHTML = hobby
+                        ulHobbies.appendChild(liHobby)
+                    })
+                    profilInfo.appendChild(ulHobbies)
+                    console.log("hobbies", profilInfo)
+                    break;
+                case "soft_skills":
+                    var ulSoftSkills = document.createElement("ul")
+                    softSkills.forEach(softSkill => {
+                        let liSoftSkill = document.createElement("li")
+                        liSoftSkill.innerHTML = softSkill
+                        ulSoftSkills.appendChild(liSoftSkill)
+                    })
+                    profilInfo.appendChild(ulSoftSkills)
                     break;
             }
         });
@@ -329,6 +360,22 @@ function buildTimeline(dataTimeline){
     })()
 }
 
+function showMore(){
+    let presentationText = document.getElementById("presentation_text")
+    let morePresentation = document.getElementById("more_presentation")
+    if (presentationText.style.display === "block") {
+        presentationText.style.display = "none";
+    } else {
+        presentationText.style.display = "block";
+    }
+    
+    if (morePresentation.style.display === "block") {
+        morePresentation.style.display = "none";
+    } else {
+        morePresentation.style.display = "block";
+    }
+}
+
 function initSite() {
     // Recuperation des informations du fichier
     fetch(FILENAME)
@@ -387,7 +434,7 @@ function initSite() {
         }
     })
     .catch(error => {
-        console.error('Erreur lors du chargement des données JSON', error);
+        console.error('Erreur lors du chargement des données JSON\n', error);
     });
 }
 //////////////

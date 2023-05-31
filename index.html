@@ -41,7 +41,6 @@
     </nav>
     
     <section class="accueil active container">
-        <h1>Qui suis-je ?</h1>
         <div id="profil">
             <span class="first_column">
                 <img src="./data/avatar.png"/>
@@ -65,7 +64,21 @@
                 </ul>
             </span>
             <span class="second_column">
-                <div>Description</div>
+                <div class="presentations">
+                    <div id="presentation_text" class="profil-info description" style="display: block;">Description</div>
+                    <div id="more_presentation" class="profil-info description" style="display: none;">Description</div>
+                    <span onclick="showMore()"> Voir plus </span>
+                </div>
+                <div class="lists">
+                    <div>
+                        <h3> Mes centres d'intérêts</h3>
+                        <div id="hobbies" class="profil-info"></div>
+                    </div>
+                    <div>
+                        <h3> Mes soft skills</h3>
+                        <div id="soft_skills" class="profil-info"></div>
+                    </div>   
+                </div>
             </span>
         </div>
     </section>
