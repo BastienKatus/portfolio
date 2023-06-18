@@ -109,7 +109,7 @@
 #profil .second_column .lists {
   display: inline-flex;
   position: relative;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
 }
 
@@ -122,13 +122,32 @@
 }
 
 #profil .second_column .lists div{
-  width: 49%;
+  width: 48%;
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 #profil .second_column .lists li{
   list-style: disc;
+}
+
+/* SECTION INTERETS AND SOFT SKILLS */
+#profil .custom-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#profil .custom-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  width: 100%;
+  height: 20px;
+}
+
+#profil .custom-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  background-color: #f2f2f2;
+  font-weight: bold; /* Ajoute une épaisseur de police en gras */
 }

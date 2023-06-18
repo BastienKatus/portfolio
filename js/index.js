@@ -29,6 +29,7 @@ function buildProfil(profil){
         let address2 = profil["adresse2"];
         let phone = profil["telephone"];
         let mail = profil["email"];
+        let poste = profil["poste"];
         let presentation = profil["presentation_text"];
         let morePresentation = profil["more_presentation"];
         let hobbies = profil["hobbies"];
@@ -56,6 +57,9 @@ function buildProfil(profil){
                 case "address":
                     profilInfo.innerHTML = address1 + "<br>" + address2;
                     break;
+                case "poste":
+                    profilInfo.innerHTML = "<p> Actuellement en tant que: </p> <p>"+poste+"</p>";
+                    break;
                 case "phone":
                     profilInfo.innerHTML = phone;
                     break;
@@ -69,23 +73,33 @@ function buildProfil(profil){
                     profilInfo.innerHTML = morePresentation;
                     break;
                 case "hobbies":
-                    var ulHobbies = document.createElement("ul")
+                    let tableHobbies = document.getElementById("hobbies");                
+                    let tbodyHobbies = document.createElement("tbody");
+                  
                     hobbies.forEach(hobby => {
-                        let liHobby = document.createElement("li")
-                        liHobby.innerHTML = hobby
-                        ulHobbies.appendChild(liHobby)
-                    })
-                    profilInfo.appendChild(ulHobbies)
-                    console.log("hobbies", profilInfo)
+                      let row = document.createElement("tr");
+                      let cell = document.createElement("td");
+                      cell.textContent = hobby;
+                      row.appendChild(cell);
+                      tbodyHobbies.appendChild(row);
+                    });
+                  
+                    tableHobbies.appendChild(tbodyHobbies);
                     break;
+                      
                 case "soft_skills":
-                    var ulSoftSkills = document.createElement("ul")
+                    let tableSoftSkills = document.getElementById("soft_skills");
+                    let tbodySoftSkills = document.createElement("tbody");
+                    
                     softSkills.forEach(softSkill => {
-                        let liSoftSkill = document.createElement("li")
-                        liSoftSkill.innerHTML = softSkill
-                        ulSoftSkills.appendChild(liSoftSkill)
-                    })
-                    profilInfo.appendChild(ulSoftSkills)
+                        let row = document.createElement("tr");
+                        let cell = document.createElement("td");
+                        cell.innerHTML = softSkill;
+                        row.appendChild(cell);
+                        tbodySoftSkills.appendChild(row);
+                    });
+                    
+                    tableSoftSkills.appendChild(tbodySoftSkills);
                     break;
             }
         });
