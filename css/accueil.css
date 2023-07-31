@@ -28,47 +28,54 @@
   font-size: 22px;
 }
 
-#profil .first_column .social{
+#profil .first_column #social{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
 
-#profil .first_column .social li{
+#profil .first_column #social li{
   position: relative;
   align-items: center;
+  height: 45px;
+  text-align: center;
 }
 
-#profil .first_column .social li:hover{
+#profil .first_column #social li:hover{
   cursor: pointer;
 }
 
-#profil .first_column .social a{
+#profil .first_column #social a{
   text-decoration: none;
-  width: 30px;
-  height: 30px;
+  color: var(--secondary);
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
 }
 
-#profil .first_column .social a img{
+#profil .first_column #social a i{
+  position: relative;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   width: 45px;
   height: 45px;
   border-radius: 50%;
 }
 
-#profil .first_column .social div {
+#profil .first_column #social div {
   display: none; /* Cacher l'élément par défaut */
   position: absolute;
-  top: 45px;
-  left: 45px;
+  top: 30px;
+  left: 30px;
   background-color: var(--secondary);
   color:black;
   width: max-content;
   padding: 6px;
+  z-index: 1;
 }
 
-#profil .first_column .social li:hover div {
+#profil .first_column #social li:hover div {
   display: block; /* Afficher l'élément lors du survol */
 }
 
@@ -85,6 +92,15 @@
 
 #profil .second_column .description{
   height: 300px;
+  flex-direction: column;
+  overflow: auto;
+  padding-right: 12px;
+  margin-bottom: 12px;
+}
+
+#profil .second_column .description a{
+  color: var(--secondary);
+  text-decoration: none;
 }
 
 #profil .second_column .description p{
@@ -98,6 +114,7 @@
   background-color: var(--secondary);
   padding: 6px;
   margin-left: auto;
+  margin-top: 12px;
 }
 
 #profil .second_column .presentations span:hover{

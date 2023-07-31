@@ -29,6 +29,32 @@
       "Capacité d'adaption rapide",
       "Prise de recul", 
       "Réflexion"
+    ],
+    "social":[
+      {
+        "social_name":"Mail",
+        "social_icon":"mail",
+        "link":"",
+        "display_link":"katusbastien@gmail.com"
+      },
+      {
+        "social_name":"Phone",
+        "social_icon":"phone",
+        "link":"",
+        "display_link":"07 66 60 35 61"
+      },
+      {
+        "social_name":"GitHub",
+        "social_icon":"github",
+        "link":"github.com",
+        "display_link":"github.com"
+      },
+      {
+        "social_name":"Linkedin",
+        "social_icon":"link",
+        "link":"",
+        "display_link":"linkedin.com"
+      }
     ]
   },
   "formations": [

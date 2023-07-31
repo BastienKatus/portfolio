@@ -3,7 +3,7 @@ const FILENAME = "./data/informations.json";
 const dataTimeline = [];
 
     // Moving point
-const speed = .75; //vitesse du point
+const speed = .5; //vitesse du point
 const screenWidth = window.innerWidth; //largeur de l'écran
 const screenHeight = window.innerHeight; //hauteur de l'écran
 const pointRadius = 1; //Radius du centre
@@ -34,6 +34,7 @@ function buildProfil(profil){
         let morePresentation = profil["more_presentation"];
         let hobbies = profil["hobbies"];
         let softSkills = profil["soft_skills"];
+        let social = profil["social"];
         
 
         // Sélection de tous les éléments avec la classe "profil-info"
@@ -101,6 +102,34 @@ function buildProfil(profil){
                     
                     tableSoftSkills.appendChild(tbodySoftSkills);
                     break;
+
+                case "social":
+                    let ulSocial = document.getElementById("social");
+
+                    social.forEach(eachSocial => {
+                        // Créer un élément <li>
+                        let liSocial = document.createElement("li");
+
+                        let link = document.createElement("a");
+                        link.href = eachSocial.link;
+                
+                        let icon = document.createElement("i");
+                        icon.classList.add("material-icons");
+                        icon.innerHTML = eachSocial.social_icon;
+                        
+
+                        link.appendChild(icon);
+                        
+                        let div = document.createElement("div");
+                        div.innerHTML = eachSocial.display_link
+                        
+                        liSocial.appendChild(link);
+                        liSocial.appendChild(div);
+                        
+                        // Ajouter l'élément <li> à l'élément <ul>
+                        ulSocial.appendChild(liSocial);
+                    });
+                    
             }
         });
     }
@@ -377,16 +406,16 @@ function buildTimeline(dataTimeline){
 function showMore(){
     let presentationText = document.getElementById("presentation_text")
     let morePresentation = document.getElementById("more_presentation")
-    if (presentationText.style.display === "block") {
+    if (presentationText.style.display === "flex") {
         presentationText.style.display = "none";
     } else {
-        presentationText.style.display = "block";
+        presentationText.style.display = "flex";
     }
     
-    if (morePresentation.style.display === "block") {
+    if (morePresentation.style.display === "flex") {
         morePresentation.style.display = "none";
     } else {
-        morePresentation.style.display = "block";
+        morePresentation.style.display = "flex";
     }
 }
 
@@ -396,13 +425,13 @@ function initSite() {
     .then(response => response.json())
     .then(data => {
         // PROFIL
-        try{
+        //try{
             let profil = data["profil"]
             buildProfil(profil)
-        }
+        /*}
         catch(profilError){
             console.log("Erreur lors du chargement du profile")
-        }
+        }*/
 
         // FORMATIONS
         try{
