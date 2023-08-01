@@ -324,35 +324,116 @@ function movePoint() {
 }
 
 function createTimelineItem(item) {
-    const liContainer = document.createElement("li");
-    liContainer.classList.add("timeline-container");
-  
-    const icon = document.createElement("div");
-    icon.classList.add("icon");
-  
-    const card = document.createElement("div");
-    card.classList.add("timeline-card");
-  
-    const title = document.createElement("h2");
-    title.textContent = item.poste;
-  
-    const period = document.createElement("small");
-    period.textContent = `${item.debut} - ${item.fin}`;
-  
-    const description = document.createElement("p");
-    description.textContent = item.description;
-  
-    const arrow = document.createElement("span");
-  
-    card.appendChild(title);
-    card.appendChild(period);
-    card.appendChild(description);
-    card.appendChild(arrow);
-  
-    liContainer.appendChild(icon);
-    liContainer.appendChild(card);
-  
-    return liContainer;
+    if(item.type == "experience") {
+        const liContainer = document.createElement("li");
+        liContainer.classList.add("timeline-container");
+      
+        const icon = document.createElement("div");
+        icon.classList.add("icon");
+      
+        const card = document.createElement("div");
+        card.classList.add("timeline-card");
+      
+        const title = document.createElement("h2");
+        title.textContent = item.poste;
+      
+        const period = document.createElement("small");
+        startDate = formatDateToReadable(item.debut)
+        endDate = formatDateToReadable(item.fin)
+        period.textContent = `${startDate} - ${endDate}`;
+      
+        const description = document.createElement("p");
+        description.textContent = item.description;
+      
+        const arrow = document.createElement("span");
+      
+        card.appendChild(title);
+        card.appendChild(period);
+        card.appendChild(description);
+        card.appendChild(arrow);
+      
+        liContainer.appendChild(icon);
+        liContainer.appendChild(card);
+      
+        return liContainer;
+    }
+    else if(item.type == "formation"){
+        const liContainer = document.createElement("li");
+        liContainer.classList.add("timeline-container");
+      
+        const icon = document.createElement("div");
+        icon.classList.add("icon");
+      
+        const card = document.createElement("div");
+        card.classList.add("timeline-card");
+      
+        const title = document.createElement("h2");
+        title.textContent = item.code_etablissement;
+        title.textContent += item.code_etablissement2 ? " / " + item.code_etablissement2 : ""; 
+        title.textContent += " " + item.ville;
+
+        const period = document.createElement("small");
+        startDate = formatDateToReadable(item.debut)
+        endDate = formatDateToReadable(item.fin)
+        period.textContent = `${startDate} - ${endDate}`;
+      
+        const description = document.createElement("p");
+        description.textContent = item.diplome;
+
+        
+        const ecole = document.createElement("p");
+        ecole.textContent = item.etablissement;
+        ecole.textContent += item.etablissement2 ? "\n/ " + item.etablissement2 : ""; 
+
+        const arrow = document.createElement("span");
+      
+        card.appendChild(title);
+        card.appendChild(period);
+        card.appendChild(description);
+        card.appendChild(arrow);
+        card.appendChild(ecole);
+      
+        liContainer.appendChild(icon);
+        liContainer.appendChild(card);
+      
+        return liContainer;
+    }
+    else if(item.type == "project"){
+        const liContainer = document.createElement("li");
+        liContainer.classList.add("timeline-container");
+      
+        const icon = document.createElement("div");
+        icon.classList.add("icon");
+      
+        const card = document.createElement("div");
+        card.classList.add("timeline-card");
+      
+        const title = document.createElement("h2");
+        title.textContent = item.nom;
+
+        const period = document.createElement("small");
+        startDate = formatDateToReadable(item.debut)
+        endDate = formatDateToReadable(item.fin)
+        period.textContent = `${startDate} - ${endDate}`;
+      
+        const description = document.createElement("p");
+        description.textContent = item.diplome;
+
+        const arrow = document.createElement("span");
+      
+        card.appendChild(title);
+        card.appendChild(period);
+        card.appendChild(description);
+        card.appendChild(arrow);
+      
+        liContainer.appendChild(icon);
+        liContainer.appendChild(card);
+      
+        return liContainer;
+    }
+
+    // Returning something empty
+    return document.createElement("div")
 }
 
 function buildTimeline(dataTimeline){
@@ -362,11 +443,21 @@ function buildTimeline(dataTimeline){
     }
 
     const ul = document.createElement("ul");
+
+    let sortTimeLine = [];
+
     dataTimeline.forEach((eachCategory) => {
             eachCategory.forEach((item) => {
-            const liContainer = createTimelineItem(item);
-            ul.appendChild(liContainer);
+                sortTimeLine.push(item)
         });
+    });
+
+    sortTimeLine.sort((a, b) => new Date(b.debut) - new Date(a.debut))
+
+
+    sortTimeLine.forEach((eachItem) => {
+        const liContainer = createTimelineItem(eachItem);
+        ul.appendChild(liContainer);
     });
 
     timelineDiv.appendChild(ul);
@@ -403,6 +494,25 @@ function buildTimeline(dataTimeline){
     })()
 }
 
+function formatDateToReadable(dateStr) {
+    if(dateStr == ""){
+        return "En cours"
+    }
+    else {
+        const dateObj = new Date(dateStr);
+
+        const day = dateObj.getDate();
+        const monthNames = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+        const month = monthNames[dateObj.getMonth()];
+        const year = dateObj.getFullYear();
+    
+        const readableDate = `${month} ${year}`;
+    
+        return readableDate;
+    }
+}
+
+
 function showMore(){
     let presentationText = document.getElementById("presentation_text")
     let morePresentation = document.getElementById("more_presentation")
@@ -425,17 +535,18 @@ function initSite() {
     .then(response => response.json())
     .then(data => {
         // PROFIL
-        //try{
+        try{
             let profil = data["profil"]
             buildProfil(profil)
-        /*}
+        }
         catch(profilError){
             console.log("Erreur lors du chargement du profile")
-        }*/
+        }
 
         // FORMATIONS
         try{
             let formations = data["formations"]
+            dataTimeline.push(formations)
             buildFormations(formations)
         }
         catch(formationsError){
@@ -464,17 +575,18 @@ function initSite() {
         // PROJETS UNIVERSITAIRES
         try {
             let projets = data["projets_universitaires"];
+            dataTimeline.push(projets)
             buildProjets(projets);
         } catch (projetsError) {
             console.log("Erreur lors du chargement des projets universitaires");
         }
     
         // MY WHOLE TIMELINE
-        try {
+        //try {
             buildTimeline(dataTimeline)
-        } catch (projetsError) {
-            console.log("Erreur lors du chargement de Ma Timeline");
-        }
+        // } catch (projetsError) {
+        //     console.log("Erreur lors du chargement de Ma Timeline");
+        // }
     })
     .catch(error => {
         console.error('Erreur lors du chargement des données JSON\n', error);

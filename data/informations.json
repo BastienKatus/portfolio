@@ -59,26 +59,36 @@
   },
   "formations": [
     {
+      "type": "formation",
       "diplome": "Diplôme d’ingénieur en Informatique et Réseaux de Communications en alternance",
       "etablissement": "Ecole de Chimie Physique et Electronique de Lyon",
-      "code_etablissement": "CPE Lyon",
+      "code_etablissement": "CPE",
       "etablissement2" : "Instituts des techniques d'ingénieur de l'industrie du Centres de Formation des Apprentis de l'Industrie de Lyon",
-      "code_etablissement2": "ITII / CFAI Lyon",
-      "annee": "2021-2024", 
+      "code_etablissement2": "ITII / CFAI",
+      "ville": "Lyon",
+      "debut": "2021-09-06",
+      "fin": "", 
       "description":""
     },
     {
+      "type": "formation",
       "diplome": "Diplôme Universitaire et Technologique Informatique",
       "etablissement": "Université Lyon 1 site Bourg-en-Bresse",
-      "code_etablissement": "IUT Lyon 1 Bourg-en-Bresse",
-      "annee": "2019-2021", 
+      "code_etablissement": "IUT Lyon 1",
+      "ville": "Bourg-en-Bresse",
+      "debut": "2019-09-01",
+      "fin": "2021-08-31", 
       "description":""
     },
     {
+      "type": "formation",
       "diplome": "Baccalauréat des Sciences Economiques et Sociales",
       "mention": "Mention Bien",
-      "etablissement": "Lycée Jean Puy Roanne",
-      "annee": "2018-2019", 
+      "etablissement": "Lycée Jean Puy",
+      "code_etablissement": "Lycée Jean Puy",
+      "ville": "Roanne",
+      "debut": "2018-09-01",
+      "fin": "2019-08-31", 
       "description":""
     }
   ],
@@ -114,13 +124,14 @@
   },
   "experiences_professionnelles": [
     {
+      "type": "experience",
       "poste": "Développeur Full Stack de site intranet et extranet",
       "entreprise": "AGIIR NETWORK",
       "ville": "Roanne",
       "pays": "France",
-      "debut": "Septembre 2021",
-      "fin": "Aujourd'hui",
-      "type": "Alternance", 
+      "debut": "2021-09-06",
+      "fin": "",
+      "contrat": "Alternance", 
       "technologies":[
         "Java / J2EE",
         "Javascript / React JS",
@@ -132,13 +143,14 @@
       ]
     },
     {
+      "type": "experience",
       "poste": "Assistant chef de projet informatique",
       "entreprise": "AGIIR NETWORK",
       "ville": "Roanne",
       "pays": "France",
-      "debut": "Août 2021",
-      "fin": "Juillet 2021",
-      "type": "CDD",
+      "debut": "2021-07-01",
+      "fin": "2021-08-31",
+      "contrat": "CDD",
       "technologies":[
         "Java / J2EE",
         "Javascript / React JS",
@@ -150,13 +162,14 @@
       ]
     },
     {
+      "type": "experience",
       "poste": "Développeur Full Stack",
       "entreprise": "AGIIR NETWORK",
       "ville": "Roanne",
       "pays": "France",
-      "debut": "Avril 2021",
-      "fin": "Juin 2021",
-      "type": "Stage",
+      "debut": "2021-04-12",
+      "fin": "2021-06-30",
+      "contrat": "Stage",
       "technologies":[
         "Java / J2EE",
         "Javascript / React JS",
@@ -168,20 +181,24 @@
       ]
     },
     {
+      "type": "experience",
       "poste": "Intérimaire",
       "entreprise": "Teinture Apprêts D’Anjoux (TAD)",
       "ville": "Le Coteau",
       "pays": "France",
-      "debut": "Juillet 2020",
-      "fin": "Août 2020",
-      "type": "CDD",
+      "debut": "2020-07-15",
+      "fin": "2020-08-31",
+      "contrat": "CDD",
       "technologies":[
       ]
     }
   ],
   "projets_universitaires": [
     {
+      "type": "project",
       "nom": "Développement d’un site internet de recherche de lieux géographique et traçage d’itinéraire",
+      "debut": "2022-03-15",
+      "fin": "2022-04-30",
       "technologies": [
         "Javascript",
         "HTML",
@@ -193,7 +210,10 @@
       "description": ""
     },
     {
+      "type": "project",
       "nom": "Mur d’escalade en réalité augmentée",
+      "debut": "2021-01-01",
+      "fin": "2021-05-31",
       "technologies": [
         "Python"
       ],
@@ -203,7 +223,10 @@
       "description": "Projet Tutoré en groupe de 3. Programmation d’un mur d’escalade interactif en Python."
     },
     {
+      "type": "project",
       "nom": "Gestion de projet Web",
+      "debut": "2020-04-01",
+      "fin": "2020-05-31",
       "technologies": [
         "HTML",
         "CSS"
