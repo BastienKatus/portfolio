@@ -328,7 +328,7 @@ function createTimelineItem(item) {
         const liContainer = document.createElement("li");
         liContainer.classList.add("timeline-container");
       
-        const icon = document.createElement("div");
+        const icon = document.createElement("icon");
         icon.classList.add("icon");
       
         const card = document.createElement("div");
@@ -361,7 +361,7 @@ function createTimelineItem(item) {
         const liContainer = document.createElement("li");
         liContainer.classList.add("timeline-container");
       
-        const icon = document.createElement("div");
+        const icon = document.createElement("icon");
         icon.classList.add("icon");
       
         const card = document.createElement("div");
@@ -402,7 +402,7 @@ function createTimelineItem(item) {
         const liContainer = document.createElement("li");
         liContainer.classList.add("timeline-container");
       
-        const icon = document.createElement("div");
+        const icon = document.createElement("icon");
         icon.classList.add("icon");
       
         const card = document.createElement("div");
@@ -432,6 +432,19 @@ function createTimelineItem(item) {
         return liContainer;
     }
 
+    else if(item.type == "yearMarker"){
+        const yearMarker = document.createElement("div");
+        yearMarker.classList.add("yearMarker");
+
+        const yearValue = document.createElement("p");
+        yearValue.innerHTML = item.debut;
+
+        yearMarker.appendChild(yearValue)
+
+
+        return yearMarker;
+    }
+
     // Returning something empty
     return document.createElement("div")
 }
@@ -444,6 +457,18 @@ function buildTimeline(dataTimeline){
 
     const ul = document.createElement("ul");
 
+    // Ajout des marqueurs d'années
+    let startYearMarker = 2018
+    const years = [];
+    for (let i = startYearMarker; i <= new Date().getFullYear()+1; i++) {
+        year = {}
+        year.type = "yearMarker"
+        year.debut = i.toString()
+        years.push(year)
+    }
+    dataTimeline.push(years)
+
+    // Mise en place du tri par date
     let sortTimeLine = [];
 
     dataTimeline.forEach((eachCategory) => {
@@ -454,7 +479,7 @@ function buildTimeline(dataTimeline){
 
     sortTimeLine.sort((a, b) => new Date(b.debut) - new Date(a.debut))
 
-
+    // Création de la Timeline
     sortTimeLine.forEach((eachItem) => {
         const liContainer = createTimelineItem(eachItem);
         ul.appendChild(liContainer);

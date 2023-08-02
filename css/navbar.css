@@ -53,7 +53,7 @@
 
 #navbar a{
     text-decoration: none;
-    color: var(--primary);
+    color: var(--text-light-primary-color);
     font-weight: 500;
     transition: color 0.3s ease-in-out;
 }

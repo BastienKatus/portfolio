@@ -196,6 +196,18 @@
   "projets_universitaires": [
     {
       "type": "project",
+      "nom": "Portfolio profesionnel",
+      "debut": "2023-05-01",
+      "fin": "",
+      "technologies": [
+        "HTML",
+        "CSS"
+      ],
+      "librairies_et_plugins": [],
+      "description": "Site Web d’un club de Babyfoot en Groupe de 3, programmé en HTML et CSS. Réalisation d’un dossier d’analyse, d’un dossier de conception et de la charte graphique du site."
+    },
+    {
+      "type": "project",
       "nom": "Développement d’un site internet de recherche de lieux géographique et traçage d’itinéraire",
       "debut": "2022-03-15",
       "fin": "2022-04-30",
