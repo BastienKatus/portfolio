@@ -1,17 +1,35 @@
 :root{
-  --background-0:#252a34;
-  --background-1:#242832;
-  --background-2:#222730;
-  --background-3:#21252e;
-  --background-4:#1f242c;
-  --background-5:#1e222a;
-  --background-6:#1c2028;
-  --background-7:#1b1f26;
-  --background-8:#1a1d24;
-  --background-9:#181b22;
-  --text-light-primary-color:#ebe2d2;
-  --text-dark-primary-color:#ebe2d2;
-  --text-secondary-color:#e05c43;
+  /*DarkTheme Background*/
+  --dark-background-0:#252a34;
+  --dark-background-1:#232831;
+  --dark-background-2:#21252e;
+  --dark-background-3:#1f232b;
+  --dark-background-4:#1c2028;
+  --dark-background-5:#1a1e25;
+  --dark-background-6:#181b22;
+
+  /*LightTheme Background*/
+  --light-background-0:#f9f9f9;
+  --light-background-1:#f4f4f4;
+  --light-background-2:#f0f0f0;
+  --light-background-3:#ebebeb;
+  --light-background-4:#e6e6e6;
+  --light-background-5:#e2e2e2;
+  --light-background-6:#dddddd;
+;
+  /* Text color */
+  --text-light-color:#ebe2d2;
+  --text-dark-color:#1b1f26;
+
+  /* Main colors */
+  --primary: #1F3A93;
+  --secondary:  #2C7FBF;
+  --tertiary: #798EAD;
+
+  /* Gradient From Primary to Secondary */
+  --primary-secondary-gradient-1:#296eb4;
+  --primary-secondary-gradient-2:#265da9;
+  --primary-secondary-gradient-3:#224b9e;
 }
 
 @font-face {
@@ -27,7 +45,7 @@
 }
 
 body{
-  color: var(--text-light-primary-color);
+  color: var(--text-dark-color);
   font-family: 'Lato', Arial;
 }
 
@@ -76,7 +94,7 @@ section * {
 
 #triangle1 {
   position: absolute;
-  background-color: var(--background-0);
+  background-color: var(--light-background-6);
   width: 100%;
   height: 100%;
 }
@@ -84,7 +102,8 @@ section * {
 #triangle2 {
   position: absolute;
   clip-path: polygon(20% 100%, 50% 50%, 66% 100%);
-  background-color: var(--background-3);
+  background-color: var(--primary-secondary-gradient-2);
+  opacity: .7;
   width: 100%;
   height: 100%;
 }
@@ -92,7 +111,7 @@ section * {
 #triangle3 {
   position: absolute;
   clip-path: polygon(100% 50%, 50% 50%, 66% 100%, 100% 100%);
-  background-color: var(--background-4);
+  background-color: var(--primary-secondary-gradient-3);
   width: 100%;
   height: 100%;
 }

@@ -45,9 +45,14 @@
   cursor: pointer;
 }
 
+#profil .first_column #social li:hover a{
+  cursor: pointer;
+  color: var(--tertiary);
+}
+
 #profil .first_column #social a{
   text-decoration: none;
-  color: var(--secondary);
+  color: var(--primary);
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -68,8 +73,8 @@
   position: absolute;
   top: 30px;
   left: 30px;
-  background-color: var(--secondary);
-  color:black;
+  background-color: var(--tertiary);
+  color:var(--text-dark-color);
   width: max-content;
   padding: 6px;
   z-index: 1;
@@ -96,22 +101,24 @@
   overflow: auto;
   padding-right: 12px;
   margin-bottom: 12px;
+  font-size: 16px;
 }
 
 #profil .second_column .description a{
-  color: var(--secondary);
+  color: var(--primary);
+  font-weight: 700;
   text-decoration: none;
 }
 
 #profil .second_column .description p{
   text-align: justify;
-  font-size: 16px;
   line-height: 18px;
   margin: 12px 0;
 }
 
 #profil .second_column .presentations span{
-  background-color: var(--secondary);
+  background-color: var(--primary);
+  color: var(--text-light-color);
   padding: 6px;
   margin-left: auto;
   margin-top: 12px;
@@ -119,8 +126,8 @@
 
 #profil .second_column .presentations span:hover{
   cursor: pointer;
-  color: black;
-  background-color: var(--primary);
+  color: var(--text-dark-color);
+  background-color: var(--tertiary);
 }
 
 #profil .second_column .lists {
