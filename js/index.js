@@ -182,43 +182,54 @@ function buildFormations(formations){
 
 function buildCompetences(competences){
     if(competences){
-      // Programmation
-      let progConfirmeList = document.querySelector("#programmation #confirme ul");
-      for(let competence of competences["programmation"]["experience_confirme"]){
-        let li = document.createElement("li");
-        li.textContent = competence;
-        progConfirmeList.appendChild(li);
-      }
-  
-      let progIntermediaireList = document.querySelector("#programmation #intermediaire ul");
-      for(let competence of competences["programmation"]["experience_intermediaire"]){
-        let li = document.createElement("li");
-        li.textContent = competence;
-        progIntermediaireList.appendChild(li);
-      }
-  
-      let progDecouverteList = document.querySelector("#programmation #decouverte ul");
-      for(let competence of competences["programmation"]["experience_decouverte"]){
-        let li = document.createElement("li");
-        li.textContent = competence;
-        progDecouverteList.appendChild(li);
-      }
-  
-      // Bases de données
-      let bdList = document.querySelector("#bases_de_donnees ul");
-      for(let competence of competences["bases_de_donnees"]){
-        let li = document.createElement("li");
-        li.textContent = competence;
-        bdList.appendChild(li);
-      }
-  
-      // Autre
-      let autreList = document.querySelector("#autre ul");
-      for(let competence of competences["autre"]){
-        let li = document.createElement("li");
-        li.textContent = competence;
-        autreList.appendChild(li);
-      }
+        let tableTechnicalSkills = document.getElementById("technical_skills");
+        let theadTechnicalSkills = document.createElement("thead");
+        let tbodyTechnicalSkills = document.createElement("tbody");
+      
+
+        // Créer la ligne d'en-tête
+        const headerRow = document.createElement('tr');
+        const types = competences.map(competence => competence.titre);
+
+        types.forEach(type => {
+            const headerCell = document.createElement('th');
+            headerCell.textContent = type;
+            headerRow.appendChild(headerCell);
+        });
+
+        theadTechnicalSkills.appendChild(headerRow);
+
+        // Trouver le nombre maximum de valeurs par type
+        const maxValues = Math.max(...competences.map(competence => competence.value.length));
+
+        // Créer les lignes de données
+        for (let i = 0; i < maxValues; i++) {
+            const dataRow = document.createElement('tr');
+
+            types.forEach(titre => {
+                const valueCell = document.createElement('td');
+                const competence = competences.find(competence => competence.titre === titre);
+                
+                if (competence && competence.value[i]) {
+                    const { technologie, niveau } = competence.value[i];
+                    const techCell = document.createElement('span');
+                    const badgeCell = document.createElement('span');
+                    techCell.textContent = technologie;
+                    badgeCell.classList.add('badge');
+                    
+                    valueCell.appendChild(techCell);
+                    valueCell.appendChild(badgeCell);
+                }
+
+                dataRow.appendChild(valueCell);
+            });
+
+            tbodyTechnicalSkills.appendChild(dataRow);
+        }
+        
+        // Construction du tableau
+        tableTechnicalSkills.appendChild(theadTechnicalSkills);
+        tableTechnicalSkills.appendChild(tbodyTechnicalSkills);
     }
 }
 
@@ -537,7 +548,6 @@ function formatDateToReadable(dateStr) {
     }
 }
 
-
 function showMore(){
     let presentationText = document.getElementById("presentation_text")
     let morePresentation = document.getElementById("more_presentation")
@@ -607,11 +617,11 @@ function initSite() {
         }
     
         // MY WHOLE TIMELINE
-        //try {
+        try {
             buildTimeline(dataTimeline)
-        // } catch (projetsError) {
-        //     console.log("Erreur lors du chargement de Ma Timeline");
-        // }
+        } catch (projetsError) {
+            console.log("Erreur lors du chargement de Ma Timeline");
+        }
     })
     .catch(error => {
         console.error('Erreur lors du chargement des données JSON\n', error);

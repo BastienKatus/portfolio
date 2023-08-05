@@ -92,36 +92,52 @@
       "description":""
     }
   ],
-  "competences": {
-    "programmation": {
-      "experience_confirme": [
-        "Java / J2EE",
-        "Javascript / React JS",
-        "HTML / CSS",
-        "Velocity", 
-        "Freemarker"
-      ], 
-      "experience_intermediaire": [
-        "C",
-        "C++",
-        "Python",
-        "Android Studio Java"
-      ],
-      "experience_decouverte": [
-        "Flutter",
-        "PHP"
-      ]
+  "competences": [
+    {
+        "type": "programmation",
+        "titre": "Langages de programmations",
+        "value": [
+            { "technologie": "Java / J2EE", "niveau": "Découverte" },
+            { "technologie": "Javascript / React JS", "niveau": "Novice" },
+            { "technologie": "HTML / CSS", "niveau": "Intermédiaire" },
+            { "technologie": "Velocity", "niveau": "Expérience professionnelle" },
+            { "technologie": "Freemarker", "niveau": "Confirmée" },
+            { "technologie": "C", "niveau": "Découverte" },
+            { "technologie": "C++", "niveau": "Découverte" },
+            { "technologie": "Python", "niveau": "Découverte" },
+            { "technologie": "Android Studio Java", "niveau": "Découverte" },
+            { "technologie": "Flutter", "niveau": "Découverte" },
+            { "technologie": "PHP", "niveau": "Découverte" }
+        ]
     },
-    "bases_de_donnees": [
-      "PostgreSQL",
-      "MySQL",
-      "MongoDB",
-      "Neo4J"
-    ],
-    "autre":[
-      "ElasticSearch"
-    ]
-  },
+    {
+        "type": "bases_de_donnees",
+        "titre": "Bases de données",
+        "value": [
+            { "technologie": "PostgreSQL", "niveau": "Découverte" },
+            { "technologie": "MySQL", "niveau": "Découverte" },
+            { "technologie": "MongoDB", "niveau": "Découverte" },
+            { "technologie": "Neo4J", "niveau": "Découverte" },
+            { "technologie": "ElasticSearch", "niveau": "Découverte" }
+        ]
+    },
+    {
+        "type": "systeme_environnement",
+        "titre": "Systèmes d'exploitation et Environnements",
+        "value": [
+            { "technologie": "Windows", "niveau": "Découverte" }
+        ]
+    },
+    {
+        "type": "gestion_projet",
+        "titre": "Outils de gestion de projet",
+        "value": [
+            { "technologie": "GitLab", "niveau": "Découverte" },
+            { "technologie": "GitHub", "niveau": "Découverte" },
+            { "technologie": "ClickUp", "niveau": "Découverte" }
+        ]
+    }
+  ],
   "experiences_professionnelles": [
     {
       "type": "experience",
