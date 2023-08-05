@@ -1,11 +1,6 @@
 /* TIMELINE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.whole_timeline h1{
-    display: flex;
-    justify-content: center;
-}
-
 #timeline ul {
     padding: 50px 0;
     overflow: hidden;
@@ -23,7 +18,7 @@
 #timeline ul li div {
     position: relative;
     bottom: 0;
-    width: 400px;
+    width: 35vw;
     padding: 15px;
     background: var(--light-background-6);
 }
@@ -52,7 +47,7 @@
 }
 
 #timeline ul li.timeline-container:nth-of-type(odd) div {    
-    left: 45px;
+    left: calc(1vw + 6px);
 }
 
 #timeline ul li.timeline-container:nth-of-type(odd) div::before {
@@ -62,7 +57,7 @@
 }
 
 #timeline ul li.timeline-container:nth-of-type(even) div {
-    left: -439px;
+    left: -36vw;
 }
 
 #timeline ul li.timeline-container:nth-of-type(even) div::before {
