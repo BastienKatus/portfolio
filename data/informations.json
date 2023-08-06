@@ -97,44 +97,46 @@
         "type": "programmation",
         "titre": "Langages de programmations",
         "value": [
-            { "technologie": "Java / J2EE", "niveau": "Découverte" },
-            { "technologie": "Javascript / React JS", "niveau": "Novice" },
-            { "technologie": "HTML / CSS", "niveau": "Intermédiaire" },
+            { "technologie": "Java / J2EE", "niveau": "Expérience professionnelle" },
+            { "technologie": "Javascript / React JS", "niveau": "Expérience professionnelle" },
+            { "technologie": "HTML / CSS", "niveau": "Expérience professionnelle" },
             { "technologie": "Velocity", "niveau": "Expérience professionnelle" },
-            { "technologie": "Freemarker", "niveau": "Confirmée" },
-            { "technologie": "C", "niveau": "Découverte" },
-            { "technologie": "C++", "niveau": "Découverte" },
-            { "technologie": "Python", "niveau": "Découverte" },
-            { "technologie": "Android Studio Java", "niveau": "Découverte" },
-            { "technologie": "Flutter", "niveau": "Découverte" },
-            { "technologie": "PHP", "niveau": "Découverte" }
+            { "technologie": "Freemarker", "niveau": "Expérience professionnelle" },
+            { "technologie": "C", "niveau": "Novice" },
+            { "technologie": "C++", "niveau": "Intermédiaire" },
+            { "technologie": "Python", "niveau": "Expérience professionnelle" },
+            { "technologie": "Android Studio Java", "niveau": "Avancée" },
+            { "technologie": "Flutter", "niveau": "Novice" },
+            { "technologie": "PHP", "niveau": "Novice" }
         ]
     },
     {
         "type": "bases_de_donnees",
         "titre": "Bases de données",
         "value": [
-            { "technologie": "PostgreSQL", "niveau": "Découverte" },
-            { "technologie": "MySQL", "niveau": "Découverte" },
-            { "technologie": "MongoDB", "niveau": "Découverte" },
+            { "technologie": "PostgreSQL", "niveau": "Expérience professionnelle" },
+            { "technologie": "MySQL", "niveau": "Avancée" },
+            { "technologie": "MongoDB", "niveau": "Novice" },
             { "technologie": "Neo4J", "niveau": "Découverte" },
-            { "technologie": "ElasticSearch", "niveau": "Découverte" }
+            { "technologie": "ElasticSearch", "niveau": "Expérience professionnelle" }
         ]
     },
     {
         "type": "systeme_environnement",
         "titre": "Systèmes d'exploitation et Environnements",
         "value": [
-            { "technologie": "Windows", "niveau": "Découverte" }
+            { "technologie": "Windows", "niveau": "Confirmée" },
+            { "technologie": "Linux", "niveau": "Avancée" },
+            { "technologie": "Mac", "niveau": "Intermédiaire" }
         ]
     },
     {
         "type": "gestion_projet",
         "titre": "Outils de gestion de projet",
         "value": [
-            { "technologie": "GitLab", "niveau": "Découverte" },
-            { "technologie": "GitHub", "niveau": "Découverte" },
-            { "technologie": "ClickUp", "niveau": "Découverte" }
+            { "technologie": "GitLab", "niveau": "Avancée" },
+            { "technologie": "GitHub", "niveau": "Confirmée" },
+            { "technologie": "ClickUp", "niveau": "Intermédiaire" }
         ]
     }
   ],

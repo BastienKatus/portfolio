@@ -1,14 +1,80 @@
+.skills_help_and_table {
+    display: inline-flex;
+    width: 100%;
+    margin: 20px auto;
+    border: 1px solid var(--secondary);
+    color: var(--text-light-color);
+}
+
+.skills_help_and_table #skills_help{
+    display: flex;
+    width: 10%;
+    background-color: var(--secondary);
+    text-align: center;
+    justify-content: center;
+}
+
+.skills_help_and_table #skills_help:hover{
+    cursor: pointer;
+}
+
+.skills_help_and_table #skills_help.active{
+    text-align: left;
+    justify-content: space-around;
+    width: 50%;
+    background-color: var(--tertiary);
+}
+
+.skills_help_and_table #skills_help:active{
+    background-color: var(--tertiary);
+}
+
+.skills_help_and_table #skills_help.active:active{
+    background-color: var(--secondary);
+}
+
+
+.skills_help_and_table #skills_help h2{
+    text-decoration: underline;
+    text-align: center;
+}
+
+.skills_help_and_table #skills_help #skills_informations{
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.skills_help_and_table #skills_help #skills_informations ul li {
+    margin: 20px 0;
+}
+
+.skills_help_and_table #skills_help #skills_informations ul li h3{
+    flex-direction: column;
+    justify-content: space-around;
+    color: var(--text-dark-color);
+    padding: 6px 0;
+}
+
+.skills_help_and_table #skills_help #skills_informations ul li p{
+    padding: 2px 8px 14px 8px;
+}
+
+/* Table */
 #technical_skills {
     border-spacing: 0;
-    margin: 20px auto;
     background-color: var(--light-background-3);
     color: var(--text-dark-color);
-    border-bottom: 2px solid teal;
+    width: 100%;
+}
+
+#technical_skills td,th {
+    max-width: 25%;
+    width: auto;
+    min-width: 12%;
 }
 
 #technical_skills td {
     border: 1px solid var(--light-background-5);
-    text-align: center;
     padding: 12px;
     position: relative;
 }
@@ -17,15 +83,137 @@
     background-color: var(--secondary);
     color: var(--text-light-color);
     font-weight: bold;
+    font-size: 18px;
     text-align: center;
     padding: 16px;
 }
 
 #technical_skills tbody .badge {
     position: absolute;
-    right: 0;
-    top: 0;
-    width: 20px;
-    height: 20px;
-    background-color: brown;
+    right: 18px;
+    top: 10px;
+    width: 40px;
+    height: 25px;
+    border-radius: 4px;
 }
+
+.badge.decouverte {
+    background-color: #4CAF50; /* Vert */
+}
+
+.badge.novice {
+    background-color: #2196F3; /* Bleu */
+}
+
+.badge.intermediaire {
+    background-color: #FFC107; /* Jaune */
+}
+
+.badge.avancee {
+    background-color: #FF9800; /* Orange */
+}
+
+.badge.confirmee {
+    background-color: #F44336; /* Rouge */
+}
+
+.badge.professionnelle {
+    background-color: #9C27B0; /* Violet */
+}
+
+
+
+/* Relations Compétences X Expériences */
+.card {
+    position: relative;
+    height: calc(100% - 30px);
+    width: calc(33.333% - 30px);
+    background: #fff;
+    overflow: hidden;
+    float: left;
+    margin: 15px;
+    height: 300px;
+  }
+  
+  .card__content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    top: calc(100% - 80px);
+    left: 0;
+    opacity: 1;
+    transition: all 0.75s ease-in-out;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+  }
+  
+  .card__content-inner {
+    position: relative;
+    display: block;
+    height: 80px;
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    justify-content: center;
+    transition: all 0.75s ease-in-out;
+  }
+  
+  .card__title {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  
+  .card__description {
+    color: #eee;
+  }
+  
+  .card__content:after {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 2px 0 0 2px;
+    content: "";
+  }
+  
+  .card:after {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    content: "";
+  }
+  
+  .card.a100 .card__content,
+  .card:hover .card__content {
+    top: 0;
+    background: #000;
+    transition: all 1s ease-in-out;
+  }
+  
+  .card.a100 .card__content-inner,
+  .card:hover .card__content-inner {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease-in-out;
+  }
+  
+  .card.a100:hover .card__content {
+    top: calc(100% - 80px);
+  }
+  
+  .card.a100:hover .card__content-inner {
+    height: 80px;
+  }

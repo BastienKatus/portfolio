@@ -94,27 +94,59 @@
     </section>
 
     <section class="competences container">
-        <h1>Compétences</h2>
-        <p>Avant de commencer la lecture du tableau, j'ai ajouté des grades sur chacunes des compétences. Ils permettent de situer et hiérarchiser mes expériences techniques.</p>
-        <ul>Les grades seront les suivants:
-            <li>
-                Découvertes -> J'ai déjà écris quelques lignes de code dans ce langage par curiosité.
-            </li>
-            <li>
-                Novice -> J'ai essayé de démarrer des projets qui n'ont jamais aboutis pour différentes raisons, ou alors j'ai développé dans ce langage mais pas suffisemment longtemps pour réellement savoir l'utiliser.
-            </li>
-            <li>
-                Intermédiaire -> J'ai développé certaines parties d'applications ou réalisé quelques projets. Je sais coder dans ce langage des fonctionnalités quelconques.
-            </li>
-            <li>
-                Expériences professionnelles -> J'ai développé une ou plusieurs applications dans des cadres professionnelles. Cela requiert d'écrire du code compréhensible, maintenable et robuste. Cela demande donc de savoir manipuler le code efficacement.
-            </li>
-            <li>
-                Confirmé -> Ici, ce sont tous les langages que je maîtrise le mieux et avec lesquelles j'ai développé des applications plus conséquentes et dont je ne me pose pas de questions syntaxiques. Je connais sans doute quelques conventions ou fonctionnalités que tu ne connais pas dans ce langage xD (Je plaisante, mais étant donné que personne ne maîtrise à 100% une technologie, tous le monde peu en apprendre à tous)
-            </li>
-        </ul>
-        <p> En clair, le niveau découverte se résume à quelques lignes de code pour voir à quoi cela ressemble et le niveau confirmé, c'est mon 99% à moi. Le dernier pourcentage est infini, il correspond à l'amélioration contenu.</p>
-        <table id="technical_skills" class="custom-table"></table>
+        <h1>Compétences</h1>
+        <div class="skills_help_and_table">
+            <div id="skills_help" onclick="showSkillsInformation()">
+                <div id="skills_know_more" style="display: flex; align-items: center;">
+                    <h2>Afficher la légende</h2>
+                </div>
+                <div id="skills_informations" style="display: none;">
+                    <h2>Légende:</h2>
+                    <div>
+                        <ul>
+                            <li>
+                                <h3 class="badge decouverte">Découvertes</h3>
+                                <p>J'ai déjà écris quelques lignes de code dans ce langage par curiosité.</p>
+                            </li>
+                            <li>
+                                <h3 class="badge novice">Novice</h3>
+                                <p>J'ai essayé de démarrer des projets qui n'ont jamais aboutis pour différentes raisons, ou alors j'ai développé dans ce langage mais pas suffisemment longtemps pour réellement savoir l'utiliser.</p>
+                            </li>
+                            <li>
+                                <h3 class="badge intermediaire">Intermédiaire</h3>
+                                <p>J'ai développé certaines parties d'applications ou réalisé quelques projets. Je sais coder dans ce langage des fonctionnalités quelconques.</p>
+                            </li>
+                            <li>
+                                <h3 class="badge avancee">Avancé</h3>
+                                <p>J'ai dévéloppé des applications et je me sens à l'aise avec ce langage.</p>
+                            </li>
+                            <li>
+                                <h3 class="badge confirmee">Confirmé</h3>
+                                <p>Ici, ce sont tous les langages que je maîtrise le mieux et avec lesquelles j'ai développé des applications plus conséquentes et dont je ne me pose pas de questions syntaxiques. Je connais sans doute quelques conventions ou fonctionnalités que tu ne connais pas dans ce langage xD (Je plaisante, mais étant donné que personne ne maîtrise à 100% une technologie, tous le monde peu en apprendre à tous)</p>
+                            </li>
+                            <li>
+                                <h3 class="badge professionnelle">Expériences professionnelles</h3>
+                                <p>J'ai développé une ou plusieurs applications dans des cadres professionnelles. Cela requiert d'écrire du code compréhensible, maintenable et robuste. Cela demande donc de savoir manipuler le code efficacement.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <table id="technical_skills" class="custom-table"></table>
+        </div>
+
+        
+        <h1>Où ont été mise en pratique ces compétences ?</h1>
+        <div>
+            <div class="card a100">
+                <div class="card__content">
+                    <div class="card__content-inner">
+                        <div class="card__title">Card Title</div>
+                        <div class="card__description">Lorem ipsum doler amet...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="experiences container">
