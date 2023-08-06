@@ -211,7 +211,7 @@
       ]
     }
   ],
-  "projets_universitaires": [
+  "projets": [
     {
       "type": "project",
       "nom": "Portfolio profesionnel",
@@ -251,6 +251,42 @@
         "OpenCV"
       ],
       "description": "Projet Tutoré en groupe de 3. Programmation d’un mur d’escalade interactif en Python."
+    },
+    {
+      "type": "project",
+      "nom": "Gestion de projet Web",
+      "debut": "2020-04-01",
+      "fin": "2020-05-31",
+      "technologies": [
+        "HTML",
+        "CSS"
+      ],
+      "librairies_et_plugins": [],
+      "description": "Site Web d’un club de Babyfoot en Groupe de 3, programmé en HTML et CSS. Réalisation d’un dossier d’analyse, d’un dossier de conception et de la charte graphique du site."
+    },
+    {
+      "type": "project",
+      "nom": "Gestion de projet Web",
+      "debut": "2020-04-01",
+      "fin": "2020-05-31",
+      "technologies": [
+        "HTML",
+        "CSS"
+      ],
+      "librairies_et_plugins": [],
+      "description": "Site Web d’un club de Babyfoot en Groupe de 3, programmé en HTML et CSS. Réalisation d’un dossier d’analyse, d’un dossier de conception et de la charte graphique du site."
+    },
+    {
+      "type": "project",
+      "nom": "Gestion de projet Web",
+      "debut": "2020-04-01",
+      "fin": "2020-05-31",
+      "technologies": [
+        "HTML",
+        "CSS"
+      ],
+      "librairies_et_plugins": [],
+      "description": "Site Web d’un club de Babyfoot en Groupe de 3, programmé en HTML et CSS. Réalisation d’un dossier d’analyse, d’un dossier de conception et de la charte graphique du site."
     },
     {
       "type": "project",

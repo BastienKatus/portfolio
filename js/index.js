@@ -282,35 +282,96 @@ function buildExperiences(experiences) {
 function buildProjets(projets) {
     let projetsDiv = document.getElementById("projets_div")
     if (projets) {
-      for (let i = 0; i < projets.length; i++) {
-        // Création des éléments HTML
-        let projetDiv = document.createElement("div");
-        let nomProjet = document.createElement("h3");
-        let descriptionProjet = document.createElement("p");
-        let technologiesProjet = document.createElement("ul");
-        let librairiesPluginsProjet = document.createElement("ul");
-  
-        // Remplissage des éléments HTML avec les données du JSON
-        nomProjet.textContent = projets[i].nom;
-        descriptionProjet.textContent = projets[i].description;
-        projets[i].technologies.forEach((technologie) => {
-          let technologieLi = document.createElement("li");
-          technologieLi.textContent = technologie;
-          technologiesProjet.appendChild(technologieLi);
+
+        // Boucle à travers les projets et crée les cartes HTML
+        projets.forEach(projet => {
+            
+
+            let stringTechnologie = ""
+            projet.technologies.forEach(techologie => {
+                stringTechnologie += "#" + techologie.toString() + " ";
+            });
+
+            let stringLibrairiesPlugins = ""
+            projet.librairies_et_plugins.forEach(librairy_et_plugin => {
+                stringLibrairiesPlugins += "#" + librairy_et_plugin.toString() + " ";
+            });
+
+            const card = document.createElement("div");
+            card.classList.add("card");
+
+            // Les informations détaillées sont stockés dans cardInnerContent
+            const cardInnerContent = document.createElement("div");
+            cardInnerContent.classList.add("card_inner_content");
+
+            const cardInnerDate = document.createElement("div");
+            cardInnerDate.classList.add("card_inner_date");
+            cardInnerDate.textContent = formatDateToReadable(projet.debut) + " - " + formatDateToReadable(projet.fin);
+
+            const cardInnerDescription = document.createElement("div");
+            cardInnerDescription.classList.add("card_inner_description");
+            cardInnerDescription.textContent = projet.description;
+
+            const cardInnerSpan = document.createElement("span");
+
+            // Container des technologies
+            const cardInnerTechnologiesContainer = document.createElement("div");
+
+            const cardInnerTechnologiesTitle = document.createElement("div");
+            cardInnerTechnologiesTitle.textContent = "Technologies"
+
+            const cardInnerTechnologies = document.createElement("div");
+            cardInnerTechnologies.classList.add("card_inner_technologies");
+            cardInnerTechnologies.textContent = stringTechnologie;
+
+            cardInnerTechnologiesContainer.appendChild(cardInnerTechnologiesTitle)
+            cardInnerTechnologiesContainer.appendChild(cardInnerTechnologies)
+            
+            // Container des librairies et plugins
+            const cardInnerLibrariesPluginsContainer = document.createElement("div");
+
+            const cardInnerLibrariesPluginsTitle = document.createElement("div");
+            cardInnerLibrariesPluginsTitle.textContent = "Bibliothèques"
+
+            const cardInnerLibrariesPlugins = document.createElement("div");
+            cardInnerLibrariesPlugins.classList.add("card_inner_librairies_plugins");
+            cardInnerLibrariesPlugins.textContent = stringLibrairiesPlugins;
+
+            cardInnerLibrariesPluginsContainer.appendChild(cardInnerLibrariesPluginsTitle)
+            cardInnerLibrariesPluginsContainer.appendChild(cardInnerLibrariesPlugins)
+            
+            cardInnerSpan.appendChild(cardInnerTechnologiesContainer);
+            cardInnerSpan.appendChild(cardInnerLibrariesPluginsContainer);
+
+            // La face de la card et les informations sont stockées ci dessous 
+            const cardFace = document.createElement("div");
+            cardFace.classList.add("card_face");
+
+            const cardFaceContent = document.createElement("div");
+            cardFaceContent.classList.add("card_face_content");
+
+            const cardTitle = document.createElement("div");
+            cardTitle.classList.add("card_face_title");
+            cardTitle.textContent = projet.nom;
+
+            const cardTechnologies = document.createElement("div");
+            cardTechnologies.classList.add("card_face_technologies");
+            cardTechnologies.innerHTML = stringTechnologie
+
+            // Construction de la carte
+            cardInnerContent.appendChild(cardInnerDate)
+            cardInnerContent.appendChild(cardInnerDescription)
+            cardInnerContent.appendChild(cardInnerSpan)
+
+            cardFaceContent.appendChild(cardTitle);
+            cardFaceContent.appendChild(cardTechnologies);
+            cardFace.appendChild(cardFaceContent);
+            
+            card.appendChild(cardInnerContent);
+            card.appendChild(cardFace);
+
+            projetsDiv.appendChild(card);
         });
-        projets[i].librairies_et_plugins.forEach((librairiePlugin) => {
-          let librairiePluginLi = document.createElement("li");
-          librairiePluginLi.textContent = librairiePlugin;
-          librairiesPluginsProjet.appendChild(librairiePluginLi);
-        });
-  
-        // Ajout des éléments HTML au DOM
-        projetDiv.appendChild(nomProjet);
-        projetDiv.appendChild(descriptionProjet);
-        projetDiv.appendChild(technologiesProjet);
-        projetDiv.appendChild(librairiesPluginsProjet);
-        projetsDiv.appendChild(projetDiv);
-      }
     }
 }
 
@@ -648,13 +709,13 @@ function initSite() {
         }
 
         // PROJETS UNIVERSITAIRES
-        try {
-            let projets = data["projets_universitaires"];
+        // try {
+            let projets = data["projets"];
             dataTimeline.push(projets)
             buildProjets(projets);
-        } catch (projetsError) {
-            console.log("Erreur lors du chargement des projets universitaires");
-        }
+        // } catch (projetsError) {
+        //     console.log("Erreur lors du chargement des projets universitaires");
+        // }
     
         // MY WHOLE TIMELINE
         try {
