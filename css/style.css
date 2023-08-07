@@ -30,6 +30,11 @@
   --primary-secondary-gradient-1:#296eb4;
   --primary-secondary-gradient-2:#265da9;
   --primary-secondary-gradient-3:#224b9e;
+
+  /* Info colors */
+  --danger: #bb2124;
+	--success:#22bb33;
+	--warning:#f0ad4e;
 }
 
 @font-face {

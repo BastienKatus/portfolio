@@ -654,7 +654,8 @@ function buildSearchAndFilterBar(projets){
 
         let postsData = projets;
         let filterData = allTechnologiesAndLibrairies;
-        const filterContainer = document.querySelector(".filter-container");
+        const filterContainer = document.createElement("div");
+        filterContainer.classList.add("filter-container");
 
 
         const createFilter = (filter) => {
@@ -666,7 +667,7 @@ function buildSearchAndFilterBar(projets){
                 handleButtonClick(e, filter)
             );
 
-            filterContainer.append(filterButton);
+            filterContainer.appendChild(filterButton);
         };
 
         const resetFilterButtons = (currentButton) => {
@@ -718,16 +719,18 @@ function buildSearchAndFilterBar(projets){
             resetFilterButtons();
             resetPosts();
         };
-
-        const resetFiltersButton = document.createElement("button");
-        resetFiltersButton.className = "reset-filters-button";
-        resetFiltersButton.innerText = "Reset Filters";
-        resetFiltersButton.addEventListener("click", resetAllFilters);
-
-        filterContainer.append(resetFiltersButton);
-
         
         filterData.map((filter) => createFilter(filter));
+
+        // Ajout du clear Filter
+        const resetFiltersButton = document.createElement("button");
+        resetFiltersButton.classList.add("reset-filter-button");
+        resetFiltersButton.classList.add("material-icons");
+        resetFiltersButton.innerText = "clear";
+        resetFiltersButton.addEventListener("click", resetAllFilters);
+
+        filterBar.appendChild(filterContainer);
+        filterBar.appendChild(resetFiltersButton);
     }
 }
 

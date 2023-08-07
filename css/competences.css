@@ -47,6 +47,7 @@
 
 .skills_help_and_table #skills_help #skills_informations ul li {
     margin: 20px 0;
+    list-style: none;
 }
 
 .skills_help_and_table #skills_help #skills_informations ul li h3{
