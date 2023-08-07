@@ -1,6 +1,7 @@
 // VARIABLES //
 const FILENAME = "./data/informations.json";
 const dataTimeline = [];
+let allTechnologiesAndLibrairies = [];
 
     // Moving point
 const speed = .5; //vitesse du point
@@ -281,24 +282,41 @@ function buildExperiences(experiences) {
 
 function buildProjets(projets) {
     let projetsDiv = document.getElementById("projets_div")
+    // Mise à jour de l'affichage en cas de filtrage
+    while (projetsDiv.firstChild) {
+        projetsDiv.removeChild(projetsDiv.firstChild);
+    }
+
     if (projets) {
-
-        // Boucle à travers les projets et crée les cartes HTML
         projets.forEach(projet => {
-            
+            const card = document.createElement("div");
+            card.classList.add("card");
 
-            let stringTechnologie = ""
+            let stringTechnologies = ""
             projet.technologies.forEach(techologie => {
-                stringTechnologie += "#" + techologie.toString() + " ";
+                stringTechnologies += "#" + techologie + " ";
+
+                // Ajout des classes tags sur la carte
+                card.classList.add(techologie)
+
+                // Ajout à la liste des technologies
+                if(!allTechnologiesAndLibrairies.includes(techologie)){
+                    allTechnologiesAndLibrairies.push(techologie)
+                }
             });
 
             let stringLibrairiesPlugins = ""
             projet.librairies_et_plugins.forEach(librairy_et_plugin => {
-                stringLibrairiesPlugins += "#" + librairy_et_plugin.toString() + " ";
-            });
+                stringLibrairiesPlugins += "#" + librairy_et_plugin + " ";
 
-            const card = document.createElement("div");
-            card.classList.add("card");
+                // Ajout des classes tags sur la carte
+                card.classList.add(librairy_et_plugin)
+
+                // Ajout à la liste des technologies
+                if(!allTechnologiesAndLibrairies.includes(librairy_et_plugin)){
+                    allTechnologiesAndLibrairies.push(librairy_et_plugin)
+                }
+            });
 
             // Les informations détaillées sont stockés dans cardInnerContent
             const cardInnerContent = document.createElement("div");
@@ -322,7 +340,7 @@ function buildProjets(projets) {
 
             const cardInnerTechnologies = document.createElement("div");
             cardInnerTechnologies.classList.add("card_inner_technologies");
-            cardInnerTechnologies.textContent = stringTechnologie;
+            cardInnerTechnologies.textContent = stringTechnologies;
 
             cardInnerTechnologiesContainer.appendChild(cardInnerTechnologiesTitle)
             cardInnerTechnologiesContainer.appendChild(cardInnerTechnologies)
@@ -356,7 +374,7 @@ function buildProjets(projets) {
 
             const cardTechnologies = document.createElement("div");
             cardTechnologies.classList.add("card_face_technologies");
-            cardTechnologies.innerHTML = stringTechnologie
+            cardTechnologies.innerHTML = stringTechnologies
 
             // Construction de la carte
             cardInnerContent.appendChild(cardInnerDate)
@@ -630,6 +648,89 @@ function formatDateToReadable(dateStr) {
     }
 }
 
+function buildSearchAndFilterBar(projets){
+    if(allTechnologiesAndLibrairies){
+        const filterBar = document.getElementById("filter_bar");
+
+        let postsData = projets;
+        let filterData = allTechnologiesAndLibrairies;
+        const filterContainer = document.querySelector(".filter-container");
+
+
+        const createFilter = (filter) => {
+            const filterButton = document.createElement("button");
+            filterButton.className = "filter-button";
+            filterButton.innerText = filter;
+            filterButton.setAttribute('data-state', 'inactive');
+            filterButton.addEventListener("click", (e) =>
+                handleButtonClick(e, filter)
+            );
+
+            filterContainer.append(filterButton);
+        };
+
+        const resetFilterButtons = (currentButton) => {
+            const filterButtons = document.querySelectorAll('.filter-button');
+            [...filterButtons].map(button => {
+                if (button != currentButton) {
+                    button.classList.remove('is-active');
+                    button.setAttribute('data-state', 'inactive')
+                }
+            })
+        }
+
+        const activeFilters = new Set();
+
+        const handleButtonClick = (e, param) => {
+            const button = e.target;
+            const buttonState = button.getAttribute('data-state');
+            
+            if (buttonState === 'inactive') {
+                activeFilters.add(param);
+            } else {
+                activeFilters.delete(param);
+            }
+            
+            if (activeFilters.size === 0) {
+                resetPosts();
+            } else {
+                handleFilterPosts();
+            }
+
+            button.classList.toggle('is-active');
+            button.setAttribute('data-state', buttonState === 'active' ? 'inactive' : 'active');
+        };
+
+        const handleFilterPosts = () => {
+            const filteredPosts = postsData.filter(post => {
+                return [...activeFilters].some(filter => post.technologies.includes(filter) || post.librairies_et_plugins.includes(filter));
+            });
+            buildProjets(filteredPosts);
+        };
+
+        const resetPosts = () => {
+            buildProjets(postsData)
+        }
+
+        
+        const resetAllFilters = () => {
+            activeFilters.clear();
+            resetFilterButtons();
+            resetPosts();
+        };
+
+        const resetFiltersButton = document.createElement("button");
+        resetFiltersButton.className = "reset-filters-button";
+        resetFiltersButton.innerText = "Reset Filters";
+        resetFiltersButton.addEventListener("click", resetAllFilters);
+
+        filterContainer.append(resetFiltersButton);
+
+        
+        filterData.map((filter) => createFilter(filter));
+    }
+}
+
 function showMore(){
     let presentationText = document.getElementById("presentation_text")
     let morePresentation = document.getElementById("more_presentation")
@@ -713,6 +814,7 @@ function initSite() {
             let projets = data["projets"];
             dataTimeline.push(projets)
             buildProjets(projets);
+            buildSearchAndFilterBar(projets)
         // } catch (projetsError) {
         //     console.log("Erreur lors du chargement des projets universitaires");
         // }
@@ -733,4 +835,4 @@ function initSite() {
 // EXECUTION //
 initSite();
 movePoint();
-//////////////
+////////////// 
