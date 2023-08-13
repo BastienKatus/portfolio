@@ -75,8 +75,16 @@ function buildProfil(profil){
                     profilInfo.innerHTML = morePresentation;
                     break;
                 case "hobbies":
-                    let tableHobbies = document.getElementById("hobbies");                
+                    let tableHobbies = document.getElementById("hobbies");  
+                    let theadHobbies = document.createElement("thead");              
                     let tbodyHobbies = document.createElement("tbody");
+
+                    let theadRowHobbies = document.createElement("tr");
+                    let theadCellHobbies = document.createElement("th");
+                    theadCellHobbies.textContent = "Mes centres d'intérêts  ";
+                    theadRowHobbies.appendChild(theadCellHobbies);
+                    
+                    theadHobbies.appendChild(theadRowHobbies);
                   
                     hobbies.forEach(hobby => {
                       let row = document.createElement("tr");
@@ -86,12 +94,21 @@ function buildProfil(profil){
                       tbodyHobbies.appendChild(row);
                     });
                   
+                    tableHobbies.appendChild(theadHobbies);
                     tableHobbies.appendChild(tbodyHobbies);
                     break;
                       
                 case "soft_skills":
                     let tableSoftSkills = document.getElementById("soft_skills");
+                    let theadSoftSkills = document.createElement("thead");
                     let tbodySoftSkills = document.createElement("tbody");
+
+                    let theadRowSoftSkills = document.createElement("tr");
+                    let theadCellSoftSkills  = document.createElement("th");
+                    theadCellSoftSkills.textContent = "Softs skills";
+                    theadRowSoftSkills.appendChild(theadCellSoftSkills);
+                    
+                    theadSoftSkills.appendChild(theadRowSoftSkills);
                     
                     softSkills.forEach(softSkill => {
                         let row = document.createElement("tr");
@@ -100,7 +117,9 @@ function buildProfil(profil){
                         row.appendChild(cell);
                         tbodySoftSkills.appendChild(row);
                     });
+
                     
+                    tableSoftSkills.appendChild(theadSoftSkills);
                     tableSoftSkills.appendChild(tbodySoftSkills);
                     break;
 
@@ -122,6 +141,11 @@ function buildProfil(profil){
                         link.appendChild(icon);
                         
                         let div = document.createElement("div");
+                        div.addEventListener("click", (e) => {
+                                navigator.clipboard.writeText(eachSocial.display_link)
+                                alert("Lien vers " + eachSocial.social_name + " copié !")
+                            }
+                        );
                         div.innerHTML = eachSocial.display_link
                         
                         liSocial.appendChild(link);
