@@ -39,11 +39,11 @@
 
 @font-face {
   font-family: 'Lato';
-  src: url('../data/Lato/Lato-Regular.ttf') format('truetype'),
-       url('../data/Lato/Lato-Thin.ttf') format('truetype'),
-       url('../data/Lato/Lato-Light.ttf') format('truetype'),
-       url('../data/Lato/Lato-Black.ttf') format('truetype'),
-       url('../data/Lato/Lato-Bold.ttf') format('truetype');
+  src: url('../data/font/Lato/Lato-Regular.ttf') format('truetype'),
+       url('../data/font/Lato/Lato-Thin.ttf') format('truetype'),
+       url('../data/font/Lato/Lato-Light.ttf') format('truetype'),
+       url('../data/font/Lato/Lato-Black.ttf') format('truetype'),
+       url('../data/font/Lato/Lato-Bold.ttf') format('truetype');
   /* Ajoutez d'autres formats de fichiers si nécessaire */
   font-weight: normal;
   font-style: normal;

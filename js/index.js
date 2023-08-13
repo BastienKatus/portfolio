@@ -482,6 +482,8 @@ function buildProjets(projets) {
             // La face de la card et les informations sont stockées ci dessous 
             const cardFace = document.createElement("div");
             cardFace.classList.add("card_face");
+            cardFace.style.backgroundImage = "url('../data/images/" + projet.image + "')";
+
 
             const cardFaceContent = document.createElement("div");
             cardFaceContent.classList.add("card_face_content");
