@@ -137,47 +137,87 @@ function buildProfil(profil){
 }
 
 function buildFormations(formations){
-    formationsList = document.getElementById("formations_list")
     if(formations){
-        formations.forEach((formation) => {
-            let formationLi = document.createElement("li")
-            let formationDiplome = document.createElement("h3")
-            let formationEtablissement = document.createElement("h4")
-            let formationAnnee = document.createElement("span")
-            let formationDescription = document.createElement("p")
+        let tableFormations = document.getElementById("formations_table");
 
-            formationDiplome.textContent = formation["diplome"]
-            formationEtablissement.textContent = formation["etablissement"]
-            formationAnnee.textContent = formation["annee"]
-            formationDescription.textContent = formation["description"]
+        formations.forEach(item => {
+            let theadFormations = document.createElement("thead");
+            let tbodyFormations = document.createElement("tbody");
 
-            formationLi.appendChild(formationDiplome)
-            formationLi.appendChild(formationEtablissement)
-            formationLi.appendChild(formationAnnee)
-            formationLi.appendChild(formationDescription)
+            // Header
+            const titleRow = document.createElement('tr');
+            const titleFullEtablissement = document.createElement('th');
+            titleFullEtablissement.textContent = item.etablissement;
+            titleFullEtablissement.textContent += item.etablissement2 ? " / " + item.etablissement2 : ""; 
+            titleFullEtablissement.colSpan = 4
 
-            if(formation["code_etablissement"]){
-                let formationCodeEtablissement = document.createElement("span")
-                formationCodeEtablissement.classList.add("code_etablissement")
-                formationCodeEtablissement.textContent = formation["code_etablissement"]
-                formationEtablissement.appendChild(formationCodeEtablissement)
-            }
+            titleRow.appendChild(titleFullEtablissement);
 
-            if(formation["etablissement2"]){
-                let formationEtablissement2 = document.createElement("h4")
-                formationEtablissement2.textContent = formation["etablissement2"]
-                formationLi.appendChild(formationEtablissement2)
+            theadFormations.appendChild(titleRow);
 
-                if(formation["code_etablissement2"]){
-                    let formationCodeEtablissement2 = document.createElement("span")
-                    formationCodeEtablissement2.classList.add("code_etablissement")
-                    formationCodeEtablissement2.textContent = formation["code_etablissement2"]
-                    formationEtablissement2.appendChild(formationCodeEtablissement2)
+
+            // Body
+            const dataRow = document.createElement('tr');
+
+            const dataRowMore = document.createElement('tr');
+            dataRowMore.className = "more_informations";
+            dataRowMore.className = "more_informations";
+            
+            const cellShowMore = document.createElement("td");
+            cellShowMore.className = "material-icons show_more"
+            cellShowMore.textContent = "add";
+            cellShowMore.addEventListener("click", (e) => {
+                    dataRowMore.classList.toggle("enable");
+                    dataRow.classList.toggle("selected");
                 }
-            }
+            );
 
-            formationsList.appendChild(formationLi)
-        })
+            // Main informations
+
+            const cellPeriod = document.createElement('td');
+            cellPeriod.textContent = formatDateToReadable(item.debut) + " - " +  formatDateToReadable(item.fin);
+            cellPeriod.classList.add("period");
+
+            const cellDiploma = document.createElement('td');
+            cellDiploma.textContent = item.diplome;
+            cellDiploma.classList.add("diploma");
+
+            const cellEtablissement = document.createElement('td');
+            cellEtablissement.textContent = item.code_etablissement;
+            cellEtablissement.textContent += item.code_etablissement2 ? " / " + item.code_etablissement2 : ""; 
+            cellEtablissement.classList.add("etablissement");
+
+            const cellLocation = document.createElement('td');
+            cellLocation.textContent = item.ville;
+            cellLocation.classList.add("location");
+
+            
+            // Toggling informations
+            const cellSpace = document.createElement("td");
+            cellSpace.style = "opacity:0;"
+
+            const cellDescription = document.createElement('td');
+            cellDescription.classList.add("description");
+            cellDescription.colSpan = 4;
+            cellDescription.textContent = item.description;
+
+            dataRow.appendChild(cellShowMore);
+            dataRow.appendChild(cellPeriod);
+            dataRow.appendChild(cellDiploma);
+            dataRow.appendChild(cellEtablissement);
+            dataRow.appendChild(cellLocation);
+
+            dataRowMore.appendChild(cellSpace);
+            dataRowMore.appendChild(cellDescription);
+            
+            tbodyFormations.appendChild(dataRow);
+            tbodyFormations.appendChild(dataRowMore);
+            
+            // Construction du tableau
+            tableFormations.appendChild(theadFormations);
+            tableFormations.appendChild(tbodyFormations);
+                
+        });
     }
 }
 
@@ -256,27 +296,105 @@ function buildCompetences(competences){
 }
 
 function buildExperiences(experiences) {
-    const experiencesList = document.querySelector('#experiences-list');
-  
-    for (let i = 0; i < experiences.length; i++) {
-      const experience = experiences[i];
-      const li = document.createElement('li');
-      const title = document.createElement('h3');
-      const company = document.createElement('h4');
-      const date = document.createElement('p');
-      const technologies = document.createElement('p');
-  
-      title.innerText = experience.poste;
-      company.innerText = `${experience.entreprise} - ${experience.ville}, ${experience.pays}`;
-      date.innerText = `${experience.debut} - ${experience.fin}`;
-      technologies.innerText = experience.technologies.join(', ');
-  
-      li.appendChild(title);
-      li.appendChild(company);
-      li.appendChild(date);
-      li.appendChild(technologies);
-  
-      experiencesList.appendChild(li);
+    if(experiences){
+
+        let tableExperiences = document.getElementById("experiences_table");
+        let theadExperiences = document.createElement("thead");
+        let tbodyExperiences = document.createElement("tbody");
+
+        // Header
+        const titleRow = document.createElement('tr');
+        const titlePeriod = document.createElement('th');
+        titlePeriod.textContent = "Période"
+        const titleContract = document.createElement('th');
+        titleContract.textContent = "Type de contrat"
+        const titlePoste = document.createElement('th');
+        titlePoste.textContent = "Intitulé du poste"
+        const titleCompany = document.createElement('th');
+        titleCompany.textContent = "Entreprise"
+        const titleTechnologies = document.createElement('th');
+        titleTechnologies.textContent = "Technologies"
+
+        titleRow.appendChild(titlePeriod);
+        titleRow.appendChild(titleContract);
+        titleRow.appendChild(titlePoste);
+        titleRow.appendChild(titleCompany);
+        titleRow.appendChild(titleTechnologies);
+
+        theadExperiences.appendChild(titleRow);
+
+
+        // Body
+        experiences.forEach(experience => {
+            const dataRow = document.createElement('tr');
+            const dataRowMore = document.createElement('tr');
+            dataRowMore.className = "more_informations";
+
+            // Main informations
+            
+            const cellShowMore = document.createElement("td");
+            cellShowMore.className = "material-icons show_more"
+            cellShowMore.textContent = "add";
+            cellShowMore.addEventListener("click", (e) => {
+                    dataRowMore.classList.toggle("enable");
+                    dataRow.classList.toggle("selected");
+                }
+            );
+
+            const cellPeriod = document.createElement('td');
+            cellPeriod.textContent = formatDateToReadable(experience.debut) + " - " +  formatDateToReadable(experience.fin);
+            cellPeriod.classList.add("period");
+
+            const cellContract = document.createElement('td');
+            cellContract.textContent = experience.contrat;
+            cellContract.classList.add("contract");
+
+            const cellPoste = document.createElement('td');
+            cellPoste.textContent = experience.poste;
+            cellPoste.classList.add("poste");
+
+            const cellCompany = document.createElement('td');
+            let location = experience.ville + ", " + experience.pays;
+            cellCompany.textContent = experience.entreprise + ", " + location;
+            cellCompany.classList.add("company");
+
+            
+            // Toggling informations
+            const cellSpace = document.createElement("td");
+            cellSpace.style = "opacity:0;"
+
+            const cellDescription = document.createElement('td');
+            cellDescription.classList.add("description");
+            cellDescription.colSpan = 3;
+            cellDescription.textContent = experience.description;
+
+            const cellTechnologies = document.createElement('td');
+            cellTechnologies.classList.add("technologies");
+
+            experience.technologies.map((techno) => {
+                const technologyBadge = document.createElement("div");
+                technologyBadge.innerText = techno;
+    
+                cellTechnologies.appendChild(technologyBadge );
+            });
+
+            dataRow.appendChild(cellShowMore);
+            dataRow.appendChild(cellPeriod);
+            dataRow.appendChild(cellContract);
+            dataRow.appendChild(cellPoste);
+            dataRow.appendChild(cellCompany);
+            
+            dataRowMore.appendChild(cellSpace);
+            dataRowMore.appendChild(cellDescription);
+            dataRowMore.appendChild(cellTechnologies);
+
+            tbodyExperiences.appendChild(dataRow);
+            tbodyExperiences.appendChild(dataRowMore);
+        })
+        
+        // Construction du tableau
+        tableExperiences.appendChild(theadExperiences);
+        tableExperiences.appendChild(tbodyExperiences);
     }
 }
 
@@ -558,7 +676,7 @@ function createTimelineItem(item) {
 
     // Returning something empty
     return document.createElement("div")
-}
+}  
 
 function buildTimeline(dataTimeline){
     const timelineDiv = document.getElementById("timeline");
@@ -784,14 +902,14 @@ function initSite() {
         }
 
         // FORMATIONS
-        try{
-            let formations = data["formations"]
-            dataTimeline.push(formations)
-            buildFormations(formations)
-        }
-        catch(formationsError){
-            console.log("Erreur lors du chargement des formations", formationsError)
-        }
+        // try{
+        //     let formations = data["formations"]
+        //     dataTimeline.push(formations)
+        //     buildFormations(formations)
+        // }
+        // catch(formationsError){
+        //     console.log("Erreur lors du chargement des formations", formationsError)
+        // }
 
         // COMPETENCES
         try{
@@ -802,25 +920,29 @@ function initSite() {
             console.log("Erreur lors du chargement des compétences", competencesError)
         }
 
-        // EXPERIENCES
+        // EXPERIENCES ET FORMATIONS
         try{
             let experiences = data["experiences_professionnelles"]
             dataTimeline.push(experiences)
             buildExperiences(experiences)
+            
+            let formations = data["formations"]
+            dataTimeline.push(formations)
+            buildFormations(formations)
         }
         catch(experiencesError){
             console.log("Erreur lors du chargement des expériences professionnel", experiencesError)
         }
 
         // PROJETS UNIVERSITAIRES
-        // try {
+        try {
             let projets = data["projets"];
             dataTimeline.push(projets)
             buildProjets(projets);
             buildSearchAndFilterBar(projets)
-        // } catch (projetsError) {
-        //     console.log("Erreur lors du chargement des projets universitaires");
-        // }
+        } catch (projetsError) {
+            console.log("Erreur lors du chargement des projets universitaires");
+        }
     
         // MY WHOLE TIMELINE
         try {

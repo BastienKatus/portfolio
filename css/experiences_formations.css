@@ -1,0 +1,151 @@
+/* Table */
+#experiences_formations_table table{
+    border-spacing: 0;
+    color: var(--text-dark-color);
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+#experiences_formations_table table tr th {
+    display: none;
+    font-size: 18px;
+    padding: 16px;
+    text-align: center;
+    background-color: var(--secondary);
+    color: var(--text-light-color);
+}
+
+#experiences_formations_table table tr:nth-child(odd) {
+    background-color: var(--light-background-1);
+}
+
+#experiences_formations_table table tr:nth-child(even) {
+    background-color: var(--light-background-6);
+    opacity: 0;
+    height: 0;
+    transition: all .3s ease-in-out;
+}
+
+#experiences_formations_table table tr td {
+    border: 1px solid var(--light-background-5);
+    padding: 12px;
+    position: relative;
+    font-size: 16px;
+    display: table-cell;
+    min-height: 50px;
+}
+
+#experiences_formations_table table  tr td:first-child {
+    width: 50px;
+    font-size: 22px;
+    text-align: center;
+}
+
+#experiences_formations_table table  tr td.show_more:first-child:hover {
+    cursor: pointer;
+}
+
+#experiences_formations_table table  tr .period {
+    width: 15%;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#experiences_formations_table table  tr .contract {
+    width: 10%;
+    text-align: center;
+}
+
+#experiences_formations_table table  tr .poste {
+    width: 30%;
+}
+
+#experiences_formations_table table  tr .company {
+    width: auto;
+    font-size: 18x;
+    line-height: 20px;
+}
+
+#experiences_formations_table table  tr .technologies div {
+    display: inline-block;
+    background-color: transparent;
+    padding: 2px 4px;
+    border-radius: 6px;
+    font-size: 16px;
+    color: var(--tertiary);
+    border: 1px solid var(--tertiary);
+    margin: 6px;
+}
+
+#experiences_formations_table table  tr.more_informations {
+	display: table-row;
+    width: 100%;
+    background-color: var(--light-background-1);
+    opacity: 0;
+    height: 0px;
+    min-height: 0px;
+    max-height: 0px;
+    font-size: 0px;
+}
+
+#experiences_formations_table table  tr.more_informations.enable {
+	display: table-row;
+    opacity: 1;
+    height: 100%;
+}
+
+#experiences_formations_table table  tr.more_informations td{
+    border-top: 0;
+    border-bottom: 0;
+}
+
+#experiences_formations_table table  tr.selected {
+    background-color: var(--secondary);
+    color: var(--text-light-color);
+    transition: all .3s ease-in-out;
+}
+
+#experiences_formations_table table  tr:nth-child(even) td {
+    height: 0px;
+    min-height: 0px;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    font-size: 0px;
+    transition: all .3s ease-in-out;
+}
+
+#experiences_formations_table table  tr:nth-child(even).enable td {
+    height: 100%;
+    opacity: 1;
+    padding: 12px;
+    font-size: 14px;
+    min-height: 50px;
+    transition: all .3s ease-in-out;
+}
+
+#experiences_formations_table table  tr:nth-child(even) td div{
+    height: 0px;
+    min-height: 0px;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    font-size: 0px;
+    transition: all .3s ease-in-out;
+}
+
+#experiences_formations_table table  tr:nth-child(even).enable td div {
+    height: fit-content;
+    min-height: fit-content;
+    opacity: 1;
+    display: inline-block;
+    background-color: transparent;
+    padding: 2px 4px;
+    border-radius: 6px;
+    font-size: 16px;
+    color: var(--tertiary);
+    border: 1px solid var(--tertiary);
+    margin: 6px;
+    transition: all .3s ease-in-out;
+}

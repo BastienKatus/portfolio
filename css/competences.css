@@ -69,7 +69,7 @@
     width: 100%;
 }
 
-#technical_skills td,th {
+#technical_skills td, #technical_skills th {
     max-width: 25%;
     width: auto;
     min-width: 12%;

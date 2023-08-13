@@ -6,6 +6,7 @@
     <title>Portfolio</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/experiences_formations.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/projets.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/competences.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/navbar.css'>
@@ -35,12 +36,12 @@
             </div>
             <ul class="menu-items">
                 <li onclick="changeSection('accueil')"><a href="#">Accueil</a></li>
-                <li onclick="changeSection('experiences')"><a href="#">Expériences</a></li>
-                <li onclick="changeSection('formations')"><a href="#">Formations</a></li>
+                <li onclick="changeSection('experiences_and_formations')"><a href="#">Expériences et Formations</a></li>
+                <!-- <li onclick="changeSection('formations')"><a href="#">Formations</a></li> -->
                 <li onclick="changeSection('competences')"><a href="#">Compétences</a></li>
                 <li onclick="changeSection('projets')"><a href="#">Projets</a></li>
                 <li onclick="changeSection('whole_timeline')"><a href="#">Ma timeline</a></li>
-                <li onclick="changeSection('contacts')"><a href="#">Contact</a></li>
+                <!-- <li onclick="changeSection('contacts')"><a href="#">Contact</a></li> -->
             </ul>
             <h1 class="logo"></h1>
         </div>
@@ -89,17 +90,17 @@
         </div>
     </section>
 
-    <section class="formations container">
-        <h1>Formations</h2>
-        <ul id="formations_list"></ul>
-    </section>
+    <!-- <section class="formations container">
+        <h1>Formations</h1>
+        <table id="formations_list"></table>
+    </section> -->
 
     <section class="competences container">
         <h1>Compétences</h1>
         <div class="skills_help_and_table">
             <div id="skills_help" onclick="showSkillsInformation()">
                 <div id="skills_know_more" style="display: flex; align-items: center;">
-                    <h2>Afficher la légende</h2>
+                    <h1>Afficher la légende</h1>
                 </div>
                 <div id="skills_informations" style="display: none;">
                     <h2>Légende:</h2>
@@ -137,19 +138,23 @@
         </div>
     </section>
 
-    <section class="experiences container">
-        <h1>Expériences professionnelles</h2>
-        <ul id="experiences-list"></ul>
+    <section class="experiences_and_formations container">
+        <div id="experiences_formations_table">
+            <h1>Expériences professionnelles</h1>
+            <table id="experiences_table" class="custom-table"></table> 
+            <h1>Formations</h1> 
+            <table id="formations_table"></table>  
+        </div>    
     </section>
 
     <section class="projets container">
-        <h1>Projets</h2>
+        <h1>Projets</h1>
             <div id="filter_bar"></div>          
         <div id="projets_div"></div>
     </section>
     
     <section class="whole_timeline container">
-        <h1>Mes expériences au fil du temps</h2>
+        <h1>Mes expériences au fil du temps</h1>
         <div id="timeline"></div>
     </section>
 

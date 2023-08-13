@@ -149,7 +149,8 @@
       "pays": "France",
       "debut": "2021-09-06",
       "fin": "",
-      "contrat": "Alternance", 
+      "contrat": "Alternance",
+      "description": "Description du travail effectué",
       "technologies":[
         "Java / J2EE",
         "Javascript / React JS",
