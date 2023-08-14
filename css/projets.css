@@ -9,9 +9,9 @@
     position: relative;
     display: flex;
     height: 300px;
-    flex: 1 1 calc(25% - 50px);
+    flex: 1 1 calc(33% - 50px);
     min-width: 21%;
-    max-width: 33%;
+    max-width: 49%;
     background: var(--secondary);
     color: var(--text-light-color);
     overflow: hidden;

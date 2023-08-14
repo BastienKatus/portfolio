@@ -134,8 +134,12 @@ function buildProfil(profil){
                         link.href = eachSocial.link;
                 
                         let icon = document.createElement("i");
-                        icon.classList.add("material-icons");
-                        icon.innerHTML = eachSocial.social_icon;
+                        // Ajout de la taille de l'icone
+                        eachSocial.social_icon += " fa-2xl"
+                        let allClassIcons = eachSocial.social_icon.split(" ");
+                        allClassIcons.map(iconClass => {
+                            icon.classList.add(iconClass)
+                        })
                         
 
                         link.appendChild(icon);
@@ -188,8 +192,7 @@ function buildFormations(formations){
             dataRowMore.className = "more_informations";
             
             const cellShowMore = document.createElement("td");
-            cellShowMore.className = "material-icons show_more"
-            cellShowMore.textContent = "add";
+            cellShowMore.className = "fa-solid fa-plus show_more"
             cellShowMore.addEventListener("click", (e) => {
                     dataRowMore.classList.toggle("enable");
                     dataRow.classList.toggle("selected");
@@ -357,8 +360,7 @@ function buildExperiences(experiences) {
             // Main informations
             
             const cellShowMore = document.createElement("td");
-            cellShowMore.className = "material-icons show_more"
-            cellShowMore.textContent = "add";
+            cellShowMore.className = "fa-solid fa-plus show_more"
             cellShowMore.addEventListener("click", (e) => {
                     dataRowMore.classList.toggle("enable");
                     dataRow.classList.toggle("selected");
@@ -868,9 +870,8 @@ function buildSearchAndFilterBar(projets){
 
         // Ajout du clear Filter
         const resetFiltersButton = document.createElement("button");
+        resetFiltersButton.className = "fa-solid fa-filter-circle-xmark"
         resetFiltersButton.classList.add("reset-filter-button");
-        resetFiltersButton.classList.add("material-icons");
-        resetFiltersButton.innerText = "clear";
         resetFiltersButton.addEventListener("click", resetAllFilters);
 
         filterBar.appendChild(filterContainer);

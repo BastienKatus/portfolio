@@ -18,7 +18,7 @@
 #timeline ul li div {
     position: relative;
     bottom: 0;
-    width: 35vw;
+    width: 28vw;
     padding: 15px;
     background: var(--light-background-6);
 }
@@ -57,7 +57,7 @@
 }
 
 #timeline ul li.timeline-container:nth-of-type(even) div {
-    left: -36vw;
+    left: -29vw;
 }
 
 #timeline ul li.timeline-container:nth-of-type(even) div::before {

@@ -33,25 +33,25 @@
     "social":[
       {
         "social_name":"Mail",
-        "social_icon":"mail",
+        "social_icon":"fa-solid fa-envelope",
         "link":"",
         "display_link":"katusbastien@gmail.com"
       },
       {
         "social_name":"Phone",
-        "social_icon":"phone",
+        "social_icon":"fa-solid fa-phone",
         "link":"",
         "display_link":"07 66 60 35 61"
       },
       {
         "social_name":"GitHub",
-        "social_icon":"github",
+        "social_icon":"fa-brands fa-github",
         "link":"github.com",
         "display_link":"github.com"
       },
       {
         "social_name":"Linkedin",
-        "social_icon":"link",
+        "social_icon":"fa-brands fa-linkedin",
         "link":"",
         "display_link":"linkedin.com"
       }

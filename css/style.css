@@ -68,12 +68,12 @@ section{
 }
 
 .container{
-  width: 80%;
+  width: 60%;
   margin: auto;
 }
 
-/* Effet de bounce
-section * {
+/* Effet de bounce */
+/* section * {
     animation: bounce 4s infinite;
   }
   
@@ -88,8 +88,8 @@ section * {
   100% {
     transform: translateX(0);
   }
-}
-*/
+} */
+
 
 /* Backgoround */
 .triangle {

@@ -1,3 +1,7 @@
+section.accueil.container {
+  width: 70%;
+}
+
 #profil {
   display: flex;
   flex-direction: row;
