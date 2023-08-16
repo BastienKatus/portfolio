@@ -16,18 +16,18 @@
 }
 
 #experiences_formations_table table tr:nth-child(odd) {
-    background-color: var(--light-background-1);
+    background-color: var(--background-1);
 }
 
 #experiences_formations_table table tr:nth-child(even) {
-    background-color: var(--light-background-6);
+    background-color: var(--background-6);
     opacity: 0;
     height: 0;
     transition: all .3s ease-in-out;
 }
 
 #experiences_formations_table table tr td {
-    border: 1px solid var(--light-background-5);
+    border: 1px solid var(--background-5);
     padding: 12px;
     position: relative;
     font-size: 16px;
@@ -81,7 +81,7 @@
 #experiences_formations_table table  tr.more_informations {
 	display: table-row;
     width: 100%;
-    background-color: var(--light-background-1);
+    background-color: var(--background-1);
     opacity: 0;
     height: 0px;
     min-height: 0px;

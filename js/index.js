@@ -914,6 +914,23 @@ function showSkillsInformation(){
     helpContent.classList.toggle("active");
 }
 
+function InitializeModeTheme(){
+    const bodyDOM = document.getElementById("portfolio_website");
+    // Detect if user preference is dark
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: light)");
+    
+    // Settings default theme mode
+    bodyDOM.classList.add(prefersDarkScheme.matches === "dark" ? "dark" : "light");
+}
+
+function toggleModeTheme(){
+    const bodyDOM = document.getElementById("portfolio_website");
+
+    bodyDOM.classList.toggle("dark")
+    bodyDOM.classList.toggle("light")
+    console.log("You changed theme mode ");
+}
+
 function initSite() {
     // Recuperation des informations du fichier
     fetch(FILENAME)
@@ -981,6 +998,9 @@ function initSite() {
     .catch(error => {
         console.error('Erreur lors du chargement des données JSON\n', error);
     });
+
+    // Initialize the theme mode
+    InitializeModeTheme()
 }
 //////////////
 

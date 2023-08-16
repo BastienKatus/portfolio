@@ -64,7 +64,7 @@
 /* Table */
 #technical_skills {
     border-spacing: 0;
-    background-color: var(--light-background-3);
+    background-color: var(--background-3);
     color: var(--text-dark-color);
     width: 100%;
 }
@@ -76,7 +76,7 @@
 }
 
 #technical_skills td {
-    border: 1px solid var(--light-background-5);
+    border: 1px solid var(--background-5);
     padding: 12px;
     position: relative;
 }

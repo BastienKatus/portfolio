@@ -146,13 +146,13 @@
 
 #projets_div .card .card_inner_content .card_inner_date{
     text-align: right;
-    border-bottom: 1px solid var(--light-background-0);
+    border-bottom: 1px solid var(--background-0);
     padding-bottom: 4px;
 }
 
 #projets_div .card .card_inner_content span{
     display: inline-flex;
-    border-top: 1px solid var(--light-background-0);
+    border-top: 1px solid var(--background-0);
     padding-top: 4px;
 }
 

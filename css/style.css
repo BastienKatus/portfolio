@@ -1,26 +1,4 @@
 :root{
-  /*DarkTheme Background*/
-  --dark-background-0:#252a34;
-  --dark-background-1:#232831;
-  --dark-background-2:#21252e;
-  --dark-background-3:#1f232b;
-  --dark-background-4:#1c2028;
-  --dark-background-5:#1a1e25;
-  --dark-background-6:#181b22;
-
-  /*LightTheme Background*/
-  --light-background-0:#f9f9f9;
-  --light-background-1:#f4f4f4;
-  --light-background-2:#f0f0f0;
-  --light-background-3:#ebebeb;
-  --light-background-4:#e6e6e6;
-  --light-background-5:#e2e2e2;
-  --light-background-6:#dddddd;
-;
-  /* Text color */
-  --text-light-color:#ebe2d2;
-  --text-dark-color:#1b1f26;
-
   /* Main colors */
   --primary: #1F3A93;
   --secondary:  #2C7FBF;
@@ -37,6 +15,37 @@
 	--warning:#f0ad4e;
 }
 
+/* Light mode */
+:root body.light {
+  --background-0:#f9f9f9;
+  --background-1:#f4f4f4;
+  --background-2:#f0f0f0;
+  --background-3:#ebebeb;
+  --background-4:#e6e6e6;
+  --background-5:#e2e2e2;
+  --background-6:#dddddd;
+  
+  /* Text color */
+  --text-light-color:#ebe2d2;
+  --text-dark-color:#1b1f26;
+}
+
+/* Dark mode */
+:root body.dark {
+  --background-0:#252a34;
+  --background-1:#232831;
+  --background-2:#21252e;
+  --background-3:#1f232b;
+  --background-4:#1c2028;
+  --background-5:#1a1e25;
+  --background-6:#181b22;
+  
+  /* Here we only invert the light and dark from the light mode text */
+  --text-dark-color:#ebe2d2;
+  --text-light-color:#1b1f26;
+}
+
+/* Police d'écriture */
 @font-face {
   font-family: 'Lato';
   src: url('../data/font/Lato/Lato-Regular.ttf') format('truetype'),
@@ -44,7 +53,6 @@
        url('../data/font/Lato/Lato-Light.ttf') format('truetype'),
        url('../data/font/Lato/Lato-Black.ttf') format('truetype'),
        url('../data/font/Lato/Lato-Bold.ttf') format('truetype');
-  /* Ajoutez d'autres formats de fichiers si nécessaire */
   font-weight: normal;
   font-style: normal;
 }
@@ -100,7 +108,7 @@ section{
 
 #triangle1 {
   position: absolute;
-  background-color: var(--light-background-6);
+  background-color: var(--background-6);
   width: 100%;
   height: 100%;
 }

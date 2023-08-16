@@ -20,7 +20,7 @@
     bottom: 0;
     width: 28vw;
     padding: 15px;
-    background: var(--light-background-6);
+    background: var(--background-6);
 }
 
 #timeline ul li div::before {
@@ -53,7 +53,7 @@
 #timeline ul li.timeline-container:nth-of-type(odd) div::before {
     left: -15px;
     border-width: 8px 16px 8px 0;
-    border-color: transparent var(--light-background-6) transparent transparent;
+    border-color: transparent var(--background-6) transparent transparent;
 }
 
 #timeline ul li.timeline-container:nth-of-type(even) div {
@@ -63,7 +63,7 @@
 #timeline ul li.timeline-container:nth-of-type(even) div::before {
     right: -15px;
     border-width: 8px 0 8px 16px;
-    border-color: transparent transparent transparent var(--light-background-6);
+    border-color: transparent transparent transparent var(--background-6);
 }
 
 #timeline ul .yearMarker{
@@ -156,7 +156,7 @@
     #timeline ul li:nth-child(even) div::before {
         left: -15px;
         border-width: 8px 16px 8px 0;
-        border-color: transparent var(--dark-background-7) transparent transparent;
+        border-color: transparent var(--background-7) transparent transparent;
     }
 }
 
