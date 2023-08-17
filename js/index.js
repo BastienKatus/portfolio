@@ -931,6 +931,12 @@ function toggleModeTheme(){
     console.log("You changed theme mode ");
 }
 
+
+function handleLanguageChange(selectElement) {
+    const selectedLanguage = selectElement.value;
+    console.log("Selected language:", selectedLanguage);
+}
+
 function initSite() {
     // Recuperation des informations du fichier
     fetch(FILENAME)

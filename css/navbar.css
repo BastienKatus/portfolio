@@ -106,6 +106,12 @@
     transform: translateX(24px);
 }
 
+/* Language Selector */
+
+#navbar #language_picker {
+    margin-left: 50px;
+}
+
 @media (max-width: 768px){
     .navbar{
         opacity: 0.95;
