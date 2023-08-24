@@ -50,14 +50,19 @@
                     </label>
                 </div>
                 <div id="language_picker" data-trigger-class="li4-btn">
-                    <form action="" class="language-picker__form">
-                    <label for="language-picker-select">Select your language</label>
-                
-                    <select id="language-picker-select" name="language-picker-select" onchange="handleLanguageChange(this)">
-                        <option lang="en" value="english" selected>English</option>
-                        <option lang="fr" value="francais">Français</option>
-                    </select>
-                    </form>
+                    <div id="language_picker_option">
+                        <span></span>
+                        <span>
+                            <div onclick="handleLanguageChange('english')">
+                                <img src='./data/images/united-kingdom-flag-icon.svg'></img>
+                                English
+                            </div>
+                            <div onclick="handleLanguageChange('francais')">
+                                <img src='./data/images/france-flag-icon.svg'></img>
+                                Français
+                            </div>
+                        </span>
+                    </div>
                 </div>
             </ul>
             <h1 class="logo"></h1>

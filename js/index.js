@@ -914,7 +914,7 @@ function showSkillsInformation(){
     helpContent.classList.toggle("active");
 }
 
-function InitializeModeTheme(){
+function initializeModeTheme(){
     const bodyDOM = document.getElementById("portfolio_website");
     // Detect if user preference is dark
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: light)");
@@ -931,10 +931,39 @@ function toggleModeTheme(){
     console.log("You changed theme mode ");
 }
 
+function initializeLanguage(){
+    let navigatorLanguage = navigator.language
+    let langValue = "" 
+    if(navigatorLanguage.includes("en")){
+        langValue = "english"
+    }
+    else{
+        langValue = "francais"
+    }
+    handleLanguageChange(langValue)
+}
 
-function handleLanguageChange(selectElement) {
-    const selectedLanguage = selectElement.value;
-    console.log("Selected language:", selectedLanguage);
+function handleLanguageChange(langValue) {
+    pickerOption = document.getElementById("language_picker_option");
+    textLabel = "";
+
+    // Span Option
+    spanOptions = pickerOption.children[1];
+    for(index = 0; index < spanOptions.children.length; index++){
+        languageOption = spanOptions.children[index];
+        if(languageOption.innerText.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(langValue)){
+            textLabel = languageOption.innerHTML;
+            spanOptions.removeChild(languageOption)
+            spanOptions.insertBefore(languageOption, spanOptions.firstChild)
+        }
+    }
+
+    // Span Label 
+    spanLabel = pickerOption.children[0];
+    divContainerLabel = document.createElement("div");
+    divContainerLabel.innerHTML = textLabel;
+    spanLabel.innerHTML = ""
+    spanLabel.appendChild(divContainerLabel);
 }
 
 function initSite() {
@@ -1006,7 +1035,10 @@ function initSite() {
     });
 
     // Initialize the theme mode
-    InitializeModeTheme()
+    initializeModeTheme()
+
+    // Initialize the language
+    initializeLanguage()
 }
 //////////////
 

@@ -39,16 +39,24 @@
 #navbar .menu-items{
     order: 2;
     display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 #navbar .logo{
     order: 1;
     font-size: 2.3rem;
 }
 
-#navbar .menu-items li{
+#navbar .menu-items li, #navbar .menu-items div{
     list-style: none;
-    margin-left: 1.5rem;
+    margin-left: 1rem;
     font-size: 1.3rem;
+}
+
+#navbar .menu-items li{
+    width: max-content;
+    margin-left: 50px;
 }
 
 #navbar a{
@@ -66,7 +74,7 @@
 /* Theme Mode Toggle Button */
 
 #navbar #toggle_button_change_theme {
-    margin-left: 50px;
+    margin-left: auto;
 }
 
 #navbar .checkbox {
@@ -76,8 +84,8 @@
 
 #navbar .checkbox-label {
     background-color: #111;
-    width: 50px;
-    height: 26px;
+    width: 60px;
+    height: 30px;
     border-radius: 50px;
     position: relative;
     padding: 5px;
@@ -93,23 +101,85 @@
 
 #navbar .checkbox-label .ball {
     background-color: #fff;
-    width: 22px;
-    height: 22px;
+    width: 27px;
+    height: 27px;
     position: absolute;
-    left: 2px;
+    left: 3px;
     top: 2px;
     border-radius: 50%;
     transition: transform 0.2s linear;
 }
 
 #navbar .checkbox:checked + .checkbox-label .ball {
-    transform: translateX(24px);
+    transform: translateX(28px);
 }
 
 /* Language Selector */
 
 #navbar #language_picker {
-    margin-left: 50px;
+    transition: all 0.3s ease-in-out;
+    width: 5%;
+    height: 100%;
+}
+
+#navbar #language_picker label {
+    display: none;
+}
+
+#navbar #language_picker_option  {
+    position: relative;
+    border-color: var(--background-6);
+    border-radius: 4px;
+    color: var(--text-dark-color);
+    margin: 0;
+    height: 100%;
+}
+
+#navbar #language_picker_option span:first-child  {
+    display: flex;
+}
+
+#navbar #language_picker_option:hover span:first-child {
+    display: none;
+}
+
+#navbar #language_picker_option span {
+    display: none;
+    background-color: var(--background-1);
+    border: 1px solid transparent;
+    padding: 4px;
+    width: 180px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    gap: 4px;
+    font-size: 18px;
+}
+
+#navbar #language_picker_option span div {
+    padding: 4px;
+    margin: 0;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+}
+
+#navbar #language_picker_option span div img{
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+}
+
+#navbar #language_picker_option:hover span {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    color: var(--text-dark-color);
+}
+
+#navbar #language_picker_option span div:hover {
+    background-color: var(--background-6);
+    color: var(--light-dark-color);
 }
 
 @media (max-width: 768px){
