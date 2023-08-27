@@ -1,6 +1,6 @@
 // VARIABLES //
 const FILENAME = "./data/informations.json";
-const dataTimeline = [];
+let dataTimeline = [];
 let allTechnologiesAndLibrairies = [];
 
     // Moving point
@@ -42,7 +42,6 @@ function buildProfil(profil){
         let profilInfos = document.querySelectorAll(".profil-info");
         profilInfos.forEach(function(profilInfo) {
             // Ajout du contenu correspondant à chaque élément
-            console.log(profilInfo.id)
             switch(profilInfo.id) {
                 case "lastname":
                     profilInfo.innerHTML = lastName;
@@ -75,7 +74,8 @@ function buildProfil(profil){
                     profilInfo.innerHTML = morePresentation;
                     break;
                 case "hobbies":
-                    let tableHobbies = document.getElementById("hobbies");  
+                    let tableHobbies = document.getElementById("hobbies");
+                    tableHobbies.innerHTML = "";
                     let theadHobbies = document.createElement("thead");              
                     let tbodyHobbies = document.createElement("tbody");
 
@@ -100,6 +100,7 @@ function buildProfil(profil){
                       
                 case "soft_skills":
                     let tableSoftSkills = document.getElementById("soft_skills");
+                    tableSoftSkills.innerHTML = "";
                     let theadSoftSkills = document.createElement("thead");
                     let tbodySoftSkills = document.createElement("tbody");
 
@@ -125,6 +126,7 @@ function buildProfil(profil){
 
                 case "social":
                     let ulSocial = document.getElementById("social");
+                    ulSocial.innerHTML = "";
 
                     social.forEach(eachSocial => {
                         // Créer un élément <li>
@@ -167,6 +169,7 @@ function buildProfil(profil){
 function buildFormations(formations){
     if(formations){
         let tableFormations = document.getElementById("formations_table");
+        tableFormations.innerHTML = "";
 
         formations.forEach(item => {
             let theadFormations = document.createElement("thead");
@@ -251,6 +254,7 @@ function buildFormations(formations){
 function buildCompetences(competences){
     if(competences){
         let tableTechnicalSkills = document.getElementById("technical_skills");
+        tableTechnicalSkills.innerHTML = "";
         let theadTechnicalSkills = document.createElement("thead");
         let tbodyTechnicalSkills = document.createElement("tbody");
       
@@ -326,6 +330,7 @@ function buildExperiences(experiences) {
     if(experiences){
 
         let tableExperiences = document.getElementById("experiences_table");
+        tableExperiences.innerHTML = "";
         let theadExperiences = document.createElement("thead");
         let tbodyExperiences = document.createElement("tbody");
 
@@ -426,6 +431,7 @@ function buildExperiences(experiences) {
 
 function buildProjets(projets) {
     let projetsDiv = document.getElementById("projets_div")
+    projetsDiv.innerHTML = "";
     // Mise à jour de l'affichage en cas de filtrage
     while (projetsDiv.firstChild) {
         projetsDiv.removeChild(projetsDiv.firstChild);
@@ -708,6 +714,7 @@ function createTimelineItem(item) {
 
 function buildTimeline(dataTimeline){
     const timelineDiv = document.getElementById("timeline");
+    timelineDiv.innerHTML = ""
     if (!timelineDiv) {
         return;
     }
@@ -797,6 +804,7 @@ function formatDateToReadable(dateStr) {
 function buildSearchAndFilterBar(projets){
     if(allTechnologiesAndLibrairies){
         const filterBar = document.getElementById("filter_bar");
+        filterBar.innerHTML = ""
 
         let postsData = projets;
         let filterData = allTechnologiesAndLibrairies;
@@ -941,6 +949,7 @@ function initializeLanguage(){
         langValue = "francais"
     }
     handleLanguageChange(langValue)
+    return langValue
 }
 
 function handleLanguageChange(langValue) {
@@ -964,13 +973,45 @@ function handleLanguageChange(langValue) {
     divContainerLabel.innerHTML = textLabel;
     spanLabel.innerHTML = ""
     spanLabel.appendChild(divContainerLabel);
+
+    // Hide wrong language content
+    var langDivs = document.querySelectorAll('[lang]'); // Get all elements with lang attribute
+    for (var i = 0; i < langDivs.length; i++) {
+      if (langValue.includes(langDivs[i].getAttribute('lang'))) {
+        langDivs[i].style.display = 'unset';
+      } else {
+        langDivs[i].style.display = 'none';
+      }
+    }
+
+    initSite(langValue)
 }
 
-function initSite() {
+function initSite(dataLangValue) {
+    console.log("Start website with: ", dataLangValue)
+    // Clear data timeline
+    dataTimeline = [];
+
+    // Initialize the theme mode
+    initializeModeTheme()
+
+    let langValue = dataLangValue
+    // Initialize the language
+    if(dataLangValue == undefined || dataLangValue ==  null || dataLangValue == ""){
+        langValue = initializeLanguage()   
+    } 
+
     // Recuperation des informations du fichier
     fetch(FILENAME)
     .then(response => response.json())
     .then(data => {
+        console.log("langValue", langValue)
+        if (!data[langValue] || typeof data[langValue] !== "object" || Object.keys(data[langValue]).length === 0) {
+            data = data["francais"];
+        } else {
+            data = data[langValue];
+        }
+
         // PROFIL
         try{
             let profil = data["profil"]
@@ -1033,12 +1074,6 @@ function initSite() {
     .catch(error => {
         console.error('Erreur lors du chargement des données JSON\n', error);
     });
-
-    // Initialize the theme mode
-    initializeModeTheme()
-
-    // Initialize the language
-    initializeLanguage()
 }
 //////////////
 

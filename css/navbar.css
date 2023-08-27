@@ -86,7 +86,7 @@
     background-color: #111;
     width: 60px;
     height: 30px;
-    border-radius: 50px;
+    border-radius: 12px;
     position: relative;
     padding: 5px;
     cursor: pointer;
@@ -120,6 +120,7 @@
     transition: all 0.3s ease-in-out;
     width: 5%;
     height: 100%;
+    margin-left: 30px;
 }
 
 #navbar #language_picker label {

@@ -34,12 +34,27 @@
                 <span class="line line3"></span>
             </div>
             <ul class="menu-items">
-                <li onclick="changeSection('accueil')"><a href="#">Accueil</a></li>
-                <li onclick="changeSection('experiences_and_formations')"><a href="#">Expériences et Formations</a></li>
+                <li onclick="changeSection('accueil')">
+                    <a href="#" lang="fr">Accueil</a>
+                    <a href="#" lang="en">Home</a>
+                </li>
+                <li onclick="changeSection('experiences_and_formations')">
+                    <a href="#" lang="fr">Expériences et Formations</a>
+                    <a href="#" lang="en">Experiences and Studies</a>
+                </li>
                 <!-- <li onclick="changeSection('formations')"><a href="#">Formations</a></li> -->
-                <li onclick="changeSection('competences')"><a href="#">Compétences</a></li>
-                <li onclick="changeSection('projets')"><a href="#">Projets</a></li>
-                <li onclick="changeSection('whole_timeline')"><a href="#">Ma timeline</a></li>
+                <li onclick="changeSection('competences')">
+                    <a href="#" lang="fr">Compétences</a>
+                    <a href="#" lang="en">Skills</a>
+                </li>
+                <li onclick="changeSection('projets')">
+                    <a href="#" lang="fr">Projets</a>
+                    <a href="#" lang="en">Projects</a>
+                </li>
+                <li onclick="changeSection('whole_timeline')">
+                    <a href="#" lang="fr">Ma timeline</a>
+                    <a href="#" lang="en">My timeline</a>
+                </li>
                 <!-- <li onclick="changeSection('contacts')"><a href="#">Contact</a></li> -->
                 <div id="toggle_button_change_theme" onchange="toggleModeTheme()">
                     <input type="checkbox" class="checkbox" id="checkbox">
@@ -79,23 +94,15 @@
                 </div>
                 <div id="nationality" class="profil-info"></div>
                 <div id="poste" class="profil-info"></div>
-                <!--<div id="address" class="profil-info"></div>-->
                 <ul id="social" class="profil-info ">
-                    <!-- <li> 
-                        <a><img src="./data/avatar.png"/></a>
-                        <div id="phone" class="profil-info"></div>
-                    </li>
-                    <li>
-                        <a><img src="./data/avatar.png"/></a>
-                        <div id="mail" class="profil-info"></div>
-                    </li> -->
                 </ul>
             </span>
             <span class="second_column">
                 <div class="presentations">
                     <div id="presentation_text" class="profil-info description" style="display: flex;"></div>
                     <div id="more_presentation" class="profil-info description" style="display: none;"></div>
-                    <span onclick="showMore()"> Voir plus </span>
+                    <span onclick="showMore()" lang="fr"> Voir plus </span>
+                    <span onclick="showMore()" lang="en"> Show more </span>
                 </div>
                 <div class="lists">
                     <div>
@@ -159,21 +166,25 @@
 
     <section class="experiences_and_formations container">
         <div id="experiences_formations_table">
-            <h1>Expériences professionnelles</h1>
-            <table id="experiences_table" class="custom-table"></table> 
-            <h1>Formations</h1> 
+            <h1 lang="fr">Expériences professionnelles</h1>
+            <h1 lang="en">Profesionnal experiences</h1>
+            <table id="experiences_table" class="custom-table"></table>
+            <h1 lang="fr">Formations</h1>  
+            <h1 lang="en">Studies</h1> 
             <table id="formations_table"></table>  
         </div>    
     </section>
 
     <section class="projets container">
-        <h1>Projets</h1>
-            <div id="filter_bar"></div>          
+        <h1 lang="fr">Projets</h1>
+        <h1 lang="en">Projects</h1>
+        <div id="filter_bar"></div>          
         <div id="projets_div"></div>
     </section>
     
     <section class="whole_timeline container">
-        <h1>Mes expériences au fil du temps</h1>
+        <h1 lang="fr">Mes expériences au fil du temps</h1>
+        <h1 lang="en">My experiences since the beginning</h1>
         <div id="timeline"></div>
     </section>
 
