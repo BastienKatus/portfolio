@@ -133,7 +133,10 @@ function buildProfil(profil){
                         let liSocial = document.createElement("li");
 
                         let link = document.createElement("a");
-                        link.href = eachSocial.link;
+                        if(!eachSocial.social_name.toLowerCase().includes("phone")){
+                            link.href = eachSocial.link;
+                            link.target = "_blank"
+                        }
                 
                         let icon = document.createElement("i");
                         // Ajout de la taille de l'icone
@@ -148,11 +151,11 @@ function buildProfil(profil){
                         
                         let div = document.createElement("div");
                         div.addEventListener("click", (e) => {
-                                navigator.clipboard.writeText(eachSocial.display_link)
+                                navigator.clipboard.writeText(eachSocial.link)
                                 alert("Lien vers " + eachSocial.social_name + " copié !")
                             }
                         );
-                        div.innerHTML = eachSocial.display_link
+                        div.innerHTML = eachSocial.link
                         
                         liSocial.appendChild(link);
                         liSocial.appendChild(div);
@@ -587,16 +590,34 @@ function movePoint() {
 }
 
 function createTimelineItem(item) {
-    if(item.type == "experience") {
-        const liContainer = document.createElement("li");
-        liContainer.classList.add("timeline-container");
-      
-        const icon = document.createElement("icon");
-        icon.classList.add("icon");
-      
-        const card = document.createElement("div");
-        card.classList.add("timeline-card");
-      
+
+    if(item.type == "yearMarker"){
+        const yearMarker = document.createElement("div");
+        yearMarker.classList.add("yearMarker");
+
+        const yearValue = document.createElement("p");
+        yearValue.innerHTML = item.debut;
+
+        yearMarker.appendChild(yearValue)
+
+
+        return yearMarker;
+    }
+
+    const liContainer = document.createElement("li");
+    liContainer.classList.add("timeline-container");
+
+    liContainer.addEventListener("click", (e) =>
+        liContainer.classList.toggle("active")
+    );
+
+    const icon = document.createElement("icon");
+    icon.classList.add("icon");
+  
+    const card = document.createElement("div");
+    card.classList.add("timeline-card");
+
+    if(item.type == "experience") {      
         const title = document.createElement("h2");
         title.textContent = item.poste;
       
@@ -605,31 +626,20 @@ function createTimelineItem(item) {
         endDate = formatDateToReadable(item.fin)
         period.textContent = `${startDate} - ${endDate}`;
       
-        const description = document.createElement("p");
-        description.textContent = item.description;
       
         const arrow = document.createElement("span");
       
         card.appendChild(title);
         card.appendChild(period);
-        card.appendChild(description);
         card.appendChild(arrow);
       
-        liContainer.appendChild(icon);
-        liContainer.appendChild(card);
-      
-        return liContainer;
+        item.description.map(desc => {
+            const description = document.createElement("p");
+            description.textContent = desc
+            card.appendChild(description);
+        })
     }
-    else if(item.type == "formation"){
-        const liContainer = document.createElement("li");
-        liContainer.classList.add("timeline-container");
-      
-        const icon = document.createElement("icon");
-        icon.classList.add("icon");
-      
-        const card = document.createElement("div");
-        card.classList.add("timeline-card");
-      
+    else if(item.type == "formation"){      
         const title = document.createElement("h2");
         title.textContent = item.code_etablissement;
         title.textContent += item.code_etablissement2 ? " / " + item.code_etablissement2 : ""; 
@@ -655,22 +665,8 @@ function createTimelineItem(item) {
         card.appendChild(description);
         card.appendChild(arrow);
         card.appendChild(ecole);
-      
-        liContainer.appendChild(icon);
-        liContainer.appendChild(card);
-      
-        return liContainer;
     }
-    else if(item.type == "project"){
-        const liContainer = document.createElement("li");
-        liContainer.classList.add("timeline-container");
-      
-        const icon = document.createElement("icon");
-        icon.classList.add("icon");
-      
-        const card = document.createElement("div");
-        card.classList.add("timeline-card");
-      
+    else if(item.type == "project"){      
         const title = document.createElement("h2");
         title.textContent = item.nom;
 
@@ -680,7 +676,7 @@ function createTimelineItem(item) {
         period.textContent = `${startDate} - ${endDate}`;
       
         const description = document.createElement("p");
-        description.textContent = item.diplome;
+        description.textContent = item.description;
 
         const arrow = document.createElement("span");
       
@@ -688,28 +684,12 @@ function createTimelineItem(item) {
         card.appendChild(period);
         card.appendChild(description);
         card.appendChild(arrow);
-      
-        liContainer.appendChild(icon);
-        liContainer.appendChild(card);
-      
-        return liContainer;
     }
 
-    else if(item.type == "yearMarker"){
-        const yearMarker = document.createElement("div");
-        yearMarker.classList.add("yearMarker");
-
-        const yearValue = document.createElement("p");
-        yearValue.innerHTML = item.debut;
-
-        yearMarker.appendChild(yearValue)
-
-
-        return yearMarker;
-    }
-
-    // Returning something empty
-    return document.createElement("div")
+    liContainer.appendChild(icon);
+    liContainer.appendChild(card);
+  
+    return liContainer;
 }  
 
 function buildTimeline(dataTimeline){
@@ -718,7 +698,6 @@ function buildTimeline(dataTimeline){
     if (!timelineDiv) {
         return;
     }
-
     const ul = document.createElement("ul");
 
     // Ajout des marqueurs d'années
@@ -1055,21 +1034,21 @@ function initSite(dataLangValue) {
         }
 
         // PROJETS UNIVERSITAIRES
-        try {
+        // try {
             let projets = data["projets"];
             dataTimeline.push(projets)
             buildProjets(projets);
             buildSearchAndFilterBar(projets)
-        } catch (projetsError) {
-            console.log("Erreur lors du chargement des projets universitaires");
-        }
+        // } catch (projetsError) {
+        //     console.log("Erreur lors du chargement des projets universitaires");
+        // }
     
         // MY WHOLE TIMELINE
-        try {
+        // try {
             buildTimeline(dataTimeline)
-        } catch (projetsError) {
-            console.log("Erreur lors du chargement de Ma Timeline");
-        }
+        // } catch (projetsError) {
+        //     console.log("Erreur lors du chargement de Ma Timeline");
+        // }
     })
     .catch(error => {
         console.error('Erreur lors du chargement des données JSON\n', error);

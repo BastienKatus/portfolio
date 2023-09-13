@@ -46,6 +46,20 @@
     color: var(--tertiary);
 }
 
+#timeline ul li .timeline-card p{    
+    display: none;
+}
+
+#timeline ul li .timeline-card:hover{    
+    cursor: pointer;
+}
+
+#timeline ul li.active .timeline-card p{    
+    display: block;
+    margin: 4px 2px;
+    font-size: 14px;
+}
+
 #timeline ul li.timeline-container:nth-of-type(odd) div {    
     left: calc(1vw + 6px);
 }

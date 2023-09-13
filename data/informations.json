@@ -6,27 +6,24 @@
       "date_naissance": "2001-01-05",
       "format_date": "YYYY-MM-DD",
       "nationalite": "Française",
-      "adresse1": "1 rue Emile Dunière, 69100 Villeurbanne",
-      "adresse2": "7 rue du moulin à vent, 42300 Roanne",
       "telephone": "07 66 603561",
       "email": "katusbastien@gmail.com",
       "poste": "Développeur Full Stack",
-      "presentation_text":"English",
-      "more_presentation":"English",
+      "presentation_text":"ENGLISH",
+      "more_presentation":"Mon autobiographie est en cours de rédaction",
       "hobbies":[
         "Badminton (2 ans)",
         "Aviron (4 ans)",
         "Football (10 ans)",
         "Voiture de sports",
         "Jeux de société",
-        "Les jeux de stratégies tour par tour ou en temps réel",
-        "Les défis"
+        "Les jeux de stratégies tour par tour ou en temps réel"
       ],
       "soft_skills":[
         "Esprit d'équipe",
         "Persévérance",
         "Assiduité",
-        "Autonome",
+        "Autonomie",
         "Capacité d'adaption rapide",
         "Prise de recul", 
         "Réflexion"
@@ -35,29 +32,451 @@
         {
           "social_name":"Mail",
           "social_icon":"fa-solid fa-envelope",
-          "link":"",
+          "link":"https://www.gmail.com",
           "display_link":"katusbastien@gmail.com"
         },
         {
           "social_name":"Phone",
           "social_icon":"fa-solid fa-phone",
-          "link":"",
+          "link":"+33 7 66 60 35 61",
           "display_link":"07 66 60 35 61"
         },
         {
           "social_name":"GitHub",
           "social_icon":"fa-brands fa-github",
-          "link":"github.com",
-          "display_link":"github.com"
+          "link":"https://www.github.com",
+          "display_link":"https://www.github.com"
         },
         {
           "social_name":"Linkedin",
           "social_icon":"fa-brands fa-linkedin",
-          "link":"",
-          "display_link":"linkedin.com"
+          "link":"https://www.linkedin.com/in/bastien-katuszynski",
+          "display_link":"https://www.linkedin.com/in/bastien-katuszynski"
         }
-      ] 
-    }
+      ]
+    },
+    "formations": [
+      {
+        "type": "formation",
+        "diplome": "Diplôme d’ingénieur en Informatique et Réseaux de Communications en alternance",
+        "etablissement": "Ecole de Chimie Physique et Electronique de Lyon",
+        "code_etablissement": "CPE",
+        "etablissement2" : "Instituts des techniques d'ingénieur de l'industrie du Centres de Formation des Apprentis de l'Industrie de Lyon",
+        "code_etablissement2": "ITII / CFAI",
+        "ville": "Lyon",
+        "debut": "2021-09-06",
+        "fin": "", 
+        "description":""
+      },
+      {
+        "type": "formation",
+        "diplome": "Diplôme Universitaire et Technologique Informatique",
+        "etablissement": "Université Lyon 1 site Bourg-en-Bresse",
+        "code_etablissement": "IUT Lyon 1",
+        "ville": "Bourg-en-Bresse",
+        "debut": "2019-09-01",
+        "fin": "2021-08-31", 
+        "description":""
+      },
+      {
+        "type": "formation",
+        "diplome": "Baccalauréat des Sciences Economiques et Sociales",
+        "mention": "Mention Bien",
+        "etablissement": "Lycée Jean Puy Roanne",
+        "code_etablissement": "Lycée Jean Puy",
+        "ville": "Roanne",
+        "debut": "2018-09-01",
+        "fin": "2019-08-31", 
+        "description":""
+      }
+    ],
+    "competences": [
+      {
+          "type": "programmation",
+          "titre": "Langages de programmations",
+          "value": [
+              { "technologie": "Java / J2EE", "niveau": "Expérience professionnelle" },
+              { "technologie": "Javascript / React JS", "niveau": "Expérience professionnelle" },
+              { "technologie": "HTML / CSS", "niveau": "Expérience professionnelle" },
+              { "technologie": "Velocity", "niveau": "Expérience professionnelle" },
+              { "technologie": "Freemarker", "niveau": "Expérience professionnelle" },
+              { "technologie": "C", "niveau": "Novice" },
+              { "technologie": "C++", "niveau": "Intermédiaire" },
+              { "technologie": "Python", "niveau": "Expérience professionnelle" },
+              { "technologie": "Android Studio Java", "niveau": "Avancée" },
+              { "technologie": "Flutter", "niveau": "Novice" },
+              { "technologie": "PHP", "niveau": "Novice" }
+          ]
+      },
+      {
+          "type": "bases_de_donnees",
+          "titre": "Bases de données",
+          "value": [
+              { "technologie": "PostgreSQL", "niveau": "Expérience professionnelle" },
+              { "technologie": "MySQL", "niveau": "Avancée" },
+              { "technologie": "MongoDB", "niveau": "Novice" },
+              { "technologie": "Neo4J", "niveau": "Découverte" },
+              { "technologie": "ElasticSearch", "niveau": "Expérience professionnelle" }
+          ]
+      },
+      {
+          "type": "systeme_environnement",
+          "titre": "Systèmes d'exploitation et Environnements",
+          "value": [
+              { "technologie": "Windows", "niveau": "Confirmée" },
+              { "technologie": "Linux", "niveau": "Avancée" },
+              { "technologie": "Mac", "niveau": "Intermédiaire" }
+          ]
+      },
+      {
+          "type": "gestion_projet",
+          "titre": "Outils de gestion de projet",
+          "value": [
+              { "technologie": "GitLab", "niveau": "Avancée" },
+              { "technologie": "GitHub", "niveau": "Confirmée" },
+              { "technologie": "ClickUp", "niveau": "Intermédiaire" }
+          ]
+      }
+    ],
+    "experiences_professionnelles": [
+      {
+        "type": "experience",
+        "poste": "Développeur Full Stack de site intranet et extranet",
+        "entreprise": "AGIIR NETWORK",
+        "ville": "Roanne",
+        "pays": "France",
+        "debut": "2021-09-06",
+        "fin": "",
+        "contrat": "Alternance",
+        "technologies": [
+          "Java / J2EE",
+          "Javascript / React JS",
+          "HTML / CSS",
+          "Velocity",
+          "Freemarker",
+          "PostgreSQL",
+          "ElasticSearch"
+        ],
+        "description" :[
+          "Récupération et gestion de projet, assurant une exécution efficace des tâches de maintenance préventive et corrective pour garantir la continuité du site intranet",
+          "Gestion d'équipe, en supervisant et en motivant une équipe lors de la réalisation de modules clients",
+          "Participation active à des réunions de lancements et de préparations à des projets de site intranet, en contribuant à la définition des objectifs et des plans d'action.",
+          "Développement BackEnd des processus applicatifs du site intranet, en assurant la fiabilité et la sécurité des fonctionnalités essentielles.",
+          "Développement FrontEnd de divers modules pour répondre aux besoins spécifiques des clients",
+          "Mise en place de bases de données et d'indexeurs de données, optimisant ainsi la gestion des informations et la recherche de données.",
+          "Conception et étude technique de développements, en fournissant une expertise essentielle pour la planification et la mise en œuvre de projets innovants."
+        ]
+      },
+      {
+        "type": "experience",
+        "poste": "Assistant chef de projet informatique",
+        "entreprise": "AGIIR NETWORK",
+        "ville": "Roanne",
+        "pays": "France",
+        "debut": "2021-07-01",
+        "fin": "2021-08-31",
+        "contrat": "CDD",
+        "technologies":[
+          "Java / J2EE",
+          "Javascript / React JS",
+          "HTML / CSS",
+          "Velocity", 
+          "Freemarker",
+          "PostgreSQL",
+          "ElasticSearch"
+        ],
+        "description" :[
+          "Participation passives à des réunions de lancements et de préparations à des projets de site intranet",
+          "Développement BackEnd des processus applicatifs du site intranet, en assurant la fiabilité et la sécurité des fonctionnalités essentielles.",
+          "Développement FrontEnd de divers modules pour répondre aux besoins spécifiques des clients",
+          "Mise en place de bases de données et d'indexeurs de données, optimisant ainsi la gestion des informations et la recherche de données.",
+          "Conception et étude technique de développements, en fournissant une expertise essentielle pour la planification et la mise en œuvre de projets innovants."
+        ]
+      },
+      {
+        "type": "experience",
+        "poste": "Développeur Full Stack",
+        "entreprise": "AGIIR NETWORK",
+        "ville": "Roanne",
+        "pays": "France",
+        "debut": "2021-04-12",
+        "fin": "2021-06-30",
+        "contrat": "Stage",
+        "technologies":[
+          "Java / J2EE",
+          "Javascript / React JS",
+          "HTML / CSS",
+          "Velocity", 
+          "Freemarker",
+          "PostgreSQL",
+          "ElasticSearch"
+        ],
+        "description" :[
+          "Développement BackEnd des processus applicatifs du site intranet, en assurant la fiabilité et la sécurité des fonctionnalités essentielles.",
+          "Développement FrontEnd de divers modules pour répondre aux besoins spécifiques des clients",
+          "Mise en place de bases de données et d'indexeurs de données, optimisant ainsi la gestion des informations et la recherche de données.",
+          "Conception de développements, en fournissant un point de vue constructifs afin d'aborder des projets innovants."
+        ]
+      }
+    ],
+    "projets": [
+      {
+        "type": "project",
+        "nom": "Portfolio profesionnel",
+        "debut": "2023-05-01",
+        "fin": "",
+        "technologies": [
+          "Javascript",
+          "HTML",
+          "CSS"
+        ],
+        "image": "Capture d’écran 2023-08-05 120424.png",
+        "librairies_et_plugins": [],
+        "description": "Projet personnel. Défi de réalisation d'un portfolio avec le trio du langage web uniquement. Les fonctionnalités ont été développés en grande partie. Les améliorations graphiques seront apportés au fur et à mesure de la créativité"
+      },
+      {
+        "type": "project",
+        "nom": "Développement d’un site de recherche de lieux géographique et traçage d’itinéraire",
+        "debut": "2022-03-15",
+        "fin": "2022-04-30",
+        "technologies": [
+          "Javascript",
+          "HTML",
+          "CSS"
+        ],
+        "librairies_et_plugins": [
+          "Leaflet"
+        ],
+        "description": "Projet scolaire en duo avec obligation d'utiliser le trio de langage web vanilla. Le site internet est basé sur les informations récupérés par l'API d'OpenStreetMap. C'est l'API de Leaflet qui permet de faire le traçage des trajets. L'objectif était donc de revoir les bases du développements web en maintenant une architecture cohérente, ainsi que l'utilisation d'API externe."
+      },
+      {
+        "type": "project",
+        "nom": "Mur d’escalade en réalité augmentée",
+        "debut": "2021-01-01",
+        "fin": "2021-05-31",
+        "technologies": [
+          "Python"
+        ],
+        "librairies_et_plugins": [
+          "OpenCV",
+          "TKinter"
+        ],
+        "description": "Projet tutoré en groupe de 3. Programmation d’un mur d’escalade interactif en Python. Analyse et traitement d'images en temps réels réalisé avec OpenCV. Création d'items interactifs via l'ordinateur. L'image contenant les éléments interactifs sont projetés sur mur blanc. Une caméra capture en contenu ce même écran, cela permet de remettre à jour en temps réel l'application. Via une soustraction d'image et leurs traitements, l'escaladeur a la possibilité d'interagir avec l'application. Enfin une interface graphique a été développé à l'aide de TKinter. "
+      },
+      {
+        "type": "project",
+        "nom": "Gestion de projet Web",
+        "debut": "2020-04-01",
+        "fin": "2020-05-31",
+        "technologies": [
+          "HTML",
+          "CSS"
+        ],
+        "librairies_et_plugins": [],
+        "description": "Projet scolaire d'un de la réalisation d'un site de club de Babyfoot en trio. Programmé en HTML et CSS, l'objectif premier n'était pas le rendu visuel. Plusieurs dimensions sont abordé, comme la gestion de projet, l'analyse du besoin, la création de la charte graphique et la rédaction du cahier des charges. La gestion du projet était au coeur du projet."
+      },
+      {
+        "type": "project",
+        "nom": "Undercover",
+        "debut": "2020-02-01",
+        "fin": "2020-04-30",
+        "technologies": [
+          "C++"
+        ],
+        "librairies_et_plugins": [],
+        "description": "Projet personnel. Réalisation du jeu Undercover. Jeu dans lequel plusieurs joueurs possédent des mots et d'autres joueurs des mots similaires. En fonction de son mot le joueur est dans une équipe. Chaque équipe doit trouver les intrus en annonçant un mot par tour. C'est un des tout premiers jeux que j'ai développé. Le jeu se joue sur le terminal et chaque jour doit suivre les étapes afin de jouer selon les régles pour découvrir son mot."
+      },
+      {
+        "type": "project",
+        "nom": "Pikolo / Jeux à questions",
+        "debut": "2021-03-01",
+        "fin": "2021-03-30",
+        "technologies": [
+          "Java", 
+          "Android_Studio"
+        ],
+        "librairies_et_plugins": [],
+        "description": "Projet personnel. Jeux dans lequel des questions, des minis-jeux ou des gages défilent à chaque fois que le maître du jeu touche l'écran. Il est possible d'ajouter, de modifier et de supprimer des joueurs de la liste afin de lancé une partie personnalisé. Les questions sont stockés dans un format XML."
+      },
+      {
+        "type": "project",
+        "nom": "Pokémon Hunter Géo",
+        "debut": "2023-05-01",
+        "fin": "2023-06-30",
+        "technologies": [
+          "Java",
+          "Android_Studio",
+          "Gradle"
+        ],
+        "librairies_et_plugins": [],
+        "description": "Projet scolaire en duo. C'est un jeu inspiré de Pokémon GO. Comme le jeu initial, l'objectif et de capturer tous les pokémons et de les garder dans son inventaire afin d'avoir les mêmes pokémons que le pokédex. Les pokémons apparaissent sur la carte qui géolocalise le joueur. Il est possible de lancer des combats et de capturer les pokémons à l'aide de pokéballs. Il est aussi possible de se rendre dans des pokéstops afin d'acheter des pokéballs et des potions de soin pour garder son personnage en vit."
+      },
+      {
+        "type": "project",
+        "nom": "Livre dont je suis le héros",
+        "debut": "2019-11-01",
+        "fin": "2019-11-15",
+        "technologies": [
+          "C++"
+        ],
+        "librairies_et_plugins": [],
+        "description": "Projet scolaire en trio, une histoire tiré d'un livre étant mis à disposition. L'objectif était de faire en sorte que l'histoire puissent se jouer informatiquement. Des choix à différents moments clefs redirigeait vers certaines pages du livre. Un dé était aussi lié à ce jeu afin de l'agrémenté avec un peu de hasard"
+      },
+      {
+        "type": "project",
+        "nom": "Application Web de gestion d'image",
+        "debut": "2020-04-01",
+        "fin": "2020-06-01",
+        "technologies": [
+          "PHP",
+          "laravel",
+          "HTML",
+          "CSS"
+        ],
+        "librairies_et_plugins": [],
+        "description": "Projet scolaire en solitaire, c'est un site web avec récupération d'images et traitement d'informations exif. Le site internet stock les différentes photos et permet plusieurs fonctionnalités de tri, d'ajout, de modification, de suppression et de téléchargement d'images."
+      },
+      {
+        "type": "project",
+        "nom": "Simulation de gestion de feu et de pompiers",
+        "debut": "2023-01-01",
+        "fin": "2023-01-31",
+        "technologies": [
+          "Java"
+        ],
+        "librairies_et_plugins": [],
+        "description": "Projet annuel dans un groupe de 4 développeurs possédant des compétences distinctes (Réseau, IOT, développement...). Applications complète réalisé par équipe de 4. Toute la chaîne d'informations et l'infrastructure de l'application a été pensé. Les capteurs étaient simulé dans un environnement, un serveur en Java afin que des feux, soit générés automatiquement et aléatoirement. Ensuite, les informations étaient envoyé via une chaîne IOT au serveur contenant l'application de gestion d'incendie. Dans cette application, les feux sont gérés par des casernes contenant des véhicules, des pompiers et des rssources d'eau. Cela était géré via l'applciation afin de consituer des équipes et les assignés à des feux. De plus les informations provenant de la chaîne IOT était transmises via MQTT dans grafana afin d'avoir des statistiques en temps réelle. Toute la partie réseau à aussi dû être pensé afin de répondre à ce besoin. "
+      },
+      {
+        "type": "project",
+        "nom": "La rochelle",
+        "debut": "2021-07-01",
+        "fin": "",
+        "technologies": [
+          "Java",
+          "React",
+          "HTML",
+          "CSS",
+          "Javascript",
+          "Freemarker",
+          "Velocity",
+          "SQL", 
+          "Gradle"
+        ],
+        "librairies_et_plugins": [
+          "J2E",
+          "Springboot"
+        ],
+        "description": "Projet professionnel réalisé avec l'entreprise. Création du site intranet de l'université à l'aide d'un CMS Liferay Open Source. Toutes les fonctionnalités du site ont été développés à travers différents modules en Java. La réalisation du visuel des modules se sont basé sur la reproduction rigoureuse de maquette créé par l'UX designer.  Une fois le site terminé, j'ai eu l'occasion de prendre la relève en tant que chef de projet afin d'assurer la maintenance et les relations clients. Cela dans l'objectif de prendre de l'expérience en gestion de projet et aussi de continuer à faire vivre le site intranet."
+      },
+      {
+        "type": "project",
+        "nom": "OPCO mobilité",
+        "debut": "2022-06-01",
+        "fin": "",
+        "technologies": [
+          "Java",
+          "React",
+          "HTML",
+          "CSS",
+          "Javascript",
+          "Freemarker",
+          "Velocity",
+          "SQL", 
+          "Gradle"
+        ],
+        "librairies_et_plugins": [
+          "J2E",
+          "Springboot"
+        ],
+        "description": "Projet professionnel réalisé avec l'entreprise. Création du site intranet de l'université à l'aide d'un CMS Liferay Open Source. Ce site intranet est la première étape vers la création d'un produit de l'entreprise. J'ai eu l'occasion de repensé et de reconceptionner une partie des modules tant visuellement que dans les fonctionnalités. Les fonctionnalités du site ont été développés à travers différents modules en Java. La réalisation du visuel des modules se sont basé sur la reproduction rigoureuse de maquette créé par l'UX designer."
+      },
+      {
+        "type": "project",
+        "nom": "Sorbonne Université",
+        "debut": "2023-04-01",
+        "fin": "",
+        "technologies": [
+          "Java",
+          "React",
+          "HTML",
+          "CSS",
+          "Javascript",
+          "Freemarker",
+          "Velocity",
+          "SQL", 
+          "Gradle"
+        ],
+        "librairies_et_plugins": [
+          "J2E",
+          "Springboot"
+        ],
+        "description": "Projet professionnel réalisé avec l'entreprise. Création du site intranet de l'université à l'aide d'un CMS Liferay Open Source. Ce site intranet permet la continuation vers une version produit. Cependant, ce projet est aussi la source de véritable challenge technique dont l'entreprise n'avait jamais fait face. Par exemple, j'ai eu l'occasion de gérer un micro-projet avec pour objectifs la création d'un client SOAP sécurisé afin de récupérés des informations sur les personnels et étudiants pour créer des fiches d'informations accessible par les adminsitrateurs. Toutes les fonctionnalités du site ont été développés à travers différents modules en Java. La réalisation du visuel des modules se sont basé sur la reproduction rigoureuse de maquette créé par l'UX designer.  Une fois le site terminé, j'ai eu l'occasion de prendre la relève en tant que chef de projet afin d'assurer la maintenance et les relations clients. Cela dans l'objectif de prendre de l'expérience en gestion de projet et aussi de continuer à faire vivre le site intranet."
+      },
+      {
+        "type": "project",
+        "nom": "Computer Vision et reconstruction de modèle 3D",
+        "debut": "2023-07-15",
+        "fin": "2023-09-18",
+        "technologies": [
+          "Python"
+        ],
+        "librairies_et_plugins": [
+          "Open3d",
+          "OpenCV",
+          "YOLO"
+        ],
+        "description": "Projet professionnel réalisé avec le centre de recherche Barcelonais I2CAT. J'ai commencer les premières recherches sur l'amélioration de la qualité des reconstruction tri-dimensionnel. Auparavant, l'application fonctionnait avec la reconstruction 3D, à l'aide d'une seul caméra KINECT. L'object de ce stage était de permettre la reconstruction de modèle 3D à l'aide de plusieurs caméra capturant les images d'un environnement. Pour cela, l'intelligence Artificielle a permi de trouver les objets se trouvant sur les images afin de pouvoir aligner les différents points de vue dnas un même système de coordonnées. C'est à l'aide notamment de la puissant librairie Open3d que les nuages de points générés par les images peuvent être ensuite fusionnés, alignés et combinés dans ce même système de coordonnées."
+      },
+      {
+        "type": "project",
+        "nom": "Site web de gestion de cartes pokémons",
+        "debut": "2023-05-01",
+        "fin": "2023-06-01",
+        "technologies": [
+          "Java",
+          "HTML",
+          "CSS",
+          "Javascript"
+        ],
+        "librairies_et_plugins": [],
+        "description": "Projet scolaire en solitaire. Applications web avec gestion de cartes pokémons, achats de cartes et matchs entre joueurs en ligne afin de gagner des cartes. Les cartes sont enregistrés en base de données et suscpetibles d'être mis à jour afin d'ajouter de nouvelles cartes pokémons à la liste complète."
+      },
+      {
+        "type": "project",
+        "nom": "Bot discord",
+        "debut": "2021-12-05",
+        "fin": "2022-07-01",
+        "technologies": [
+          "Python"
+        ],
+        "librairies_et_plugins": [],
+        "description": "Récupération de données via API. Plusieurs commandes sont disponibles afin de consulter les différentes statistiques en fonction du pseudo."
+      },
+      {
+        "type": "project",
+        "nom": "Age of Empire",
+        "debut": "2022-08-01",
+        "fin": "2022-10-01",
+        "technologies": [
+          "C#",
+          "Unity"
+        ],
+        "librairies_et_plugins": [],
+        "description": "Projets Unity consistant à reproduire un jeu de stratégie et de gestion tour par tour. Ce projet n'a pas aboutti, mais m'a permis de découvrir le dévloppement de jeux vidéos à l'aide de moteur jeu."
+      },
+      {
+        "type": "project",
+        "nom": "Projet KP",
+        "debut": "2021-10-01",
+        "fin": "2022-06-01",
+        "technologies": [
+          "Flutter"
+        ],
+        "librairies_et_plugins": [],
+        "description": "Projet personnel avec un collaborateur.  C'est une applications mobiles regroupant une multitude de mini-jeux. Les mini-jeux peuvent être filtré et recherché. C'est une application dont l'objectif est de rassembler une multitude de jeu afin de casser l'ennui avec ses amis."
+      }
+    ]
   },
   "francais": {
       "profil": {
@@ -66,8 +485,6 @@
         "date_naissance": "2001-01-05",
         "format_date": "YYYY-MM-DD",
         "nationalite": "Française",
-        "adresse1": "1 rue Emile Dunière, 69100 Villeurbanne",
-        "adresse2": "7 rue du moulin à vent, 42300 Roanne",
         "telephone": "07 66 603561",
         "email": "katusbastien@gmail.com",
         "poste": "Développeur Full Stack",
@@ -79,42 +496,40 @@
           "Football (10 ans)",
           "Voiture de sports",
           "Jeux de société",
-          "Les jeux de stratégies tour par tour ou en temps réel",
-          "Les défis"
+          "Les jeux de stratégies tour par tour ou en temps réel"
         ],
         "soft_skills":[
           "Esprit d'équipe",
           "Persévérance",
           "Assiduité",
-          "Autonome",
+          "Autonomie",
           "Capacité d'adaption rapide",
-          "Prise de recul", 
-          "Réflexion"
+          "Prise de recul"
         ],
         "social":[
           {
             "social_name":"Mail",
             "social_icon":"fa-solid fa-envelope",
-            "link":"",
+            "link":"https://www.gmail.com",
             "display_link":"katusbastien@gmail.com"
           },
           {
             "social_name":"Phone",
             "social_icon":"fa-solid fa-phone",
-            "link":"",
+            "link":"+33 7 66 60 35 61",
             "display_link":"07 66 60 35 61"
           },
           {
             "social_name":"GitHub",
             "social_icon":"fa-brands fa-github",
-            "link":"github.com",
-            "display_link":"github.com"
+            "link":"https://www.github.com",
+            "display_link":"https://www.github.com"
           },
           {
             "social_name":"Linkedin",
             "social_icon":"fa-brands fa-linkedin",
-            "link":"",
-            "display_link":"linkedin.com"
+            "link":"https://www.linkedin.com/in/bastien-katuszynski",
+            "display_link":"https://www.linkedin.com/in/bastien-katuszynski"
           }
         ]
       },
@@ -145,7 +560,7 @@
           "type": "formation",
           "diplome": "Baccalauréat des Sciences Economiques et Sociales",
           "mention": "Mention Bien",
-          "etablissement": "Lycée Jean Puy",
+          "etablissement": "Lycée Jean Puy Roanne",
           "code_etablissement": "Lycée Jean Puy",
           "ville": "Roanne",
           "debut": "2018-09-01",
@@ -211,15 +626,23 @@
           "debut": "2021-09-06",
           "fin": "",
           "contrat": "Alternance",
-          "description": "Description du travail effectué",
-          "technologies":[
+          "technologies": [
             "Java / J2EE",
             "Javascript / React JS",
             "HTML / CSS",
-            "Velocity", 
+            "Velocity",
             "Freemarker",
             "PostgreSQL",
             "ElasticSearch"
+          ],
+          "description" :[
+            "Récupération et gestion de projet, assurant une exécution efficace des tâches de maintenance préventive et corrective pour garantir la continuité du site intranet",
+            "Gestion d'équipe, en supervisant et en motivant une équipe lors de la réalisation de modules clients",
+            "Participation active à des réunions de lancements et de préparations à des projets de site intranet, en contribuant à la définition des objectifs et des plans d'action.",
+            "Développement BackEnd des processus applicatifs du site intranet, en assurant la fiabilité et la sécurité des fonctionnalités essentielles.",
+            "Développement FrontEnd de divers modules pour répondre aux besoins spécifiques des clients",
+            "Mise en place de bases de données et d'indexeurs de données, optimisant ainsi la gestion des informations et la recherche de données.",
+            "Conception et étude technique de développements, en fournissant une expertise essentielle pour la planification et la mise en œuvre de projets innovants."
           ]
         },
         {
@@ -239,6 +662,13 @@
             "Freemarker",
             "PostgreSQL",
             "ElasticSearch"
+          ],
+          "description" :[
+            "Participation passives à des réunions de lancements et de préparations à des projets de site intranet",
+            "Développement BackEnd des processus applicatifs du site intranet, en assurant la fiabilité et la sécurité des fonctionnalités essentielles.",
+            "Développement FrontEnd de divers modules pour répondre aux besoins spécifiques des clients",
+            "Mise en place de bases de données et d'indexeurs de données, optimisant ainsi la gestion des informations et la recherche de données.",
+            "Conception et étude technique de développements, en fournissant une expertise essentielle pour la planification et la mise en œuvre de projets innovants."
           ]
         },
         {
@@ -258,18 +688,12 @@
             "Freemarker",
             "PostgreSQL",
             "ElasticSearch"
-          ]
-        },
-        {
-          "type": "experience",
-          "poste": "Intérimaire",
-          "entreprise": "Teinture Apprêts D’Anjoux (TAD)",
-          "ville": "Le Coteau",
-          "pays": "France",
-          "debut": "2020-07-15",
-          "fin": "2020-08-31",
-          "contrat": "CDD",
-          "technologies":[
+          ],
+          "description" :[
+            "Développement BackEnd des processus applicatifs du site intranet, en assurant la fiabilité et la sécurité des fonctionnalités essentielles.",
+            "Développement FrontEnd de divers modules pour répondre aux besoins spécifiques des clients",
+            "Mise en place de bases de données et d'indexeurs de données, optimisant ainsi la gestion des informations et la recherche de données.",
+            "Conception de développements, en fournissant un point de vue constructifs afin d'aborder des projets innovants."
           ]
         }
       ],
@@ -280,16 +704,17 @@
           "debut": "2023-05-01",
           "fin": "",
           "technologies": [
+            "Javascript",
             "HTML",
             "CSS"
           ],
           "image": "Capture d’écran 2023-08-05 120424.png",
           "librairies_et_plugins": [],
-          "description": "Site Web d’un club de Babyfoot en Groupe de 3, programmé en HTML et CSS. Réalisation d’un dossier d’analyse, d’un dossier de conception et de la charte graphique du site."
+          "description": "Projet personnel. Défi de réalisation d'un portfolio avec le trio du langage web uniquement. Les fonctionnalités ont été développés en grande partie. Les améliorations graphiques seront apportés au fur et à mesure de la créativité"
         },
         {
           "type": "project",
-          "nom": "Développement d’un site internet de recherche de lieux géographique et traçage d’itinéraire",
+          "nom": "Développement d’un site de recherche de lieux géographique et traçage d’itinéraire",
           "debut": "2022-03-15",
           "fin": "2022-04-30",
           "technologies": [
@@ -300,7 +725,7 @@
           "librairies_et_plugins": [
             "Leaflet"
           ],
-          "description": ""
+          "description": "Projet scolaire en duo avec obligation d'utiliser le trio de langage web vanilla. Le site internet est basé sur les informations récupérés par l'API d'OpenStreetMap. C'est l'API de Leaflet qui permet de faire le traçage des trajets. L'objectif était donc de revoir les bases du développements web en maintenant une architecture cohérente, ainsi que l'utilisation d'API externe."
         },
         {
           "type": "project",
@@ -311,9 +736,10 @@
             "Python"
           ],
           "librairies_et_plugins": [
-            "OpenCV"
+            "OpenCV",
+            "TKinter"
           ],
-          "description": "Projet Tutoré en groupe de 3. Programmation d’un mur d’escalade interactif en Python."
+          "description": "Projet tutoré en groupe de 3. Programmation d’un mur d’escalade interactif en Python. Analyse et traitement d'images en temps réels réalisé avec OpenCV. Création d'items interactifs via l'ordinateur. L'image contenant les éléments interactifs sont projetés sur mur blanc. Une caméra capture en contenu ce même écran, cela permet de remettre à jour en temps réel l'application. Via une soustraction d'image et leurs traitements, l'escaladeur a la possibilité d'interagir avec l'application. Enfin une interface graphique a été développé à l'aide de TKinter. "
         },
         {
           "type": "project",
@@ -325,43 +751,208 @@
             "CSS"
           ],
           "librairies_et_plugins": [],
-          "description": "Site Web d’un club de Babyfoot en Groupe de 3, programmé en HTML et CSS. Réalisation d’un dossier d’analyse, d’un dossier de conception et de la charte graphique du site."
+          "description": "Projet scolaire d'un de la réalisation d'un site de club de Babyfoot en trio. Programmé en HTML et CSS, l'objectif premier n'était pas le rendu visuel. Plusieurs dimensions sont abordé, comme la gestion de projet, l'analyse du besoin, la création de la charte graphique et la rédaction du cahier des charges. La gestion du projet était au coeur du projet."
         },
         {
           "type": "project",
-          "nom": "Gestion de projet Web",
-          "debut": "2020-04-01",
-          "fin": "2020-05-31",
+          "nom": "Undercover",
+          "debut": "2020-02-01",
+          "fin": "2020-04-30",
           "technologies": [
+            "C++"
+          ],
+          "librairies_et_plugins": [],
+          "description": "Projet personnel. Réalisation du jeu Undercover. Jeu dans lequel plusieurs joueurs possédent des mots et d'autres joueurs des mots similaires. En fonction de son mot le joueur est dans une équipe. Chaque équipe doit trouver les intrus en annonçant un mot par tour. C'est un des tout premiers jeux que j'ai développé. Le jeu se joue sur le terminal et chaque jour doit suivre les étapes afin de jouer selon les régles pour découvrir son mot."
+        },
+        {
+          "type": "project",
+          "nom": "Pikolo / Jeux à questions",
+          "debut": "2021-03-01",
+          "fin": "2021-03-30",
+          "technologies": [
+            "Java", 
+            "Android_Studio"
+          ],
+          "librairies_et_plugins": [],
+          "description": "Projet personnel. Jeux dans lequel des questions, des minis-jeux ou des gages défilent à chaque fois que le maître du jeu touche l'écran. Il est possible d'ajouter, de modifier et de supprimer des joueurs de la liste afin de lancé une partie personnalisé. Les questions sont stockés dans un format XML."
+        },
+        {
+          "type": "project",
+          "nom": "Pokémon Hunter Géo",
+          "debut": "2023-05-01",
+          "fin": "2023-06-30",
+          "technologies": [
+            "Java",
+            "Android_Studio",
+            "Gradle"
+          ],
+          "librairies_et_plugins": [],
+          "description": "Projet scolaire en duo. C'est un jeu inspiré de Pokémon GO. Comme le jeu initial, l'objectif et de capturer tous les pokémons et de les garder dans son inventaire afin d'avoir les mêmes pokémons que le pokédex. Les pokémons apparaissent sur la carte qui géolocalise le joueur. Il est possible de lancer des combats et de capturer les pokémons à l'aide de pokéballs. Il est aussi possible de se rendre dans des pokéstops afin d'acheter des pokéballs et des potions de soin pour garder son personnage en vit."
+        },
+        {
+          "type": "project",
+          "nom": "Livre dont je suis le héros",
+          "debut": "2019-11-01",
+          "fin": "2019-11-15",
+          "technologies": [
+            "C++"
+          ],
+          "librairies_et_plugins": [],
+          "description": "Projet scolaire en trio, une histoire tiré d'un livre étant mis à disposition. L'objectif était de faire en sorte que l'histoire puissent se jouer informatiquement. Des choix à différents moments clefs redirigeait vers certaines pages du livre. Un dé était aussi lié à ce jeu afin de l'agrémenté avec un peu de hasard"
+        },
+        {
+          "type": "project",
+          "nom": "Application Web de gestion d'image",
+          "debut": "2020-04-01",
+          "fin": "2020-06-01",
+          "technologies": [
+            "PHP",
+            "laravel",
             "HTML",
             "CSS"
           ],
           "librairies_et_plugins": [],
-          "description": "Site Web d’un club de Babyfoot en Groupe de 3, programmé en HTML et CSS. Réalisation d’un dossier d’analyse, d’un dossier de conception et de la charte graphique du site."
+          "description": "Projet scolaire en solitaire, c'est un site web avec récupération d'images et traitement d'informations exif. Le site internet stock les différentes photos et permet plusieurs fonctionnalités de tri, d'ajout, de modification, de suppression et de téléchargement d'images."
         },
         {
           "type": "project",
-          "nom": "Gestion de projet Web",
-          "debut": "2020-04-01",
-          "fin": "2020-05-31",
+          "nom": "Simulation de gestion de feu et de pompiers",
+          "debut": "2023-01-01",
+          "fin": "2023-01-31",
           "technologies": [
-            "HTML",
-            "CSS"
+            "Java"
           ],
           "librairies_et_plugins": [],
-          "description": "Site Web d’un club de Babyfoot en Groupe de 3, programmé en HTML et CSS. Réalisation d’un dossier d’analyse, d’un dossier de conception et de la charte graphique du site."
+          "description": "Projet annuel dans un groupe de 4 développeurs possédant des compétences distinctes (Réseau, IOT, développement...). Applications complète réalisé par équipe de 4. Toute la chaîne d'informations et l'infrastructure de l'application a été pensé. Les capteurs étaient simulé dans un environnement, un serveur en Java afin que des feux, soit générés automatiquement et aléatoirement. Ensuite, les informations étaient envoyé via une chaîne IOT au serveur contenant l'application de gestion d'incendie. Dans cette application, les feux sont gérés par des casernes contenant des véhicules, des pompiers et des rssources d'eau. Cela était géré via l'applciation afin de consituer des équipes et les assignés à des feux. De plus les informations provenant de la chaîne IOT était transmises via MQTT dans grafana afin d'avoir des statistiques en temps réelle. Toute la partie réseau à aussi dû être pensé afin de répondre à ce besoin. "
         },
         {
           "type": "project",
-          "nom": "Gestion de projet Web",
-          "debut": "2020-04-01",
-          "fin": "2020-05-31",
+          "nom": "La rochelle",
+          "debut": "2021-07-01",
+          "fin": "",
           "technologies": [
+            "Java",
+            "React",
             "HTML",
-            "CSS"
+            "CSS",
+            "Javascript",
+            "Freemarker",
+            "Velocity",
+            "SQL", 
+            "Gradle"
+          ],
+          "librairies_et_plugins": [
+            "J2E",
+            "Springboot"
+          ],
+          "description": "Projet professionnel réalisé avec l'entreprise. Création du site intranet de l'université à l'aide d'un CMS Liferay Open Source. Toutes les fonctionnalités du site ont été développés à travers différents modules en Java. La réalisation du visuel des modules se sont basé sur la reproduction rigoureuse de maquette créé par l'UX designer.  Une fois le site terminé, j'ai eu l'occasion de prendre la relève en tant que chef de projet afin d'assurer la maintenance et les relations clients. Cela dans l'objectif de prendre de l'expérience en gestion de projet et aussi de continuer à faire vivre le site intranet."
+        },
+        {
+          "type": "project",
+          "nom": "OPCO mobilité",
+          "debut": "2022-06-01",
+          "fin": "",
+          "technologies": [
+            "Java",
+            "React",
+            "HTML",
+            "CSS",
+            "Javascript",
+            "Freemarker",
+            "Velocity",
+            "SQL", 
+            "Gradle"
+          ],
+          "librairies_et_plugins": [
+            "J2E",
+            "Springboot"
+          ],
+          "description": "Projet professionnel réalisé avec l'entreprise. Création du site intranet de l'université à l'aide d'un CMS Liferay Open Source. Ce site intranet est la première étape vers la création d'un produit de l'entreprise. J'ai eu l'occasion de repensé et de reconceptionner une partie des modules tant visuellement que dans les fonctionnalités. Les fonctionnalités du site ont été développés à travers différents modules en Java. La réalisation du visuel des modules se sont basé sur la reproduction rigoureuse de maquette créé par l'UX designer."
+        },
+        {
+          "type": "project",
+          "nom": "Sorbonne Université",
+          "debut": "2023-04-01",
+          "fin": "",
+          "technologies": [
+            "Java",
+            "React",
+            "HTML",
+            "CSS",
+            "Javascript",
+            "Freemarker",
+            "Velocity",
+            "SQL", 
+            "Gradle"
+          ],
+          "librairies_et_plugins": [
+            "J2E",
+            "Springboot"
+          ],
+          "description": "Projet professionnel réalisé avec l'entreprise. Création du site intranet de l'université à l'aide d'un CMS Liferay Open Source. Ce site intranet permet la continuation vers une version produit. Cependant, ce projet est aussi la source de véritable challenge technique dont l'entreprise n'avait jamais fait face. Par exemple, j'ai eu l'occasion de gérer un micro-projet avec pour objectifs la création d'un client SOAP sécurisé afin de récupérés des informations sur les personnels et étudiants pour créer des fiches d'informations accessible par les adminsitrateurs. Toutes les fonctionnalités du site ont été développés à travers différents modules en Java. La réalisation du visuel des modules se sont basé sur la reproduction rigoureuse de maquette créé par l'UX designer.  Une fois le site terminé, j'ai eu l'occasion de prendre la relève en tant que chef de projet afin d'assurer la maintenance et les relations clients. Cela dans l'objectif de prendre de l'expérience en gestion de projet et aussi de continuer à faire vivre le site intranet."
+        },
+        {
+          "type": "project",
+          "nom": "Computer Vision et reconstruction de modèle 3D",
+          "debut": "2023-07-15",
+          "fin": "2023-09-18",
+          "technologies": [
+            "Python"
+          ],
+          "librairies_et_plugins": [
+            "Open3d",
+            "OpenCV",
+            "YOLO"
+          ],
+          "description": "Projet professionnel réalisé avec le centre de recherche Barcelonais I2CAT. J'ai commencer les premières recherches sur l'amélioration de la qualité des reconstruction tri-dimensionnel. Auparavant, l'application fonctionnait avec la reconstruction 3D, à l'aide d'une seul caméra KINECT. L'object de ce stage était de permettre la reconstruction de modèle 3D à l'aide de plusieurs caméra capturant les images d'un environnement. Pour cela, l'intelligence Artificielle a permi de trouver les objets se trouvant sur les images afin de pouvoir aligner les différents points de vue dnas un même système de coordonnées. C'est à l'aide notamment de la puissant librairie Open3d que les nuages de points générés par les images peuvent être ensuite fusionnés, alignés et combinés dans ce même système de coordonnées."
+        },
+        {
+          "type": "project",
+          "nom": "Site web de gestion de cartes pokémons",
+          "debut": "2023-05-01",
+          "fin": "2023-06-01",
+          "technologies": [
+            "Java",
+            "HTML",
+            "CSS",
+            "Javascript"
           ],
           "librairies_et_plugins": [],
-          "description": "Site Web d’un club de Babyfoot en Groupe de 3, programmé en HTML et CSS. Réalisation d’un dossier d’analyse, d’un dossier de conception et de la charte graphique du site."
+          "description": "Projet scolaire en solitaire. Applications web avec gestion de cartes pokémons, achats de cartes et matchs entre joueurs en ligne afin de gagner des cartes. Les cartes sont enregistrés en base de données et suscpetibles d'être mis à jour afin d'ajouter de nouvelles cartes pokémons à la liste complète."
+        },
+        {
+          "type": "project",
+          "nom": "Bot discord",
+          "debut": "2021-12-05",
+          "fin": "2022-07-01",
+          "technologies": [
+            "Python"
+          ],
+          "librairies_et_plugins": [],
+          "description": "Récupération de données via API. Plusieurs commandes sont disponibles afin de consulter les différentes statistiques en fonction du pseudo."
+        },
+        {
+          "type": "project",
+          "nom": "Age of Empire",
+          "debut": "2022-08-01",
+          "fin": "2022-10-01",
+          "technologies": [
+            "C#",
+            "Unity"
+          ],
+          "librairies_et_plugins": [],
+          "description": "Projets Unity consistant à reproduire un jeu de stratégie et de gestion tour par tour. Ce projet n'a pas aboutti, mais m'a permis de découvrir le dévloppement de jeux vidéos à l'aide de moteur jeu."
+        },
+        {
+          "type": "project",
+          "nom": "Projet KP",
+          "debut": "2021-10-01",
+          "fin": "2022-06-01",
+          "technologies": [
+            "Flutter"
+          ],
+          "librairies_et_plugins": [],
+          "description": "Projet personnel avec un collaborateur.  C'est une applications mobiles regroupant une multitude de mini-jeux. Les mini-jeux peuvent être filtré et recherché. C'est une application dont l'objectif est de rassembler une multitude de jeu afin de casser l'ennui avec ses amis."
         }
       ]
     }
