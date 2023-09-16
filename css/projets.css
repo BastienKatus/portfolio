@@ -8,7 +8,7 @@
 #projets_div .card {
     position: relative;
     display: flex;
-    height: 300px;
+    height: 350px;
     flex: 1 1 calc(33% - 50px);
     min-width: 21%;
     max-width: 49%;
@@ -170,10 +170,13 @@
 }
 
 #projets_div .card .card_inner_content .card_inner_description{
-    padding: 4px 0;
+    padding: 8px 0;
     font-size: 15px;
+    line-height: 16px;
     word-spacing: 1px;
     font-family: 'Lato-Thin';
+    height: 300px;
+    overflow: auto;
 }
 
 
@@ -187,32 +190,37 @@
 
 #filter_bar .reset-filter-button{
   position: relative;
-  width: 35px;
-  height: 30px;
-  align-self: center;
+  width: 55px;
+  height: 40px;
+  margin: 20px 0;
   background-color: var(--danger);
   color: var(--text-light-color);
+  border: 1px solid var(--tertiary);
 }
+
+#filter_bar .reset-filter-button:hover{
+    cursor: pointer;
+    opacity: .9;
+  }
 
 #filter_bar .filter-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   gap: 10px;
-  padding: 32px 0;
-  margin: 16px 15px;
+  margin: 20px 15px;
   width: 90%;
 }
 
 #filter_bar .filter-button {
   transition: background-color 200ms, color 200ms;
-  background-color: transparent;
+  background-color: var(--tertiary);
   cursor: pointer;
   display: inline-block;
   padding: 8px 12px;
-  color: var(--tertiary);
+  color: var(--text-dark-color);
   border: 1px solid var(--tertiary);
-  border-radius: 8px;
+  border-radius: 4px;
   font-size: 18px;
   white-space: nowrap;
 }

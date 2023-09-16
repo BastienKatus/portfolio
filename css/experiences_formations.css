@@ -53,12 +53,12 @@
 }
 
 #experiences_formations_table table  tr .contract {
-    width: 10%;
+    width: 15%;
     text-align: center;
 }
 
 #experiences_formations_table table  tr .poste {
-    width: 30%;
+    width: 40%;
 }
 
 #experiences_formations_table table  tr .company {

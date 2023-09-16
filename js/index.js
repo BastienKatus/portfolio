@@ -50,7 +50,7 @@ function buildProfil(profil){
                     profilInfo.innerHTML = firstName;
                     break;
                 case "age":
-                    profilInfo.innerHTML = age;
+                    profilInfo.innerHTML = age.toString() + profilInfo.children[0].outerHTML + profilInfo.children[1].outerHTML;
                     break;
                 case "nationality":
                     profilInfo.innerHTML = nationality;
@@ -400,7 +400,12 @@ function buildExperiences(experiences) {
             const cellDescription = document.createElement('td');
             cellDescription.classList.add("description");
             cellDescription.colSpan = 3;
-            cellDescription.textContent = experience.description;
+            
+            experience.description.map(desc => {
+                const description = document.createElement("p");
+                description.textContent = desc
+                cellDescription.appendChild(description);
+            })
 
             const cellTechnologies = document.createElement('td');
             cellTechnologies.classList.add("technologies");

@@ -288,7 +288,7 @@
       },
       {
         "type": "project",
-        "nom": "Pikolo / Jeux à questions",
+        "nom": "Jeux à questions",
         "debut": "2021-03-01",
         "fin": "2021-03-30",
         "technologies": [
@@ -484,11 +484,11 @@
         "prenom": "Bastien",
         "date_naissance": "2001-01-05",
         "format_date": "YYYY-MM-DD",
-        "nationalite": "Française",
-        "telephone": "07 66 603561",
+        "nationalite": "Français",
+        "telephone": "07 66 60 35 61",
         "email": "katusbastien@gmail.com",
         "poste": "Développeur Full Stack",
-        "presentation_text":" <p> Je suis actuellement en formations en alternance dans le domaine de l’informatique et des réseaux de télécommunications. Actuellement, mon alternance est partagée entre la formation dispensé par <a href=\"https://www.cpe.fr/\"> CPE Lyon </a> dans laquelle je poursuis cette 5ème année avec une spécialisation génie logiciel et l’entreprise <a href=\"https://agiir-digital.com/\"> AGIIR Network</a> qui me permet de me confirmer mes compétences en tant que développeur full stack et chef de projet.</p> <p> Si vous êtes ici, c’est que vous avez dû apercevoir un lien vers mon portfolio et que vous êtes curieux de découvrir mes expériences. Vous trouverez différents onglets accessibles via un simple clic afin d’en savoir plus sur mes formations, mes expériences professionnelles, les projets personnels etc… </p> <p> Autrement, si cela peut vous intéresser, vous pouvez déployer la description en cliquant sur « Voir plus ». Attention, cette section a tendance à ressembler à une autobiographie. Je vais expliquer plus ou moins en détail tous les choix que j’ai été amené à prendre durant ma scolarité afin de construire l’Homme que je suis aujourd’hui. </p>",
+        "presentation_text":"<p>Je suis actuellement en formation en alternance dans le domaine de l'informatique et des réseaux de télécommunications. Mon parcours se divise entre la formation dispensée par <a href=\"https://www.cpe.fr/\"> CPE Lyon </a> en cette cinquième année, avec une spécialisation en génie logiciel, et mon rôle au sein de l'entreprise  <a href=\"https://agiir-digital.com/\"> AGIIR Network</a>. Cette expérience me permet de consolider mes compétences en tant que développeur full stack et chef de projet.<p>Si vous êtes arrivé sur cette page, c'est probablement parce que vous avez découvert un lien vers mon portfolio et que vous êtes curieux de connaître mes expériences. Vous trouverez différents onglets accessibles en un simple clic pour en savoir davantage sur mes formations, mes expériences professionnelles, mes projets personnels, et bien plus encore.</p><p>Sinon, vous pouvez également explorer davantage en cliquant sur l'option \"Voir plus\". Mon objectif est de partager mon parcours et mes réalisations de manière détaillée et transparente.</p>",
         "more_presentation":"Mon autobiographie est en cours de rédaction",
         "hobbies":[
           "Badminton (2 ans)",
@@ -508,6 +508,12 @@
         ],
         "social":[
           {
+            "social_name":"Linkedin",
+            "social_icon":"fa-brands fa-linkedin",
+            "link":"https://www.linkedin.com/in/bastien-katuszynski",
+            "display_link":"https://www.linkedin.com/in/bastien-katuszynski"
+          },
+          {
             "social_name":"Mail",
             "social_icon":"fa-solid fa-envelope",
             "link":"https://www.gmail.com",
@@ -518,18 +524,6 @@
             "social_icon":"fa-solid fa-phone",
             "link":"+33 7 66 60 35 61",
             "display_link":"07 66 60 35 61"
-          },
-          {
-            "social_name":"GitHub",
-            "social_icon":"fa-brands fa-github",
-            "link":"https://www.github.com",
-            "display_link":"https://www.github.com"
-          },
-          {
-            "social_name":"Linkedin",
-            "social_icon":"fa-brands fa-linkedin",
-            "link":"https://www.linkedin.com/in/bastien-katuszynski",
-            "display_link":"https://www.linkedin.com/in/bastien-katuszynski"
           }
         ]
       },
@@ -766,7 +760,7 @@
         },
         {
           "type": "project",
-          "nom": "Pikolo / Jeux à questions",
+          "nom": "Jeux à questions",
           "debut": "2021-03-01",
           "fin": "2021-03-30",
           "technologies": [
