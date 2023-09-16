@@ -96,29 +96,45 @@
     top: 10px;
     width: 40px;
     height: 25px;
-    border-radius: 4px;
+    border-radius: 3px;
 }
 
-.badge.decouverte {
+.badge.decouverte, .badge.decouverte .badge_details {
     background-color: #4CAF50; /* Vert */
 }
 
-.badge.novice {
+.badge.novice, .badge.novice .badge_details {
     background-color: #2196F3; /* Bleu */
 }
 
-.badge.intermediaire {
+.badge.intermediaire, .badge.intermediaire .badge_details {
     background-color: #FFC107; /* Jaune */
 }
 
-.badge.avancee {
+.badge.avancee, .badge.avancee .badge_details {
     background-color: #FF9800; /* Orange */
 }
 
-.badge.confirmee {
+.badge.confirmee, .badge.confirmee .badge_details {
     background-color: #F44336; /* Rouge */
 }
 
-.badge.professionnelle {
+.badge.professionnelle, .badge.professionnelle .badge_details {
     background-color: #9C27B0; /* Violet */
+}
+
+#technical_skills .badge .badge_details{
+    display: none;
+    position: relative;
+    top: -50px;
+    left: 50px;
+    width: 250px;
+    z-index: 1;
+    border-radius: 4px;
+    padding: 12px;
+}
+
+#technical_skills .badge:hover .badge_details{
+    cursor: pointer;
+    display: flex;
 }

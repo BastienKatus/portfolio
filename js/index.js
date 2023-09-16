@@ -263,6 +263,29 @@ function buildCompetences(competences){
 
         theadTechnicalSkills.appendChild(headerRow);
 
+        let grade = ["decouverte", "novice", "intermediaire", "avancee", "confirmee", "professionnelle"]
+        let gradeDescFR = [
+            "Expérience avec ce langage par curiosité.",
+            "Démarrage de projets à l'aide de cette technologie qui n'ont pas abouti pour diverses raisons.",
+            "Création de certaines parties d'applications et réalisation de projets, démontrant la capacité à coder des fonctionnalités basiques.",
+            "Développement d'applications avec une aisance dans ce langage.",
+            "Langages et technologies les mieux maîtrisé, avec la création d'applications substantielles. Familiarité avec des conventions et fonctionnalités avancées.",
+            "Conception d'une ou plusieurs applications dans un contexte professionnel, exigeant la rédaction de code lisible, maintenable et robuste, démontrant ainsi la capacité à manipuler efficacement le code."
+       ]
+        let gradeDescEN = [
+            "Experience with this language out of curiosity.",
+            "Attempted to initiate projects using this technology that did not succeed for various reasons.",
+            "Creation of certain application components and completion of projects, demonstrating the ability to code basic functionalities.",
+            "Development of applications with ease in this language.",
+            "Languages and technologies most proficiently mastered, with the creation of substantial applications. Familiarity with advanced conventions and features.",
+            "Design of one or more applications in a professional context, requiring the writing of readable, maintainable, and robust code, thereby demonstrating effective code manipulation."
+        ]
+
+        let gradeDesc = gradeDescFR
+        if(currentLanguage.includes("en")){
+            gradeDesc = gradeDescEN
+        }
+
         // Trouver le nombre maximum de valeurs par type
         const maxValues = Math.max(...competences.map(competence => competence.value.length));
 
@@ -278,29 +301,37 @@ function buildCompetences(competences){
                     const { technologie, niveau } = competence.value[i];
                     const techCell = document.createElement('span');
                     const badgeCell = document.createElement('span');
+                    const badgeDetailsCell = document.createElement('div');
                     techCell.textContent = technologie;
                     badgeCell.classList.add('badge');
 
                     // Ajouter le grade du badge
-                    grade = ["decouverte", "novice", "intermediaire", "avancee", "confirmee", "professionnelle"]
                     if (niveau.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(grade[0])) {
-                        badgeCell.classList.add(grade[0])
+                        badgeCell.classList.add(grade[0]);
+                        badgeDetailsCell.textContent = gradeDesc[0];
                     }
                     else if (niveau.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(grade[1])) {
-                        badgeCell.classList.add(grade[1])
+                        badgeCell.classList.add(grade[1]);
+                        badgeDetailsCell.textContent = gradeDesc[1];
                     }
                     else if (niveau.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(grade[2])) {
-                        badgeCell.classList.add(grade[2])
+                        badgeCell.classList.add(grade[2]);
+                        badgeDetailsCell.textContent = gradeDesc[2];
                     }
                     else if (niveau.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(grade[3])) {
-                        badgeCell.classList.add(grade[3])
+                        badgeCell.classList.add(grade[3]);
+                        badgeDetailsCell.textContent = gradeDesc[3];
                     }
                     else if (niveau.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(grade[4])) {
-                        badgeCell.classList.add(grade[4])
+                        badgeCell.classList.add(grade[4]);
+                        badgeDetailsCell.textContent = gradeDesc[4];
                     }
                     else{
-                        badgeCell.classList.add(grade[5])
+                        badgeCell.classList.add(grade[5]);
+                        badgeDetailsCell.textContent = gradeDesc[5];
                     }
+                    badgeDetailsCell.classList.add("badge_details")
+                    badgeCell.appendChild(badgeDetailsCell)
                     
                     valueCell.appendChild(techCell);
                     valueCell.appendChild(badgeCell);
