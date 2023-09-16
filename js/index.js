@@ -1,5 +1,6 @@
 // VARIABLES //
 const FILENAME = "./data/informations.json";
+let currentLanguage = ""
 let dataTimeline = [];
 let allTechnologiesAndLibrairies = [];
 
@@ -59,7 +60,7 @@ function buildProfil(profil){
                     profilInfo.innerHTML = address1 + "<br>" + address2;
                     break;
                 case "poste":
-                    profilInfo.innerHTML = "<p> Actuellement en tant que: </p> <p>"+poste+"</p>";
+                    profilInfo.innerHTML = profilInfo.children[0].outerHTML + profilInfo.children[1].outerHTML + "<p>"+poste+"</p>";
                     break;
                 case "phone":
                     profilInfo.innerHTML = phone;
@@ -74,18 +75,14 @@ function buildProfil(profil){
                     profilInfo.innerHTML = morePresentation;
                     break;
                 case "hobbies":
-                    let tableHobbies = document.getElementById("hobbies");
-                    tableHobbies.innerHTML = "";
-                    let theadHobbies = document.createElement("thead");              
+                    let tableHobbies = document.getElementById("hobbies");            
                     let tbodyHobbies = document.createElement("tbody");
+                    if(tableHobbies.children[1]){
+                        for( let index = 1; index <= tableHobbies.children.length; index++){
+                            tableHobbies.removeChild(tableHobbies.children[index])
+                        }
+                    }
 
-                    let theadRowHobbies = document.createElement("tr");
-                    let theadCellHobbies = document.createElement("th");
-                    theadCellHobbies.textContent = "Mes centres d'intérêts  ";
-                    theadRowHobbies.appendChild(theadCellHobbies);
-                    
-                    theadHobbies.appendChild(theadRowHobbies);
-                  
                     hobbies.forEach(hobby => {
                       let row = document.createElement("tr");
                       let cell = document.createElement("td");
@@ -94,24 +91,18 @@ function buildProfil(profil){
                       tbodyHobbies.appendChild(row);
                     });
                   
-                    tableHobbies.appendChild(theadHobbies);
                     tableHobbies.appendChild(tbodyHobbies);
                     break;
                       
                 case "soft_skills":
                     let tableSoftSkills = document.getElementById("soft_skills");
-                    tableSoftSkills.innerHTML = "";
-                    let theadSoftSkills = document.createElement("thead");
                     let tbodySoftSkills = document.createElement("tbody");
-
-                    let theadRowSoftSkills = document.createElement("tr");
-                    let theadCellSoftSkills  = document.createElement("th");
-                    theadCellSoftSkills.textContent = "Softs skills";
-                    theadRowSoftSkills.appendChild(theadCellSoftSkills);
-                    
-                    theadSoftSkills.appendChild(theadRowSoftSkills);
-                    
-                    softSkills.forEach(softSkill => {
+                    if(tableSoftSkills.children[1]){
+                        for( let index = 1; index <= tableSoftSkills.children.length; index++){
+                            tableSoftSkills.removeChild(tableSoftSkills.children[index])
+                        }
+                    }
+                    softSkills.forEach(softSkill => {   
                         let row = document.createElement("tr");
                         let cell = document.createElement("td");
                         cell.innerHTML = softSkill;
@@ -119,8 +110,6 @@ function buildProfil(profil){
                         tbodySoftSkills.appendChild(row);
                     });
 
-                    
-                    tableSoftSkills.appendChild(theadSoftSkills);
                     tableSoftSkills.appendChild(tbodySoftSkills);
                     break;
 
@@ -400,7 +389,7 @@ function buildExperiences(experiences) {
             const cellDescription = document.createElement('td');
             cellDescription.classList.add("description");
             cellDescription.colSpan = 3;
-            
+
             experience.description.map(desc => {
                 const description = document.createElement("p");
                 description.textContent = desc
@@ -705,6 +694,7 @@ function buildTimeline(dataTimeline){
     }
     const ul = document.createElement("ul");
 
+    console.log("Building a timeline")
     // Ajout des marqueurs d'années
     let startYearMarker = 2018
     const years = [];
@@ -769,17 +759,31 @@ function buildTimeline(dataTimeline){
 
 function formatDateToReadable(dateStr) {
     if(dateStr == ""){
+        if(currentLanguage.includes("en")){
+            return "In progress"
+        }
+
         return "En cours"
     }
     else {
         const dateObj = new Date(dateStr);
 
         const day = dateObj.getDate();
-        const monthNames = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+        const monthNamesFR = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+        const monthNamesEN = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+        let monthNames = monthNamesFR
+        if(currentLanguage.includes("en")){
+            monthNames = monthNamesEN
+        }
+
         const month = monthNames[dateObj.getMonth()];
         const year = dateObj.getFullYear();
     
-        const readableDate = `${month} ${year}`;
+        let readableDate = `${month} ${year}`;
+        if(currentLanguage.includes("en")){
+            readableDate = `${year} ${month}`;
+        }
     
         return readableDate;
     }
@@ -967,14 +971,12 @@ function handleLanguageChange(langValue) {
         langDivs[i].style.display = 'none';
       }
     }
-
+    currentLanguage = langValue
     initSite(langValue)
 }
 
 function initSite(dataLangValue) {
     console.log("Start website with: ", dataLangValue)
-    // Clear data timeline
-    dataTimeline = [];
 
     // Initialize the theme mode
     initializeModeTheme()
@@ -990,6 +992,8 @@ function initSite(dataLangValue) {
     .then(response => response.json())
     .then(data => {
         console.log("langValue", langValue)
+        // Clear data timeline
+        dataTimeline = [];
         if (!data[langValue] || typeof data[langValue] !== "object" || Object.keys(data[langValue]).length === 0) {
             data = data["francais"];
         } else {

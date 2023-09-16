@@ -168,11 +168,16 @@ section.accueil.container {
   margin-top: 40px;
 }
 
-#profil .custom-table th {
+#profil .custom-table thead{
   border: 1px solid var(--background-1);
+}
+
+#profil .custom-table th {
   padding: 8px;
   background-color: var(--background-6);
   font-weight: bold; /* Ajoute une épaisseur de police en gras */
+  display: flex;
+  width: 100%;
 }
 
 #profil .custom-table tr td {

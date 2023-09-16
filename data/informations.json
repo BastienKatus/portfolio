@@ -1,99 +1,92 @@
 {
   "english": {
     "profil": {
-      "nom": "ENGLISH",
+      "nom": "KATUSZYNSKI",
       "prenom": "Bastien",
       "date_naissance": "2001-01-05",
       "format_date": "YYYY-MM-DD",
-      "nationalite": "Française",
-      "telephone": "07 66 603561",
+      "nationalite": "French",
+      "telephone": "07 66 60 35 61",
       "email": "katusbastien@gmail.com",
-      "poste": "Développeur Full Stack",
-      "presentation_text":"ENGLISH",
-      "more_presentation":"Mon autobiographie est en cours de rédaction",
-      "hobbies":[
-        "Badminton (2 ans)",
-        "Aviron (4 ans)",
-        "Football (10 ans)",
-        "Voiture de sports",
-        "Jeux de société",
-        "Les jeux de stratégies tour par tour ou en temps réel"
+      "poste": "Full Stack Developer",
+      "presentation_text": "<p>I am currently undergoing apprenticeship training in the field of computer science and telecommunications networks. My journey is divided between the education provided by <a href=\"https://www.cpe.fr/\">CPE Lyon</a> in this fifth year, specializing in software engineering, and my role at the company <a href=\"https://agiir-digital.com/\">AGIIR Network</a>. This experience allows me to strengthen my skills as a full stack developer and project manager.</p><p>If you have arrived on this page, it's probably because you've discovered a link to my portfolio and you're curious to learn about my experiences. You'll find various tabs accessible with a simple click to learn more about my education, professional experiences, personal projects, and much more.</p><p>Alternatively, you can explore further by clicking on the 'See more' option. My goal is to share my journey and accomplishments in a detailed and transparent manner.</p>",
+      "more_presentation": "My autobiography is currently in progress",
+      "hobbies": [
+        "Badminton (2 years)",
+        "Rowing (4 years)",
+        "Football (10 years)",
+        "Sports cars",
+        "Board games",
+        "Turn-based or real-time strategy games"
       ],
-      "soft_skills":[
-        "Esprit d'équipe",
-        "Persévérance",
-        "Assiduité",
-        "Autonomie",
-        "Capacité d'adaption rapide",
-        "Prise de recul", 
-        "Réflexion"
+      "soft_skills": [
+        "Team spirit",
+        "Perseverance",
+        "Diligence",
+        "Autonomy",
+        "Quick adaptability",
+        "Perspective"
       ],
-      "social":[
+      "social": [
         {
-          "social_name":"Mail",
-          "social_icon":"fa-solid fa-envelope",
-          "link":"https://www.gmail.com",
-          "display_link":"katusbastien@gmail.com"
+          "social_name": "LinkedIn",
+          "social_icon": "fa-brands fa-linkedin",
+          "link": "https://www.linkedin.com/in/bastien-katuszynski",
+          "display_link": "https://www.linkedin.com/in/bastien-katuszynski"
         },
         {
-          "social_name":"Phone",
-          "social_icon":"fa-solid fa-phone",
-          "link":"+33 7 66 60 35 61",
-          "display_link":"07 66 60 35 61"
+          "social_name": "Mail",
+          "social_icon": "fa-solid fa-envelope",
+          "link": "https://www.gmail.com",
+          "display_link": "katusbastien@gmail.com"
         },
         {
-          "social_name":"GitHub",
-          "social_icon":"fa-brands fa-github",
-          "link":"https://www.github.com",
-          "display_link":"https://www.github.com"
-        },
-        {
-          "social_name":"Linkedin",
-          "social_icon":"fa-brands fa-linkedin",
-          "link":"https://www.linkedin.com/in/bastien-katuszynski",
-          "display_link":"https://www.linkedin.com/in/bastien-katuszynski"
+          "social_name": "Phone",
+          "social_icon": "fa-solid fa-phone",
+          "link": "+33 7 66 60 35 61",
+          "display_link": "07 66 60 35 61"
         }
       ]
     },
     "formations": [
       {
         "type": "formation",
-        "diplome": "Diplôme d’ingénieur en Informatique et Réseaux de Communications en alternance",
+        "diplome": "Master's Degree in Computer Science and Telecommunications Networks (Apprenticeship)",
         "etablissement": "Ecole de Chimie Physique et Electronique de Lyon",
         "code_etablissement": "CPE",
-        "etablissement2" : "Instituts des techniques d'ingénieur de l'industrie du Centres de Formation des Apprentis de l'Industrie de Lyon",
+        "etablissement2": "Institute of Engineering Techniques of the Industry of Lyon's Apprenticeship Training Centers",
         "code_etablissement2": "ITII / CFAI",
         "ville": "Lyon",
         "debut": "2021-09-06",
-        "fin": "", 
-        "description":""
+        "fin": "",
+        "description": ""
       },
       {
-        "type": "formation",
-        "diplome": "Diplôme Universitaire et Technologique Informatique",
-        "etablissement": "Université Lyon 1 site Bourg-en-Bresse",
+        "type": "education",
+        "diplome": "University and Technology Diploma in Computer Science",
+        "etablissement": "Lyon 1 University, Bourg-en-Bresse Campus",
         "code_etablissement": "IUT Lyon 1",
         "ville": "Bourg-en-Bresse",
         "debut": "2019-09-01",
-        "fin": "2021-08-31", 
-        "description":""
+        "fin": "2021-08-31",
+        "description": ""
       },
       {
-        "type": "formation",
-        "diplome": "Baccalauréat des Sciences Economiques et Sociales",
-        "mention": "Mention Bien",
-        "etablissement": "Lycée Jean Puy Roanne",
+        "type": "education",
+        "diplome": "Baccalaureate in Economics and Social Sciences",
+        "mention": "With Honors",
+        "etablissement": "Lycée Jean Puy, Roanne",
         "code_etablissement": "Lycée Jean Puy",
         "ville": "Roanne",
         "debut": "2018-09-01",
-        "fin": "2019-08-31", 
-        "description":""
+        "fin": "2019-08-31",
+        "description": ""
       }
     ],
     "competences": [
       {
           "type": "programmation",
-          "titre": "Langages de programmations",
+          "titre": "Programmation Language",
           "value": [
               { "technologie": "Java / J2EE", "niveau": "Expérience professionnelle" },
               { "technologie": "Javascript / React JS", "niveau": "Expérience professionnelle" },
@@ -110,7 +103,7 @@
       },
       {
           "type": "bases_de_donnees",
-          "titre": "Bases de données",
+          "titre": "Database",
           "value": [
               { "technologie": "PostgreSQL", "niveau": "Expérience professionnelle" },
               { "technologie": "MySQL", "niveau": "Avancée" },
@@ -121,7 +114,7 @@
       },
       {
           "type": "systeme_environnement",
-          "titre": "Systèmes d'exploitation et Environnements",
+          "titre": "Operating System and Environnement",
           "value": [
               { "technologie": "Windows", "niveau": "Confirmée" },
               { "technologie": "Linux", "niveau": "Avancée" },
@@ -130,7 +123,7 @@
       },
       {
           "type": "gestion_projet",
-          "titre": "Outils de gestion de projet",
+          "titre": "Project Management Tools",
           "value": [
               { "technologie": "GitLab", "niveau": "Avancée" },
               { "technologie": "GitHub", "niveau": "Confirmée" },
@@ -141,13 +134,35 @@
     "experiences_professionnelles": [
       {
         "type": "experience",
-        "poste": "Développeur Full Stack de site intranet et extranet",
+        "poste": "Assistant reasearcher in Computer Vision and 3D Model Reconstruction",
+        "entreprise":"I2CAT Foundation",
+        "ville": "Barcelona",
+        "pays": "Spain",
+        "debut": "2023-07-14",
+        "fin": "2023-09-18",
+        "contrat": "Internship",
+        "technologies": [
+          "Python",
+          "Open3d",
+          "OpenCV",
+          "YOLO"
+        ],
+        "description": [
+          "Contribution to research aimed at improving the quality of three-dimensional reconstructions.",
+          "Transition from a 3D reconstruction method using only a KINECT camera to a 3D reconstruction that combines images from multiple cameras.",
+          "Use of artificial intelligence to detect objects in the images, thereby facilitating the alignment of different perspectives in a common coordinate system.",
+          "Implementation of the powerful Open3d library to merge, align, and combine the point clouds generated from these images in the same coordinate system."
+        ]
+      },
+      {
+        "type": "experience",
+        "poste": "Full Stack Developer for intranet and extranet websites",
         "entreprise": "AGIIR NETWORK",
         "ville": "Roanne",
         "pays": "France",
         "debut": "2021-09-06",
         "fin": "",
-        "contrat": "Alternance",
+        "contrat": "Apprenticeship",
         "technologies": [
           "Java / J2EE",
           "Javascript / React JS",
@@ -158,24 +173,24 @@
           "ElasticSearch"
         ],
         "description" :[
-          "Récupération et gestion de projet, assurant une exécution efficace des tâches de maintenance préventive et corrective pour garantir la continuité du site intranet",
-          "Gestion d'équipe, en supervisant et en motivant une équipe lors de la réalisation de modules clients",
-          "Participation active à des réunions de lancements et de préparations à des projets de site intranet, en contribuant à la définition des objectifs et des plans d'action.",
-          "Développement BackEnd des processus applicatifs du site intranet, en assurant la fiabilité et la sécurité des fonctionnalités essentielles.",
-          "Développement FrontEnd de divers modules pour répondre aux besoins spécifiques des clients",
-          "Mise en place de bases de données et d'indexeurs de données, optimisant ainsi la gestion des informations et la recherche de données.",
-          "Conception et étude technique de développements, en fournissant une expertise essentielle pour la planification et la mise en œuvre de projets innovants."
+          "Recovery and management of projects, ensuring efficient execution of preventive and corrective maintenance tasks to ensure the continuity of the intranet site",
+          "Team management, supervising and motivating a team during client module development",
+          "Active participation in intranet site project kickoff and preparation meetings, contributing to goal and action plan definition.",
+          "BackEnd development of intranet site application processes, ensuring reliability and security of essential functionalities.",
+          "FrontEnd development of various modules to meet specific client needs",
+          "Implementation of databases and data indexers, optimizing information management and data retrieval.",
+          "Design and technical study of developments, providing essential expertise for the planning and implementation of innovative projects."
         ]
       },
       {
         "type": "experience",
-        "poste": "Assistant chef de projet informatique",
+        "poste": "Assistant IT Project Manager",
         "entreprise": "AGIIR NETWORK",
         "ville": "Roanne",
         "pays": "France",
         "debut": "2021-07-01",
         "fin": "2021-08-31",
-        "contrat": "CDD",
+        "contrat": "Fixed-term contract",
         "technologies":[
           "Java / J2EE",
           "Javascript / React JS",
@@ -186,22 +201,22 @@
           "ElasticSearch"
         ],
         "description" :[
-          "Participation passives à des réunions de lancements et de préparations à des projets de site intranet",
-          "Développement BackEnd des processus applicatifs du site intranet, en assurant la fiabilité et la sécurité des fonctionnalités essentielles.",
-          "Développement FrontEnd de divers modules pour répondre aux besoins spécifiques des clients",
-          "Mise en place de bases de données et d'indexeurs de données, optimisant ainsi la gestion des informations et la recherche de données.",
-          "Conception et étude technique de développements, en fournissant une expertise essentielle pour la planification et la mise en œuvre de projets innovants."
+          "Participation in project kickoff and preparation meetings",
+          "BackEnd development of intranet site application processes, ensuring reliability and security of essential functionalities.",
+          "FrontEnd development of various modules to meet specific client needs",
+          "Implementation of databases and data indexers, optimizing information management and data retrieval.",
+          "Design and technical study of developments, providing essential expertise for the planning and implementation of innovative projects."
         ]
       },
       {
         "type": "experience",
-        "poste": "Développeur Full Stack",
+        "poste": "Full Stack Developer",
         "entreprise": "AGIIR NETWORK",
         "ville": "Roanne",
         "pays": "France",
         "debut": "2021-04-12",
         "fin": "2021-06-30",
-        "contrat": "Stage",
+        "contrat": "Internship",
         "technologies":[
           "Java / J2EE",
           "Javascript / React JS",
@@ -212,17 +227,32 @@
           "ElasticSearch"
         ],
         "description" :[
-          "Développement BackEnd des processus applicatifs du site intranet, en assurant la fiabilité et la sécurité des fonctionnalités essentielles.",
-          "Développement FrontEnd de divers modules pour répondre aux besoins spécifiques des clients",
-          "Mise en place de bases de données et d'indexeurs de données, optimisant ainsi la gestion des informations et la recherche de données.",
-          "Conception de développements, en fournissant un point de vue constructifs afin d'aborder des projets innovants."
+          "BackEnd development of intranet site application processes, ensuring reliability and security of essential functionalities.",
+          "FrontEnd development of various modules to meet specific client needs",
+          "Implementation of databases and data indexers, optimizing information management and data retrieval.",
+          "Design of developments, providing constructive insights to approach innovative projects."
         ]
       }
     ],
     "projets": [
       {
         "type": "project",
-        "nom": "Portfolio profesionnel",
+        "nom": "Computer Vision and 3D Model Reconstruction",
+        "debut": "2023-07-15",
+        "fin": "2023-09-18",
+        "technologies": [
+          "Python"
+        ],
+        "librairies_et_plugins": [
+          "Open3d",
+          "OpenCV",
+          "YOLO"
+        ],
+        "description": "Professional project carried out with the Barcelona-based research center I2CAT. I began research on improving the quality of 3D reconstructions. Previously, the application worked with 3D reconstruction using a single KINECT camera. The goal of this internship was to enable 3D model reconstruction using multiple cameras capturing images of an environment. To achieve this, artificial intelligence was used to identify objects in the images so that different viewpoints could be aligned in the same coordinate system. The powerful Open3d library was used to merge, align, and combine point clouds generated from the images in this coordinate system."
+      },
+      {
+        "type": "project",
+        "nom": "Professional Portfolio",
         "debut": "2023-05-01",
         "fin": "",
         "technologies": [
@@ -230,13 +260,13 @@
           "HTML",
           "CSS"
         ],
-        "image": "Capture d’écran 2023-08-05 120424.png",
+        "image": "",
         "librairies_et_plugins": [],
-        "description": "Projet personnel. Défi de réalisation d'un portfolio avec le trio du langage web uniquement. Les fonctionnalités ont été développés en grande partie. Les améliorations graphiques seront apportés au fur et à mesure de la créativité"
+        "description": "Personal project. Challenge to create a portfolio using the web trio of languages only. The functionalities have been developed to a large extent. Graphic improvements will be made as creativity progresses."
       },
       {
         "type": "project",
-        "nom": "Développement d’un site de recherche de lieux géographique et traçage d’itinéraire",
+        "nom": "Development of a Geographic Location Search and Route Tracing Website",
         "debut": "2022-03-15",
         "fin": "2022-04-30",
         "technologies": [
@@ -247,11 +277,11 @@
         "librairies_et_plugins": [
           "Leaflet"
         ],
-        "description": "Projet scolaire en duo avec obligation d'utiliser le trio de langage web vanilla. Le site internet est basé sur les informations récupérés par l'API d'OpenStreetMap. C'est l'API de Leaflet qui permet de faire le traçage des trajets. L'objectif était donc de revoir les bases du développements web en maintenant une architecture cohérente, ainsi que l'utilisation d'API externe."
+        "description": "School project done as a duo with the obligation to use the vanilla web trio of languages. The website is based on information retrieved from the OpenStreetMap API. The Leaflet API is used for route tracing. The goal was to revisit the basics of web development while maintaining a consistent architecture and using external APIs."
       },
       {
         "type": "project",
-        "nom": "Mur d’escalade en réalité augmentée",
+        "nom": "Augmented Reality Climbing Wall",
         "debut": "2021-01-01",
         "fin": "2021-05-31",
         "technologies": [
@@ -261,11 +291,11 @@
           "OpenCV",
           "TKinter"
         ],
-        "description": "Projet tutoré en groupe de 3. Programmation d’un mur d’escalade interactif en Python. Analyse et traitement d'images en temps réels réalisé avec OpenCV. Création d'items interactifs via l'ordinateur. L'image contenant les éléments interactifs sont projetés sur mur blanc. Une caméra capture en contenu ce même écran, cela permet de remettre à jour en temps réel l'application. Via une soustraction d'image et leurs traitements, l'escaladeur a la possibilité d'interagir avec l'application. Enfin une interface graphique a été développé à l'aide de TKinter. "
+        "description": "Group project with 3 members. Programming an interactive climbing wall in Python. Real-time image analysis and processing with OpenCV. Creation of interactive items via the computer. The image containing interactive elements is projected onto a white wall. A camera captures the content of this screen, allowing real-time updates to the application. Through image subtraction and processing, the climber can interact with the application. Finally, a graphical interface was developed using TKinter."
       },
       {
         "type": "project",
-        "nom": "Gestion de projet Web",
+        "nom": "Web Project Management",
         "debut": "2020-04-01",
         "fin": "2020-05-31",
         "technologies": [
@@ -273,34 +303,34 @@
           "CSS"
         ],
         "librairies_et_plugins": [],
-        "description": "Projet scolaire d'un de la réalisation d'un site de club de Babyfoot en trio. Programmé en HTML et CSS, l'objectif premier n'était pas le rendu visuel. Plusieurs dimensions sont abordé, comme la gestion de projet, l'analyse du besoin, la création de la charte graphique et la rédaction du cahier des charges. La gestion du projet était au coeur du projet."
+        "description": "School project for the development of a Babyfoot club website in a team of three. Programmed in HTML and CSS, the primary goal was not visual design. Several dimensions were addressed, including project management, needs analysis, graphic design, and writing the specifications. Project management was at the heart of the project."
       },
       {
         "type": "project",
-        "nom": "Undercover",
+        "nom": "Undercover Game",
         "debut": "2020-02-01",
         "fin": "2020-04-30",
         "technologies": [
           "C++"
         ],
         "librairies_et_plugins": [],
-        "description": "Projet personnel. Réalisation du jeu Undercover. Jeu dans lequel plusieurs joueurs possédent des mots et d'autres joueurs des mots similaires. En fonction de son mot le joueur est dans une équipe. Chaque équipe doit trouver les intrus en annonçant un mot par tour. C'est un des tout premiers jeux que j'ai développé. Le jeu se joue sur le terminal et chaque jour doit suivre les étapes afin de jouer selon les régles pour découvrir son mot."
+        "description": "Personal project. Creation of the Undercover game, in which several players have words, and other players have similar words. Depending on their word, the player is on a team. Each team must find the intruders by announcing a word per turn. This was one of the first games I developed. The game is played in the terminal, and each day follows the steps to play according to the rules to discover their word."
       },
       {
         "type": "project",
-        "nom": "Jeux à questions",
+        "nom": "Quiz Games",
         "debut": "2021-03-01",
         "fin": "2021-03-30",
         "technologies": [
-          "Java", 
+          "Java",
           "Android_Studio"
         ],
         "librairies_et_plugins": [],
-        "description": "Projet personnel. Jeux dans lequel des questions, des minis-jeux ou des gages défilent à chaque fois que le maître du jeu touche l'écran. Il est possible d'ajouter, de modifier et de supprimer des joueurs de la liste afin de lancé une partie personnalisé. Les questions sont stockés dans un format XML."
+        "description": "Personal project. Quiz game where questions, mini-games, or challenges appear each time the game master touches the screen. It is possible to add, modify, and delete players from the list to start a customized game. Questions are stored in XML format."
       },
       {
         "type": "project",
-        "nom": "Pokémon Hunter Géo",
+        "nom": "Pokémon Hunter Geo",
         "debut": "2023-05-01",
         "fin": "2023-06-30",
         "technologies": [
@@ -309,22 +339,22 @@
           "Gradle"
         ],
         "librairies_et_plugins": [],
-        "description": "Projet scolaire en duo. C'est un jeu inspiré de Pokémon GO. Comme le jeu initial, l'objectif et de capturer tous les pokémons et de les garder dans son inventaire afin d'avoir les mêmes pokémons que le pokédex. Les pokémons apparaissent sur la carte qui géolocalise le joueur. Il est possible de lancer des combats et de capturer les pokémons à l'aide de pokéballs. Il est aussi possible de se rendre dans des pokéstops afin d'acheter des pokéballs et des potions de soin pour garder son personnage en vit."
+        "description": "School project as a duo. It is a game inspired by Pokémon GO. Like the original game, the goal is to capture all Pokémon and keep them in your inventory to complete the Pokédex. Pokémon appear on the map, which geolocates the player. It is possible to engage in battles and capture Pokémon using Pokéballs. Players can also visit Pokéstops to buy Pokéballs and healing potions to keep their character in good health."
       },
       {
         "type": "project",
-        "nom": "Livre dont je suis le héros",
+        "nom": "Choose Your Own Adventure Book",
         "debut": "2019-11-01",
         "fin": "2019-11-15",
         "technologies": [
           "C++"
         ],
         "librairies_et_plugins": [],
-        "description": "Projet scolaire en trio, une histoire tiré d'un livre étant mis à disposition. L'objectif était de faire en sorte que l'histoire puissent se jouer informatiquement. Des choix à différents moments clefs redirigeait vers certaines pages du livre. Un dé était aussi lié à ce jeu afin de l'agrémenté avec un peu de hasard"
+        "description": "School project as a trio, adapting a story from a book made available. The goal was to make the story playable electronically. Choices at different key moments redirect to certain pages of the book. A die was also associated with this game to add an element of chance."
       },
       {
         "type": "project",
-        "nom": "Application Web de gestion d'image",
+        "nom": "Web Image Management Application",
         "debut": "2020-04-01",
         "fin": "2020-06-01",
         "technologies": [
@@ -334,22 +364,22 @@
           "CSS"
         ],
         "librairies_et_plugins": [],
-        "description": "Projet scolaire en solitaire, c'est un site web avec récupération d'images et traitement d'informations exif. Le site internet stock les différentes photos et permet plusieurs fonctionnalités de tri, d'ajout, de modification, de suppression et de téléchargement d'images."
+        "description": "Solo school project, a website with image retrieval and Exif information processing. The website stores various photos and allows several functions for sorting, adding, modifying, deleting, and downloading images."
       },
       {
         "type": "project",
-        "nom": "Simulation de gestion de feu et de pompiers",
+        "nom": "Fire and Firefighter Management Simulation",
         "debut": "2023-01-01",
         "fin": "2023-01-31",
         "technologies": [
           "Java"
         ],
         "librairies_et_plugins": [],
-        "description": "Projet annuel dans un groupe de 4 développeurs possédant des compétences distinctes (Réseau, IOT, développement...). Applications complète réalisé par équipe de 4. Toute la chaîne d'informations et l'infrastructure de l'application a été pensé. Les capteurs étaient simulé dans un environnement, un serveur en Java afin que des feux, soit générés automatiquement et aléatoirement. Ensuite, les informations étaient envoyé via une chaîne IOT au serveur contenant l'application de gestion d'incendie. Dans cette application, les feux sont gérés par des casernes contenant des véhicules, des pompiers et des rssources d'eau. Cela était géré via l'applciation afin de consituer des équipes et les assignés à des feux. De plus les informations provenant de la chaîne IOT était transmises via MQTT dans grafana afin d'avoir des statistiques en temps réelle. Toute la partie réseau à aussi dû être pensé afin de répondre à ce besoin. "
+        "description": "Annual project in a group of 4 developers with distinct skills (Network, IoT, development...). Comprehensive application developed by a team of 4. The entire information chain and application infrastructure were carefully designed. Sensors were simulated in an environment, a Java server generated fires automatically and randomly. Then, the information was sent via an IoT chain to the fire management application. In this application, fires are managed by fire stations containing vehicles, firefighters, and water resources. This was managed through the application to form teams and assign them to fires. In addition, information from the IoT chain was transmitted via MQTT to Grafana for real-time statistics. The entire network part also had to be designed to meet this need."
       },
       {
         "type": "project",
-        "nom": "La rochelle",
+        "nom": "La Rochelle",
         "debut": "2021-07-01",
         "fin": "",
         "technologies": [
@@ -367,11 +397,11 @@
           "J2E",
           "Springboot"
         ],
-        "description": "Projet professionnel réalisé avec l'entreprise. Création du site intranet de l'université à l'aide d'un CMS Liferay Open Source. Toutes les fonctionnalités du site ont été développés à travers différents modules en Java. La réalisation du visuel des modules se sont basé sur la reproduction rigoureuse de maquette créé par l'UX designer.  Une fois le site terminé, j'ai eu l'occasion de prendre la relève en tant que chef de projet afin d'assurer la maintenance et les relations clients. Cela dans l'objectif de prendre de l'expérience en gestion de projet et aussi de continuer à faire vivre le site intranet."
+        "description": "Professional project carried out with the company. Creation of the university's intranet site using the open-source CMS Liferay. All site functionalities were developed through different Java modules. The visual design of the modules was based on the precise reproduction of mock-ups created by the UX designer. Once the site was completed, I had the opportunity to take over as project manager to ensure maintenance and client relations. This was done with the goal of gaining project management experience and continuing to support the intranet site."
       },
       {
         "type": "project",
-        "nom": "OPCO mobilité",
+        "nom": "OPCO Mobility",
         "debut": "2022-06-01",
         "fin": "",
         "technologies": [
@@ -389,11 +419,11 @@
           "J2E",
           "Springboot"
         ],
-        "description": "Projet professionnel réalisé avec l'entreprise. Création du site intranet de l'université à l'aide d'un CMS Liferay Open Source. Ce site intranet est la première étape vers la création d'un produit de l'entreprise. J'ai eu l'occasion de repensé et de reconceptionner une partie des modules tant visuellement que dans les fonctionnalités. Les fonctionnalités du site ont été développés à travers différents modules en Java. La réalisation du visuel des modules se sont basé sur la reproduction rigoureuse de maquette créé par l'UX designer."
+        "description": "Professional project carried out with the company. Creation of the university's intranet site using the open-source CMS Liferay. This intranet site is the first step towards creating a product for the company. I had the opportunity to redesign and reconceptualize some modules both visually and in terms of functionality. The site's functionalities were developed through different Java modules. The visual design of the modules was based on the precise reproduction of mock-ups created by the UX designer."
       },
       {
         "type": "project",
-        "nom": "Sorbonne Université",
+        "nom": "Sorbonne University",
         "debut": "2023-04-01",
         "fin": "",
         "technologies": [
@@ -411,26 +441,11 @@
           "J2E",
           "Springboot"
         ],
-        "description": "Projet professionnel réalisé avec l'entreprise. Création du site intranet de l'université à l'aide d'un CMS Liferay Open Source. Ce site intranet permet la continuation vers une version produit. Cependant, ce projet est aussi la source de véritable challenge technique dont l'entreprise n'avait jamais fait face. Par exemple, j'ai eu l'occasion de gérer un micro-projet avec pour objectifs la création d'un client SOAP sécurisé afin de récupérés des informations sur les personnels et étudiants pour créer des fiches d'informations accessible par les adminsitrateurs. Toutes les fonctionnalités du site ont été développés à travers différents modules en Java. La réalisation du visuel des modules se sont basé sur la reproduction rigoureuse de maquette créé par l'UX designer.  Une fois le site terminé, j'ai eu l'occasion de prendre la relève en tant que chef de projet afin d'assurer la maintenance et les relations clients. Cela dans l'objectif de prendre de l'expérience en gestion de projet et aussi de continuer à faire vivre le site intranet."
+        "description": "Professional project carried out with the company. Creation of the university's intranet site using the open-source CMS Liferay. This intranet site allows for further development into a product version. However, this project also posed real technical challenges the company had never faced before. For example, I had the opportunity to manage a micro-project with the goal of creating a secure SOAP client to retrieve information about staff and students to create information sheets accessible to administrators. All site functionalities were developed through different Java modules. The visual design of the modules was based on the precise reproduction of mock-ups created by the UX designer. Once the site was completed, I had the opportunity to take over as project manager to ensure maintenance and client relations. This was done with the goal of gaining project management experience and continuing to support the intranet site."
       },
       {
         "type": "project",
-        "nom": "Computer Vision et reconstruction de modèle 3D",
-        "debut": "2023-07-15",
-        "fin": "2023-09-18",
-        "technologies": [
-          "Python"
-        ],
-        "librairies_et_plugins": [
-          "Open3d",
-          "OpenCV",
-          "YOLO"
-        ],
-        "description": "Projet professionnel réalisé avec le centre de recherche Barcelonais I2CAT. J'ai commencer les premières recherches sur l'amélioration de la qualité des reconstruction tri-dimensionnel. Auparavant, l'application fonctionnait avec la reconstruction 3D, à l'aide d'une seul caméra KINECT. L'object de ce stage était de permettre la reconstruction de modèle 3D à l'aide de plusieurs caméra capturant les images d'un environnement. Pour cela, l'intelligence Artificielle a permi de trouver les objets se trouvant sur les images afin de pouvoir aligner les différents points de vue dnas un même système de coordonnées. C'est à l'aide notamment de la puissant librairie Open3d que les nuages de points générés par les images peuvent être ensuite fusionnés, alignés et combinés dans ce même système de coordonnées."
-      },
-      {
-        "type": "project",
-        "nom": "Site web de gestion de cartes pokémons",
+        "nom": "Pokémon Card Management Website",
         "debut": "2023-05-01",
         "fin": "2023-06-01",
         "technologies": [
@@ -440,18 +455,18 @@
           "Javascript"
         ],
         "librairies_et_plugins": [],
-        "description": "Projet scolaire en solitaire. Applications web avec gestion de cartes pokémons, achats de cartes et matchs entre joueurs en ligne afin de gagner des cartes. Les cartes sont enregistrés en base de données et suscpetibles d'être mis à jour afin d'ajouter de nouvelles cartes pokémons à la liste complète."
+        "description": "Solo school project. Web applications with Pokémon card management, card purchases, and online player matches to win cards. The cards are stored in a database and can be updated to add new Pokémon cards to the complete list."
       },
       {
         "type": "project",
-        "nom": "Bot discord",
+        "nom": "Discord Bot",
         "debut": "2021-12-05",
         "fin": "2022-07-01",
         "technologies": [
           "Python"
         ],
         "librairies_et_plugins": [],
-        "description": "Récupération de données via API. Plusieurs commandes sont disponibles afin de consulter les différentes statistiques en fonction du pseudo."
+        "description": "Data retrieval via API. Several commands are available to access different statistics based on the username."
       },
       {
         "type": "project",
@@ -463,20 +478,20 @@
           "Unity"
         ],
         "librairies_et_plugins": [],
-        "description": "Projets Unity consistant à reproduire un jeu de stratégie et de gestion tour par tour. Ce projet n'a pas aboutti, mais m'a permis de découvrir le dévloppement de jeux vidéos à l'aide de moteur jeu."
+        "description": "Unity project to recreate a turn-based strategy and management game. This project was not completed but allowed me to discover video game development using a game engine."
       },
       {
         "type": "project",
-        "nom": "Projet KP",
+        "nom": "Project KP",
         "debut": "2021-10-01",
         "fin": "2022-06-01",
         "technologies": [
           "Flutter"
         ],
         "librairies_et_plugins": [],
-        "description": "Projet personnel avec un collaborateur.  C'est une applications mobiles regroupant une multitude de mini-jeux. Les mini-jeux peuvent être filtré et recherché. C'est une application dont l'objectif est de rassembler une multitude de jeu afin de casser l'ennui avec ses amis."
+        "description": "Personal project with a collaborator. It is a mobile application that includes a multitude of mini-games. The mini-games can be filtered and searched. The goal of this application is to bring together a variety of games to alleviate boredom with friends."
       }
-    ]
+    ]    
   },
   "francais": {
       "profil": {
@@ -613,6 +628,28 @@
       "experiences_professionnelles": [
         {
           "type": "experience",
+          "poste": "Assitant Chercheur en Computer Vision et reconstruction de modèle 3D",
+          "entreprise": "I2CAT Foundation",
+          "ville": "Barcelone",
+          "pays": "Espagne",
+          "debut": "2023-07-14",
+          "fin": "2023-09-18",
+          "contrat":"Stage",
+          "technologies": [
+            "Python",
+            "Open3d",
+            "OpenCV",
+            "YOLO"
+          ],
+          "description":[
+            "Contribution aux recherches visant à améliorer la qualité des reconstructions en trois dimensions.",
+            "Transition depuis une méthode de reconstruction 3D utilisant uniquement une caméra KINECT vers une reconstruction 3D combinant les images de plusieurs caméras.",
+            "Utilisation de l'intelligence artificielle pour détecter les objets dans les images, facilitant ainsi l'alignement des différentes perspectives dans un système de coordonnées commun.",
+            "Mise en œuvre de la puissante bibliothèque Open3d pour fusionner, aligner et combiner les nuages de points générés à partir de ces images dans le même système de coordonnées."
+          ]
+        },
+        {
+          "type": "experience",
           "poste": "Développeur Full Stack de site intranet et extranet",
           "entreprise": "AGIIR NETWORK",
           "ville": "Roanne",
@@ -702,7 +739,7 @@
             "HTML",
             "CSS"
           ],
-          "image": "Capture d’écran 2023-08-05 120424.png",
+          "image": "",
           "librairies_et_plugins": [],
           "description": "Projet personnel. Défi de réalisation d'un portfolio avec le trio du langage web uniquement. Les fonctionnalités ont été développés en grande partie. Les améliorations graphiques seront apportés au fur et à mesure de la créativité"
         },
@@ -898,7 +935,7 @@
             "OpenCV",
             "YOLO"
           ],
-          "description": "Projet professionnel réalisé avec le centre de recherche Barcelonais I2CAT. J'ai commencer les premières recherches sur l'amélioration de la qualité des reconstruction tri-dimensionnel. Auparavant, l'application fonctionnait avec la reconstruction 3D, à l'aide d'une seul caméra KINECT. L'object de ce stage était de permettre la reconstruction de modèle 3D à l'aide de plusieurs caméra capturant les images d'un environnement. Pour cela, l'intelligence Artificielle a permi de trouver les objets se trouvant sur les images afin de pouvoir aligner les différents points de vue dnas un même système de coordonnées. C'est à l'aide notamment de la puissant librairie Open3d que les nuages de points générés par les images peuvent être ensuite fusionnés, alignés et combinés dans ce même système de coordonnées."
+          "description": "Projet professionnel réalisé avec le centre de recherche basé à Barcelone, I2CAT. J'ai entamé des recherches visant à améliorer la qualité des reconstructions en 3D. Auparavant, l'application fonctionnait avec une reconstruction 3D utilisant uniquement une caméra KINECT. L'objectif de ce stage était de permettre la reconstruction en 3D de modèles en utilisant plusieurs caméras capturant des images d'un environnement. Pour ce faire, l'intelligence artificielle a été utilisée pour détecter les objets dans les images, facilitant ainsi l'alignement des différentes perspectives dans un même système de coordonnées. La puissante bibliothèque Open3d a été mise en œuvre pour fusionner, aligner et combiner les nuages de points générés à partir des images dans ce système de coordonnées."
         },
         {
           "type": "project",
