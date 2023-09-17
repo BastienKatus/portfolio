@@ -27,56 +27,63 @@
 
     <nav id="navbar">
         <div class="navbar-container container">
-            <input type="checkbox" name="" id="">
+            <!-- <input type="checkbox" name="nav_hamburger" id="nav_hamburger">
             <div class="hamburger-lines">
                 <span class="line line1"></span>
                 <span class="line line2"></span> 
                 <span class="line line3"></span>
-            </div>
+            </div> -->
             <ul class="menu-items">
                 <li onclick="changeSection('accueil')">
                     <a href="#" lang="fr">Accueil</a>
                     <a href="#" lang="en">Home</a>
+                    <i class="nav_icon_mobile fa-solid fa-house"></i>
                 </li>
                 <li onclick="changeSection('experiences_and_formations')">
                     <a href="#" lang="fr">Expériences et Formations</a>
                     <a href="#" lang="en">Experiences and Studies</a>
+                    <i class="nav_icon_mobile fa-solid fa-business-time"></i>
                 </li>
                 <!-- <li onclick="changeSection('formations')"><a href="#">Formations</a></li> -->
                 <li onclick="changeSection('competences')">
                     <a href="#" lang="fr">Compétences</a>
                     <a href="#" lang="en">Skills</a>
+                    <i class="nav_icon_mobile fa-solid fa-compass-drafting"></i>
                 </li>
                 <li onclick="changeSection('projets')">
                     <a href="#" lang="fr">Projets</a>
                     <a href="#" lang="en">Projects</a>
+                    <i class="nav_icon_mobile fa-solid fa-puzzle-piece"></i>
                 </li>
                 <li onclick="changeSection('whole_timeline')">
                     <a href="#" lang="fr">Ma timeline</a>
                     <a href="#" lang="en">My timeline</a>
+                    <i class="nav_icon_mobile fa-solid fa-timeline"></i>
                 </li>
                 <!-- <li onclick="changeSection('contacts')"><a href="#">Contact</a></li> -->
-                <div id="toggle_button_change_theme" onchange="toggleModeTheme()">
-                    <input type="checkbox" class="checkbox" id="checkbox">
-                    <label for="checkbox" class="checkbox-label">
-                        <i class="fas fa-moon"></i>
-                        <i class="fas fa-sun"></i>
-                        <span class="ball"></span>
-                    </label>
-                </div>
-                <div id="language_picker" data-trigger-class="li4-btn">
-                    <div id="language_picker_option">
-                        <span></span>
-                        <span>
-                            <div onclick="handleLanguageChange('english')">
-                                <img src='./data/images/united-kingdom-flag-icon.svg'></img>
-                                English
-                            </div>
-                            <div onclick="handleLanguageChange('francais')">
-                                <img src='./data/images/france-flag-icon.svg'></img>
-                                Français
-                            </div>
-                        </span>
+                <div id="visual_site_settings">
+                    <div id="toggle_button_change_theme" onchange="toggleModeTheme()">
+                        <input type="checkbox" class="checkbox" id="checkbox_theme">
+                        <label for="checkbox_theme" class="checkbox-label">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <span class="ball"></span>
+                        </label>
+                    </div>
+                    <div id="language_picker" data-trigger-class="li4-btn">
+                        <div id="language_picker_option">
+                            <span></span>
+                            <span>
+                                <div onclick="handleLanguageChange('english')">
+                                    <img src='./data/images/united-kingdom-flag-icon.svg'></img>
+                                    <div class="language_text">English</div>
+                                </div>
+                                <div onclick="handleLanguageChange('francais')">
+                                    <img src='./data/images/france-flag-icon.svg'></img>
+                                    <div class="language_text">Français</div>
+                                </div>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </ul>

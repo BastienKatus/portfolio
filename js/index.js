@@ -979,8 +979,9 @@ function handleLanguageChange(langValue) {
     spanOptions = pickerOption.children[1];
     for(index = 0; index < spanOptions.children.length; index++){
         languageOption = spanOptions.children[index];
-        if(languageOption.innerText.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(langValue)){
+        if(languageOption.children[1].innerText.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(langValue)){
             textLabel = languageOption.innerHTML;
+            console.log("found langugae", textLabel)
             spanOptions.removeChild(languageOption)
             spanOptions.insertBefore(languageOption, spanOptions.firstChild)
         }
@@ -990,7 +991,7 @@ function handleLanguageChange(langValue) {
     spanLabel = pickerOption.children[0];
     divContainerLabel = document.createElement("div");
     divContainerLabel.innerHTML = textLabel;
-    spanLabel.innerHTML = ""
+    spanLabel.innerHTML = "";
     spanLabel.appendChild(divContainerLabel);
 
     // Hide wrong language content
