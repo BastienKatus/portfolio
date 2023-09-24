@@ -35,7 +35,6 @@
 #timeline ul li .timeline-card{    
     border-radius: 4px;
     color: var(--text-dark-color);
-
 }
 
 #timeline ul li .timeline-card h2{    
@@ -61,7 +60,7 @@
 }
 
 #timeline ul li.timeline-container:nth-of-type(odd) div {    
-    left: calc(1vw + 6px);
+    left: calc(2vw + 6px);
 }
 
 #timeline ul li.timeline-container:nth-of-type(odd) div::before {
@@ -71,7 +70,7 @@
 }
 
 #timeline ul li.timeline-container:nth-of-type(even) div {
-    left: -29vw;
+    left: -30vw;
 }
 
 #timeline ul li.timeline-container:nth-of-type(even) div::before {
@@ -144,37 +143,6 @@
 }
 
 
-/* GENERAL MEDIA QUERIES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-@media screen and (max-width: 900px) {
-    #timeline ul li div {
-        width: 250px;
-    }
-    #timeline ul li:nth-child(even) div {
-        left: -289px;
-        /*250+45-6*/
-    }
-}
-
-@media screen and (max-width: 600px) {
-    #timeline ul li {
-        margin-left: 20px;
-    }
-    #timeline ul li div {
-        width: calc(100vw - 91px);
-    }
-    #timeline ul li:nth-child(even) div {
-        left: 45px;
-    }
-    #timeline ul li:nth-child(even) div::before {
-        left: -15px;
-        border-width: 8px 16px 8px 0;
-        border-color: transparent var(--background-7) transparent transparent;
-    }
-}
-
-
 /* EXTRA/CLIP PATH STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .timeline-clippy ul li::after {
@@ -223,13 +191,111 @@
 }
 
 @keyframes scaleAnimation {
-0% {
-    transform: translateX(-50%) scale(1);
+    0% {
+        transform: translateX(-50%) scale(1);
+    }
+    50% {
+        transform: translateX(-50%) scale(1.25);
+    }
+    100% {
+        transform: translateX(-50%) scale(1);
+    }
 }
-50% {
-    transform: translateX(-50%) scale(1.25);
+
+/* tablette en mode paysage*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    #timeline ul li div{
+        width: 32vw;
+    }
+
+    #timeline ul li.timeline-container:nth-of-type(odd) div {    
+        left: calc(2vw + 6px);
+    }
+    
+    #timeline ul li.timeline-container:nth-of-type(even) div {
+        left: -34vw;
+    }
+
+    #timeline ul li .timeline-card{
+        background-color: var(--background-1);
+    }
 }
-100% {
-    transform: translateX(-50%) scale(1);
+
+
+/* tablette en mode portrait */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    #timeline ul li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #timeline ul li {
+        margin: 30px 0;
+        background-color: unset;
+        padding: unset;
+        width: 100%;
+    }    
+
+    #timeline ul .yearMarker{
+        position: relative;
+    }
+
+    #timeline ul li div::before{
+        display: none;
+    }
+
+    #timeline ul li.timeline-container div{
+        left: unset !important;
+    }
+
+    #timeline ul li .timeline-card{
+        background-color: var(--background-1);
+        width: 60vw;
+        font-size: 14px;
+        width: 100%;
+    }
 }
+  
+  
+  /* smartphones */
+@media screen and (max-width: 480px) {
+    #timeline ul li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #timeline ul li {
+        margin: 30px 0;
+        background-color: unset;
+        padding: unset;
+        width: 100%;
+    }    
+
+    #timeline ul .yearMarker{
+        position: relative;
+    }
+
+    #timeline ul li div::before{
+        display: none;
+    }
+    
+    #timeline ul li.timeline-container div{
+        left: unset !important;
+    }
+
+    #timeline ul li .timeline-card{
+        background-color: var(--background-1);
+        width: 55vw;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    #timeline ul li .timeline-card p{
+        height: 0px;
+        display: none !important;
+    }
 }
+  

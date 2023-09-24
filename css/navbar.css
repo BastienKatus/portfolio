@@ -54,6 +54,7 @@
 #navbar .menu-items li{
     width: max-content;
     margin-left: 50px;
+    text-align: center;
 }
 
 #navbar .menu-items li i{
