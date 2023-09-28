@@ -246,24 +246,7 @@ function buildFormations(formations){
 
 function buildCompetences(competences){
     if(competences){
-        let tableTechnicalSkills = document.getElementById("technical_skills");
-        tableTechnicalSkills.innerHTML = "";
-        let theadTechnicalSkills = document.createElement("thead");
-        let tbodyTechnicalSkills = document.createElement("tbody");
-      
-
-        // Créer la ligne d'en-tête
-        const headerRow = document.createElement('tr');
-        const types = competences.map(competence => competence.type);
-
-        for (let i = 0; i < types.length; i++) {
-            const headerCell = document.createElement('th');
-            headerCell.textContent = competences[i].titre;
-            headerRow.appendChild(headerCell);
-        };
-
-        theadTechnicalSkills.appendChild(headerRow);
-
+        
         let grade = ["decouverte", "novice", "intermediaire", "avancee", "confirmee", "professionnelle"]
         let gradeDescFR = [
             "Expérience avec ce langage par curiosité.",
@@ -272,7 +255,7 @@ function buildCompetences(competences){
             "Développement d'applications avec une aisance dans ce langage.",
             "Langages et technologies les mieux maîtrisé, avec la création d'applications substantielles. Familiarité avec des conventions et fonctionnalités avancées.",
             "Conception d'une ou plusieurs applications dans un contexte professionnel, exigeant la rédaction de code lisible, maintenable et robuste, démontrant ainsi la capacité à manipuler efficacement le code."
-       ]
+        ]
         let gradeDescEN = [
             "Experience with this language out of curiosity.",
             "Attempted to initiate projects using this technology that did not succeed for various reasons.",
@@ -287,66 +270,152 @@ function buildCompetences(competences){
             gradeDesc = gradeDescEN
         }
 
-        // Trouver le nombre maximum de valeurs par type
-        const maxValues = Math.max(...competences.map(competence => competence.value.length));
+        const types = competences.map(competence => competence.type);
 
-        // Créer les lignes de données
-        for (let i = 0; i < maxValues; i++) {
-            const dataRow = document.createElement('tr');
+        let containerTechnicalSkills = document.getElementById("skills_help_and_table");
+        containerTechnicalSkills.innerHTML = "";
 
-            types.forEach(type => {
-                const valueCell = document.createElement('td');
-                const competence = competences.find(competence => competence.type === type);
-                
-                if (competence && competence.value[i]) {
-                    const { technologie, niveau } = competence.value[i];
-                    const techCell = document.createElement('span');
-                    const badgeCell = document.createElement('span');
-                    const badgeDetailsCell = document.createElement('div');
-                    techCell.textContent = technologie;
-                    badgeCell.classList.add('badge');
+        function createBadgeDetail(niveau, badgeCell){
+            const badgeDetailsCell = document.createElement('div');
 
-                    // Ajouter le grade du badge
-                    if (niveau.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(grade[0])) {
-                        badgeCell.classList.add(grade[0]);
-                        badgeDetailsCell.textContent = gradeDesc[0];
-                    }
-                    else if (niveau.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(grade[1])) {
-                        badgeCell.classList.add(grade[1]);
-                        badgeDetailsCell.textContent = gradeDesc[1];
-                    }
-                    else if (niveau.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(grade[2])) {
-                        badgeCell.classList.add(grade[2]);
-                        badgeDetailsCell.textContent = gradeDesc[2];
-                    }
-                    else if (niveau.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(grade[3])) {
-                        badgeCell.classList.add(grade[3]);
-                        badgeDetailsCell.textContent = gradeDesc[3];
-                    }
-                    else if (niveau.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(grade[4])) {
-                        badgeCell.classList.add(grade[4]);
-                        badgeDetailsCell.textContent = gradeDesc[4];
-                    }
-                    else{
-                        badgeCell.classList.add(grade[5]);
-                        badgeDetailsCell.textContent = gradeDesc[5];
-                    }
-                    badgeDetailsCell.classList.add("badge_details")
-                    badgeCell.appendChild(badgeDetailsCell)
-                    
-                    valueCell.appendChild(techCell);
-                    valueCell.appendChild(badgeCell);
-                }
+            if (niveau.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(grade[0])) {
+                badgeCell.classList.add(grade[0]);
+                badgeDetailsCell.textContent = gradeDesc[0];
+            }
+            else if (niveau.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(grade[1])) {
+                badgeCell.classList.add(grade[1]);
+                badgeDetailsCell.textContent = gradeDesc[1];
+            }
+            else if (niveau.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(grade[2])) {
+                badgeCell.classList.add(grade[2]);
+                badgeDetailsCell.textContent = gradeDesc[2];
+            }
+            else if (niveau.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(grade[3])) {
+                badgeCell.classList.add(grade[3]);
+                badgeDetailsCell.textContent = gradeDesc[3];
+            }
+            else if (niveau.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(grade[4])) {
+                badgeCell.classList.add(grade[4]);
+                badgeDetailsCell.textContent = gradeDesc[4];
+            }
+            else{
+                badgeCell.classList.add(grade[5]);
+                badgeDetailsCell.textContent = gradeDesc[5];
+            }
 
-                dataRow.appendChild(valueCell);
-            });
-
-            tbodyTechnicalSkills.appendChild(dataRow);
+            badgeDetailsCell.classList.add("badge_details")
+            return badgeDetailsCell
         }
         
-        // Construction du tableau
-        tableTechnicalSkills.appendChild(theadTechnicalSkills);
-        tableTechnicalSkills.appendChild(tbodyTechnicalSkills);
+        if (screenWidth <= 1024) {
+            // Format téléphone et tablette portrait et tablette paysage
+
+            types.forEach(type => {
+                let tableTechnicalSkills = document.createElement("table");
+                tableTechnicalSkills.id = "technical_skills";
+                tableTechnicalSkills.className = "custom-table";
+                let theadTechnicalSkills = document.createElement("thead");
+                let tbodyTechnicalSkills = document.createElement("tbody");
+
+                // Créer la ligne d'en-tête
+                const headerRow = document.createElement('tr');
+
+                const headerCell = document.createElement('th');
+                headerCell.textContent = competences.find(competence => competence.type === type).titre;
+                headerRow.appendChild(headerCell);
+                
+                theadTechnicalSkills.appendChild(headerRow);
+
+                // Créer les lignes de données
+                const competence = competences.find(competence => competence.type === type);
+                
+                if (competence) {
+                    competence.value.forEach(value => {
+                        let dataRow = document.createElement('tr');
+        
+                        const valueCell = document.createElement('td');
+
+                        const { technologie, niveau } = value;
+                        const techCell = document.createElement('span');
+                        const badgeCell = document.createElement('span');
+                        techCell.textContent = technologie;
+                        badgeCell.classList.add('badge');
+
+                        // Ajouter le grade du badge
+                        badgeCell.appendChild(createBadgeDetail(niveau, badgeCell))
+                        
+                        valueCell.appendChild(techCell);
+                        valueCell.appendChild(badgeCell);
+
+                        dataRow.appendChild(valueCell);
+                        tbodyTechnicalSkills.appendChild(dataRow);
+                    })
+                }
+                    
+                // Construction du tableau
+                tableTechnicalSkills.appendChild(theadTechnicalSkills);
+                tableTechnicalSkills.appendChild(tbodyTechnicalSkills);
+
+                containerTechnicalSkills.appendChild(tableTechnicalSkills);
+            });
+        } else {
+            // Format ordinateur
+
+            let tableTechnicalSkills = document.createElement("table");
+            tableTechnicalSkills.id = "technical_skills";
+            tableTechnicalSkills.className = "custom-table";
+            let theadTechnicalSkills = document.createElement("thead");
+            let tbodyTechnicalSkills = document.createElement("tbody");
+        
+
+            // Créer la ligne d'en-tête
+            const headerRow = document.createElement('tr');
+
+            for (let i = 0; i < types.length; i++) {
+                const headerCell = document.createElement('th');
+                headerCell.textContent = competences[i].titre;
+                headerRow.appendChild(headerCell);
+            };
+
+            theadTechnicalSkills.appendChild(headerRow);
+
+            // Trouver le nombre maximum de valeurs par type
+            const maxValues = Math.max(...competences.map(competence => competence.value.length));
+
+            // Créer les lignes de données
+            for (let i = 0; i < maxValues; i++) {
+                const dataRow = document.createElement('tr');
+
+                types.forEach(type => {
+                    const valueCell = document.createElement('td');
+                    const competence = competences.find(competence => competence.type === type);
+                    
+                    if (competence && competence.value[i]) {
+                        const { technologie, niveau } = competence.value[i];
+                        const techCell = document.createElement('span');
+                        const badgeCell = document.createElement('span');
+                        techCell.textContent = technologie;
+                        badgeCell.classList.add('badge');
+
+                        // Ajouter le grade du badge
+                        badgeCell.appendChild(createBadgeDetail(niveau, badgeCell))
+                        
+                        valueCell.appendChild(techCell);
+                        valueCell.appendChild(badgeCell);
+                    }
+
+                    dataRow.appendChild(valueCell);
+                });
+
+                tbodyTechnicalSkills.appendChild(dataRow);
+            }
+            
+            // Construction du tableau
+            tableTechnicalSkills.appendChild(theadTechnicalSkills);
+            tableTechnicalSkills.appendChild(tbodyTechnicalSkills);
+
+            containerTechnicalSkills.appendChild(tableTechnicalSkills);
+        }
     }
 }
 

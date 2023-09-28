@@ -145,6 +145,10 @@ h1{
     width: 70%;
     margin: auto;
   }
+
+  section.accueil.container {
+    width: 80%;
+  }
 }
 
 
