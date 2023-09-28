@@ -24,8 +24,8 @@ section.accueil.container {
 }
 
 #profil .first_column img{
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
 }
 
 #profil .first_column .main_info{
@@ -186,4 +186,95 @@ section.accueil.container {
   padding: 8px;
   width: 100%;
   height: 20px;
+}
+
+
+/* tablette en mode paysage*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #profil .first_column img{
+    width: 150px;
+    height: 150px;
+  }
+  
+  #profil .second_column{
+    padding: 0 20px;
+  }
+}
+
+
+/* tablette en mode portrait */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  #profil{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #profil .first_column, #profil .second_column{
+    width: 100%;
+  }
+  
+  #profil .first_column{
+    margin-bottom: 35px;
+  }
+
+  #profil .second_column .presentations #presentation_text {
+    height: unset;
+    margin: 0 0 10px 0;
+    overflow: unset;
+  }
+
+  #profil .second_column .lists {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #profil .second_column .lists div {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  #profil .second_column .lists .custom-table {
+    margin: 0;
+  }
+}
+
+
+/* smartphones */
+@media screen and (max-width: 480px) {
+  #profil{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #profil .first_column, #profil .second_column{
+    width: 100%;
+  }
+  
+  #profil .first_column{
+    margin-bottom: 35px;
+  }
+
+  #profil .second_column .presentations #presentation_text {
+    height: unset;
+    margin: 0 0 10px 0;
+    overflow: unset;
+  }
+
+  #profil .second_column .lists {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #profil .second_column .lists div {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  #profil .second_column .lists .custom-table {
+    margin: 0;
+  }
 }
