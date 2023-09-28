@@ -395,23 +395,36 @@ function buildExperiences(experiences) {
                     dataRow.classList.toggle("selected");
                 }
             );
+            dataTitleFR = ["Période", "Contrat", "Poste", "Entreprise"]
+            dataTitleEN = ["Period", "Contract", "Job", "Company"]
+            dataTitle = []
+            if(currentLanguage.includes("fr")){
+                dataTitle = dataTitleFR
+            }
+            else{
+                dataTitle = dataTitleEN
+            }
 
             const cellPeriod = document.createElement('td');
             cellPeriod.textContent = formatDateToReadable(experience.debut) + " - " +  formatDateToReadable(experience.fin);
             cellPeriod.classList.add("period");
+            cellPeriod.setAttribute("data-title", dataTitle[0]);
 
             const cellContract = document.createElement('td');
             cellContract.textContent = experience.contrat;
             cellContract.classList.add("contract");
+            cellContract.setAttribute("data-title", dataTitle[1]);
 
             const cellPoste = document.createElement('td');
             cellPoste.textContent = experience.poste;
             cellPoste.classList.add("poste");
+            cellPoste.setAttribute("data-title", dataTitle[2]);
 
             const cellCompany = document.createElement('td');
             let location = experience.ville + ", " + experience.pays;
             cellCompany.textContent = experience.entreprise + ", " + location;
             cellCompany.classList.add("company");
+            cellCompany.setAttribute("data-title", dataTitle[3]);
 
             
             // Toggling informations
