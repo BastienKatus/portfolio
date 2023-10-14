@@ -826,7 +826,7 @@ function buildTimeline(dataTimeline){
     }
     const ul = document.createElement("ul");
 
-    console.log("Building a timeline")
+    console.log("Building a timeline", dataTimeline)
     // Ajout des marqueurs d'années
     let startYearMarker = 2018
     const years = [];
@@ -849,6 +849,7 @@ function buildTimeline(dataTimeline){
 
     sortTimeLine.sort((a, b) => new Date(b.debut) - new Date(a.debut))
 
+    console.log("sorted data", sortTimeLine)
     // Création de la Timeline
     sortTimeLine.forEach((eachItem) => {
         const liContainer = createTimelineItem(eachItem);

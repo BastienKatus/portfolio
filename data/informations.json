@@ -62,7 +62,7 @@
         "description": ""
       },
       {
-        "type": "education",
+        "type": "formation",
         "diplome": "University and Technology Diploma in Computer Science",
         "etablissement": "Lyon 1 University, Bourg-en-Bresse Campus",
         "code_etablissement": "IUT Lyon 1",
@@ -72,7 +72,7 @@
         "description": ""
       },
       {
-        "type": "education",
+        "type": "formation",
         "diplome": "Baccalaureate in Economics and Social Sciences",
         "mention": "With Honors",
         "etablissement": "Lycée Jean Puy, Roanne",
@@ -651,7 +651,7 @@
       "experiences_professionnelles": [
         {
           "type": "experience",
-          "poste": "Full Stack Developer d'une application SaS - Previsoft",
+          "poste": "Developpeur Full Stack d'une application SaS - Previsoft",
           "entreprise": "Lefebvre Dalloz Logiciel",
           "ville": "Lyon",
           "pays": "France",
