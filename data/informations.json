@@ -9,7 +9,7 @@
       "telephone": "07 66 60 35 61",
       "email": "katusbastien@gmail.com",
       "poste": "Full Stack Developer",
-      "presentation_text": "<p>I am currently undergoing apprenticeship training in the field of computer science and telecommunications networks. My journey is divided between the education provided by <a href=\"https://www.cpe.fr/\">CPE Lyon</a> in this fifth year, specializing in software engineering, and my role at the company <a href=\"https://agiir-digital.com/\">AGIIR Network</a>. This experience allows me to strengthen my skills as a full stack developer and project manager.</p><p>If you have arrived on this page, it's probably because you've discovered a link to my portfolio and you're curious to learn about my experiences. You'll find various tabs accessible with a simple click to learn more about my education, professional experiences, personal projects, and much more.</p>",
+      "presentation_text": "<p>I am currently undergoing apprenticeship training in the field of computer science and telecommunications networks. My journey is divided between the education provided by <a href=\"https://www.cpe.fr/\">CPE Lyon</a> in this fifth year, specializing in software engineering, and my role at the company <a href=\"https://www.lefebvre-dalloz.fr/\">Lefebvre Dalloz</a>. This experience allows me to strengthen my skills as a full stack developer and project manager.</p><p>If you have arrived on this page, it's probably because you've discovered a link to my portfolio and you're curious to learn about my experiences. You'll find various tabs accessible with a simple click to learn more about my education, professional experiences, personal projects, and much more.</p>",
       "more_presentation": "My autobiography is currently in progress",
       "hobbies": [
         "Badminton (2 years)",
@@ -134,6 +134,29 @@
     "experiences_professionnelles": [
       {
         "type": "experience",
+        "poste": "Full Stack Developer for SaS software - Previsoft",
+        "entreprise": "Lefebvre Dalloz Logiciel",
+        "ville": "Lyon",
+        "pays": "France",
+        "debut": "2023-10-02",
+        "fin": "",
+        "contrat": "Apprenticeship",
+        "technologies": [
+          "Java",
+          "SpringBoot",
+          "Python",
+          "Angular JS",
+          "HTML / CSS",
+          "PostgreSQL"
+        ],
+        "description" :[
+          "The Previsoft project is a SaaS application that helps companies implement their risk prevention, personnel management, safety equipment...",
+          "Participation in evolutionary developments and corrective maintenance of the Previsoft project.",
+          "Resumption and optimization of a Bridge module for bulk data import. The two major objectives are to make the module fully configurable and improve performance by over 500% compared to the current version."
+        ]
+      },
+      {
+        "type": "experience",
         "poste": "Assistant reasearcher in Computer Vision and 3D Model Reconstruction",
         "entreprise":"I2CAT Foundation",
         "ville": "Barcelona",
@@ -161,7 +184,7 @@
         "ville": "Roanne",
         "pays": "France",
         "debut": "2021-09-06",
-        "fin": "",
+        "fin": "2023-09-31",
         "contrat": "Apprenticeship",
         "technologies": [
           "Java / J2EE",
@@ -503,7 +526,7 @@
         "telephone": "07 66 60 35 61",
         "email": "katusbastien@gmail.com",
         "poste": "Développeur Full Stack",
-        "presentation_text":"<p>Je suis actuellement en formation en alternance dans le domaine de l'informatique et des réseaux de télécommunications. Mon parcours se divise entre la formation dispensée par <a href=\"https://www.cpe.fr/\"> CPE Lyon </a> en cette cinquième année, avec une spécialisation en génie logiciel, et mon rôle au sein de l'entreprise  <a href=\"https://agiir-digital.com/\"> AGIIR Network</a>. Cette expérience me permet de consolider mes compétences en tant que développeur full stack et chef de projet.<p>Si vous êtes arrivé sur cette page, c'est probablement parce que vous avez découvert un lien vers mon portfolio et que vous êtes curieux de connaître mes expériences. Vous trouverez différents onglets accessibles en un simple clic pour en savoir davantage sur mes formations, mes expériences professionnelles, mes projets personnels, et bien plus encore.</p>",
+        "presentation_text":"<p>Je suis actuellement en formation en alternance dans le domaine de l'informatique et des réseaux de télécommunications. Mon parcours se divise entre la formation dispensée par <a href=\"https://www.cpe.fr/\"> CPE Lyon </a> en cette cinquième année, avec une spécialisation en génie logiciel, et mon rôle au sein de l'entreprise  <a href=\"https://www.lefebvre-dalloz.fr/\">Lefebvre Dalloz<a>. Cette expérience me permet de consolider mes compétences en tant que développeur full stack et chef de projet.<p>Si vous êtes arrivé sur cette page, c'est probablement parce que vous avez découvert un lien vers mon portfolio et que vous êtes curieux de connaître mes expériences. Vous trouverez différents onglets accessibles en un simple clic pour en savoir davantage sur mes formations, mes expériences professionnelles, mes projets personnels, et bien plus encore.</p>",
         "more_presentation":"Mon autobiographie est en cours de rédaction",
         "hobbies":[
           "Badminton (2 ans)",
@@ -626,6 +649,29 @@
         }
       ],
       "experiences_professionnelles": [
+        {
+          "type": "experience",
+          "poste": "Full Stack Developer d'une application SaS - Previsoft",
+          "entreprise": "Lefebvre Dalloz Logiciel",
+          "ville": "Lyon",
+          "pays": "France",
+          "debut": "2023-10-02",
+          "fin": "",
+          "contrat": "Apprenticeship",
+          "technologies": [
+            "Java",
+            "SpringBoot",
+            "Python",
+            "Angular JS",
+            "HTML / CSS",
+            "PostgreSQL"
+          ],
+          "description" :[
+            "Le projet Previsoft est une application SaS qui aide les entreprises à mettre en place leurs la prévention des risques, la gestion du personnel, des équipements de sécurité...",
+            "Participation aux développements évolutifs et à la maintenance correctives du projet Previsoft",
+            "Reprise et optimisation d'un module Bridge permettant d'importer des données en masse. Les deux objectifs majeurs sont de rendre le module paramétrable à 100% et amélioré les performances de plus de 500% par rapport à la version actuelle"
+          ]
+        },
         {
           "type": "experience",
           "poste": "Assitant Chercheur en Computer Vision et reconstruction de modèle 3D",
